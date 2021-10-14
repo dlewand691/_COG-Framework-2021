@@ -1,0 +1,369 @@
+@mixin nav-overrides(
+  $topbar-background: transparent,
+  $topbar-submenu-background: transparent,
+  $dropdownmenu-background: transparent,
+  $dropdownmenu-submenu-background: $blue,
+  $dropdown-menu-item-color-active: $white,
+  $dropdown-menu-item-background-active: $blue,
+  $dropdown-hover-color: $blue,
+  $dropdown-arrow-color: $blue-light,
+  $sticky-background: transparent,
+  $sticky-background-stuck: $white,
+  $titlebar-background: $white,
+  $anchor-color: $body-font-color,
+  $anchor-color-hover: $blue-medium,
+  $secondary-nav-background: $gray-lighter,
+  $language-menu-background: $white,
+  $hamburger-color: $anchor-color
+) {
+  // ======================================================================
+  // ██       ██████   ██████   ██████
+  // ██      ██    ██ ██       ██    ██
+  // ██      ██    ██ ██   ███ ██    ██
+  // ██      ██    ██ ██    ██ ██    ██
+  // ███████  ██████   ██████   ██████
+  // ======================================================================
+  .cog-logo {
+    transition: $transition-default;
+    @include fluidSize(width, 320px, $cog-bp--desktop-xl, 100px, 200px);
+  }
+
+  .secondary-nav .cog-logo {
+    transition: $transition-default;
+    width: auto;
+    height: 20px;
+  }
+
+  // ======================================================================
+  // ███████ ████████ ██  ██████ ██   ██ ██    ██
+  // ██         ██    ██ ██      ██  ██   ██  ██
+  // ███████    ██    ██ ██      █████     ████
+  //      ██    ██    ██ ██      ██  ██     ██
+  // ███████    ██    ██  ██████ ██   ██    ██
+  // ======================================================================
+  .stickyNav,
+  .stickyTitleBar {
+    background: $sticky-background;
+
+    // ===================================================================================
+    // STUCK STYLES
+    // ===================================================================================
+    .is-at-top.is-stuck {
+      background: $sticky-background-stuck !important;
+
+      .top-bar {
+        @include breakpoint(medium-xxl down) {
+          @include fluidSize(top, 320px, $cog-bp--desktop, 40px, 55px);
+          position: fixed;
+          width: 100%;
+          background: $sticky-background-stuck;
+        }
+      }
+    }
+  }
+
+  // ======================================================================
+  // ███████ ███████  ██████  ██████  ███    ██ ██████   █████  ██████  ██    ██
+  // ██      ██      ██      ██    ██ ████   ██ ██   ██ ██   ██ ██   ██  ██  ██
+  // ███████ █████   ██      ██    ██ ██ ██  ██ ██   ██ ███████ ██████    ████
+  //      ██ ██      ██      ██    ██ ██  ██ ██ ██   ██ ██   ██ ██   ██    ██
+  // ███████ ███████  ██████  ██████  ██   ████ ██████  ██   ██ ██   ██    ██
+  // ███    ██  █████  ██    ██
+  // ████   ██ ██   ██ ██    ██
+  // ██ ██  ██ ███████ ██    ██
+  // ██  ██ ██ ██   ██  ██  ██
+  // ██   ████ ██   ██   ████
+  // ======================================================================
+  .secondary-nav {
+    background: $secondary-nav-background;
+
+    a,
+    a:link {
+      color: $anchor-color;
+      font-weight: normal;
+      transition: $button-transition;
+
+      &:hover {
+        color: $anchor-color-hover;
+      }
+    }
+
+    // ===================================================================================
+    // ██     ██  ██████  ██████  ██      ██████  ██     ██ ██ ██████  ███████
+    // ██     ██ ██    ██ ██   ██ ██      ██   ██ ██     ██ ██ ██   ██ ██
+    // ██  █  ██ ██    ██ ██████  ██      ██   ██ ██  █  ██ ██ ██   ██ █████
+    // ██ ███ ██ ██    ██ ██   ██ ██      ██   ██ ██ ███ ██ ██ ██   ██ ██
+    //  ███ ███   ██████  ██   ██ ███████ ██████   ███ ███  ██ ██████  ███████
+    // ===================================================================================
+    .language-menu {
+      background: $language-menu-background;
+      // width     : unset;
+
+      &::before {
+        @include css-triangle(
+          $tooltip-pip-width,
+          $language-menu-background,
+          up
+        );
+        right: 4rem;
+        left: auto;
+        position: absolute;
+        top: calc(0px - #{$tooltip-pip-width});
+      }
+
+      .flag-icon {
+        box-shadow: 0 0 0 1px rgba($gray-medium, 0.5);
+        background-size: cover !important;
+      }
+    }
+
+    // ======================================================================
+    // STYLES FOR SUBMENU AND LANGUAGE MENU
+    // ======================================================================
+    &[class*="theme-blue"] {
+      .cog-logo {
+        filter: grayscale(1) brightness(100);
+      }
+    }
+  }
+
+  // ======================================================================
+  // ██████  ██████  ██ ███    ███  █████  ██████  ██    ██
+  // ██   ██ ██   ██ ██ ████  ████ ██   ██ ██   ██  ██  ██
+  // ██████  ██████  ██ ██ ████ ██ ███████ ██████    ████
+  // ██      ██   ██ ██ ██  ██  ██ ██   ██ ██   ██    ██
+  // ██      ██   ██ ██ ██      ██ ██   ██ ██   ██    ██
+  // ███    ██  █████  ██    ██
+  // ████   ██ ██   ██ ██    ██
+  // ██ ██  ██ ███████ ██    ██
+  // ██  ██ ██ ██   ██  ██  ██
+  // ██   ████ ██   ██   ████
+  // ======================================================================
+  .primary-nav {
+    &.top-bar {
+      background-color: $topbar-background;
+
+      & ul {
+        background-color: $topbar-background;
+      }
+
+      .menu {
+        // Top-level item
+        li {
+          a {
+            background: $dropdownmenu-background;
+            font-weight: normal;
+            color: $anchor-color;
+            transition: $transition-default;
+          }
+        }
+
+        // Top-level item active state
+        li.is-active a {
+          font-weight: normal;
+          color: $white;
+          transition: $transition-default;
+          background: $dropdown-menu-item-background-active;
+          color: $dropdown-menu-item-color-active;
+
+          &:hover {
+            // background-color: $dropdown-hover-color;
+          }
+
+          &::after {
+            color: $dropdown-arrow-color;
+          }
+        }
+
+        li.is-dropdown-submenu-parent {
+          > a {
+            padding: 1rem 2.2rem 1rem 1rem;
+
+            &:after {
+              font-family: "Cognizant-Icons";
+              content: "\e903";
+              color: $dropdown-arrow-color;
+              font-weight: 900;
+              border-color: transparent;
+              top: 23%;
+              right: 1.35rem;
+            }
+          }
+        }
+      }
+
+      .submenu {
+        min-width: $dropdownmenu-min-width;
+        background: $dropdownmenu-submenu-background;
+        border: none;
+      }
+
+      .is-dropdown-submenu {
+        border: none;
+
+        a {
+          padding: 0.5rem;
+
+          &:hover {
+            background: darken($dropdown-hover-color, 7%) !important;
+          }
+        }
+      }
+    }
+  }
+
+  // ======================================================================
+  // ████████ ██ ████████ ██      ███████     ██████   █████  ██████
+  //  ██    ██    ██    ██      ██          ██   ██ ██   ██ ██   ██
+  //  ██    ██    ██    ██      █████       ██████  ███████ ██████
+  //  ██    ██    ██    ██      ██          ██   ██ ██   ██ ██   ██
+  //  ██    ██    ██    ███████ ███████     ██████  ██   ██ ██   ██
+  // ======================================================================
+  .title-bar {
+    background: $titlebar-background;
+  }
+
+  // ======================================================================
+  // ███    ███ ███████  ██████   █████  ███    ███ ███████ ███    ██ ██    ██
+  // ████  ████ ██      ██       ██   ██ ████  ████ ██      ████   ██ ██    ██
+  // ██ ████ ██ █████   ██   ███ ███████ ██ ████ ██ █████   ██ ██  ██ ██    ██
+  // ██  ██  ██ ██      ██    ██ ██   ██ ██  ██  ██ ██      ██  ██ ██ ██    ██
+  // ██      ██ ███████  ██████  ██   ██ ██      ██ ███████ ██   ████  ██████
+  // ======================================================================
+  .megamenu {
+    top: calc(100% - 1rem) !important;
+  }
+
+  // ======================================================================
+  // ██   ██  █████  ███    ███ ██████  ██    ██ ██████   ██████  ███████ ██████
+  // ██   ██ ██   ██ ████  ████ ██   ██ ██    ██ ██   ██ ██       ██      ██   ██
+  // ███████ ███████ ██ ████ ██ ██████  ██    ██ ██████  ██   ███ █████   ██████
+  // ██   ██ ██   ██ ██  ██  ██ ██   ██ ██    ██ ██   ██ ██    ██ ██      ██   ██
+  // ██   ██ ██   ██ ██      ██ ██████   ██████  ██   ██  ██████  ███████ ██   ██
+  // ======================================================================
+  .hamburger-inner,
+  .hamburger.is-active .hamburger-inner {
+    background-color: $hamburger-color;
+
+    &::after,
+    &::before {
+      background-color: $hamburger-color;
+    }
+  }
+
+  [class*="theme-"]:not([class*="default"]) {
+    // color: $white;
+
+    .cog-logo {
+      filter: grayscale(1) brightness(100);
+    }
+  }
+
+  // ======================================================================
+  //  █████  ██████  ██████   ██████  ██     ██
+  // ██   ██ ██   ██ ██   ██ ██    ██ ██     ██
+  // ███████ ██████  ██████  ██    ██ ██  █  ██
+  // ██   ██ ██   ██ ██   ██ ██    ██ ██ ███ ██
+  // ██   ██ ██   ██ ██   ██  ██████   ███ ███
+  // ======================================================================
+
+  .arrow::after {
+    color: $dropdown-arrow-color;
+  }
+
+  // -----  End of ARROW  ----------
+}
+
+// ======================================================================
+// ██████  ███████ ███████  █████  ██    ██ ██   ████████
+// ██   ██ ██      ██      ██   ██ ██    ██ ██      ██
+// ██   ██ █████   █████   ███████ ██    ██ ██      ██
+// ██   ██ ██      ██      ██   ██ ██    ██ ██      ██
+// ██████  ███████ ██      ██   ██  ██████  ███████ ██
+// ======================================================================
+@include nav-overrides;
+// -----  End of DEFAULT  ----------
+
+// ======================================================================
+// ██████  ██      ██    ██ ███████
+// ██   ██ ██      ██    ██ ██
+// ██████  ██      ██    ██ █████
+// ██   ██ ██      ██    ██ ██
+// ██████  ███████  ██████  ███████
+// ======================================================================
+.theme-blue {
+  @include nav-overrides(
+    $dropdownmenu-submenu-background: $blue-dark,
+    $dropdown-menu-item-background-active: $blue-dark,
+    $dropdown-arrow-color: $teal-medium,
+    $sticky-background: rgba($blue, 0.85),
+    $sticky-background-stuck: rgba($blue, 0.85),
+    $titlebar-background: rgba($blue, 0.85),
+    $anchor-color: $white,
+    $anchor-color-hover: $teal-medium,
+    $secondary-nav-background: $blue,
+    $language-menu-background: $blue-dark,
+    $hamburger-color: $teal-medium
+  );
+}
+// -----  End of BLUE  ----------
+
+// ======================================================================
+// ██████  ██      ██    ██ ███████     ██████   █████  ██████  ██   ██
+// ██   ██ ██      ██    ██ ██          ██   ██ ██   ██ ██   ██ ██  ██
+// ██████  ██      ██    ██ █████       ██   ██ ███████ ██████  █████
+// ██   ██ ██      ██    ██ ██          ██   ██ ██   ██ ██   ██ ██  ██
+// ██████  ███████  ██████  ███████     ██████  ██   ██ ██   ██ ██   ██
+// ======================================================================
+.theme-blue-dark {
+  @include nav-overrides(
+    $dropdownmenu-submenu-background: darken($blue, 10%),
+    $dropdown-menu-item-background-active: darken($blue, 10%),
+    $dropdown-hover-color: $blue,
+    $dropdown-arrow-color: $teal-medium,
+    $sticky-background: rgba($blue-dark, 0.85),
+    $sticky-background-stuck: rgba($blue-dark, 0.85),
+    $titlebar-background: rgba($blue-dark, 0.85),
+    $anchor-color: $white,
+    $anchor-color-hover: $teal-medium,
+    $secondary-nav-background: $blue-dark,
+    $language-menu-background: darken($blue, 10%),
+    $hamburger-color: $teal-medium
+  );
+}
+// -----  End of BLUE DARK  ----------
+
+// ======================================================================
+//  ██████ ███████  ██████  ██     ██
+// ██      ██      ██    ██ ██     ██
+// ██      █████   ██    ██ ██  █  ██
+// ██      ██      ██    ██ ██ ███ ██
+//  ██████ ██       ██████   ███ ███
+// ======================================================================
+.theme-cfow {
+  @include nav-overrides(
+    $topbar-background: transparent,
+    $topbar-submenu-background: transparent,
+    $dropdownmenu-background: none,
+    $dropdownmenu-submenu-background: darken($gray-dark, 5%),
+    $dropdown-menu-item-color-active: $white,
+    $dropdown-menu-item-background-active: darken($gray-dark, 5%),
+    $dropdown-hover-color: darken($gray-dark, 10%),
+    $dropdown-arrow-color: $teal-medium,
+    $sticky-background: transparent,
+    $sticky-background-stuck: rgba($gray-dark, 0.97),
+    $titlebar-background: rgba($gray-dark, 0.97),
+    $anchor-color: $white,
+    $anchor-color-hover: $teal-medium,
+    $secondary-nav-background: transparent,
+    $language-menu-background: rgba($gray-dark, 0.97),
+    $hamburger-color: $anchor-color
+  );
+
+  .stickyNav {
+    @include breakpoint(medium-xl down) {
+      background: rgba($gray-dark, 0.97);
+    }
+  }
+}
+// -----  End of CFOW  ----------

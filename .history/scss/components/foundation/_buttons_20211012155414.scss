@@ -1,0 +1,340 @@
+.button {
+  // color: contrast-checker($light-link);
+  text-decoration: none !important;
+  font-weight: $global-weight-bold;
+  margin-right: 1rem;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &.back {
+    &:after {
+      content: "";
+    }
+    &:before {
+      margin-right: 0.5rem;
+      content: "\e905";
+      // color: $white;
+      font-family: "Cognizant-Icons";
+      font-weight: 600;
+      font-size: initial;
+      width: unset;
+      height: unset;
+    }
+  }
+
+  &.download {
+    &:after {
+      position: unset;
+      right: unset;
+      width: unset;
+      height: unset;
+      margin-top: unset;
+      margin-left: 0.5rem;
+      content: "\e920";
+      background: unset;
+      font-family: "Cognizant-Icons";
+      font-weight: bold;
+      font-size: initial;
+    }
+
+    &:before {
+      content: "";
+    }
+  }
+
+  &.video:after {
+    position: unset;
+    right: unset;
+    width: unset;
+    height: unset;
+    margin-top: unset;
+    margin-left: 0.5rem;
+    content: "\e94b";
+    background: unset;
+    font-family: "Cognizant-Icons";
+    font-weight: bold;
+    font-size: initial;
+  }
+
+  &.launch {
+    &::after {
+      position: unset;
+      right: unset;
+      width: unset;
+      height: unset;
+      margin-top: unset;
+      margin-left: 0.5rem;
+      content: "\e935";
+      background: unset;
+      font-family: "Cognizant-Icons";
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    &:before {
+      content: "";
+    }
+  }
+
+  // &.white {
+  //   color: $teal-dark;
+  //   background: $white;
+
+  //   &:after {
+  //     color: $teal-dark;
+  //   }
+
+  //   &:hover {
+  //     background: darken($white, 5%);
+  //   }
+
+  //   &.blue-bright-hover {
+  //     &:hover {
+  //       color: $teal-medium;
+  //     }
+  //   }
+  // }
+
+  // &.disabled {
+  //   background: rgba($black, 0.15);
+  // }
+
+  // &.blue {
+  //   $button-background: $blue-light;
+  //   $button-background-hover: scale-color($button-background, $lightness: -20%);
+
+  //   background: $button-background;
+
+  //   &:hover {
+  //     background: $button-background-hover;
+  //   }
+
+  //   &.hollow {
+  //     background: none;
+  //     color: $button-background;
+  //     border-color: $button-background;
+
+  //     &:hover {
+  //       background: none;
+  //       color: $button-background-hover;
+  //       border-color: $button-background-hover;
+  //     }
+  //   }
+  // }
+
+  // &.blue-bright {
+  //   $button-background: $teal-medium;
+  //   $button-background-hover: scale-color($button-background, $lightness: -20%);
+
+  //   background: $button-background;
+
+  //   &:hover {
+  //     background: $button-background-hover;
+  //   }
+
+  //   &.hollow {
+  //     background: none;
+  //     color: $button-background;
+  //     border-color: $button-background;
+
+  //     &:hover {
+  //       background: none;
+  //       color: $button-background-hover;
+  //       border-color: $button-background-hover;
+  //     }
+  //   }
+  // }
+
+  &.hover-grd-theme-1,
+  &.hover-grd-theme-2,
+  &.hover-grd-theme-3 {
+    border: none;
+    transition: $transition-default;
+    background: linear-gradient(35deg, $button-background, $button-background);
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      transition: $transition-fast;
+      border-radius: $button-radius;
+    }
+  }
+
+  &.hover-grd-theme-1 {
+    &:before {
+      background: $bg-grd-theme-1;
+    }
+
+    &:hover:before {
+      opacity: 1;
+    }
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &.hover-grd-theme-2 {
+    background-color: $blue !important;
+    color: $white;
+    &:before {
+      background: $bg-grd-theme-2;
+    }
+
+    &:hover:before {
+      opacity: 1;
+    }
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &.hover-grd-theme-3 {
+    background-color: $blue-medium;
+    &:before {
+      background: $bg-grd-theme-3;
+    }
+
+    &:hover:before {
+      opacity: 1;
+    }
+    &:hover {
+      // color: contrast-checker($light);
+    }
+  }
+}
+
+// a:not(.button) {
+//   &.blue {
+//     $anchor-color: $blue-light;
+//     $anchor-color-hover: scale-color($anchor-color, $lightness: -20%);
+//     color: $anchor-color;
+//     &:hover {
+//       color: $anchor-color-hover;
+//     }
+//   }
+//   &.blue-bright {
+//     $anchor-color: $teal-medium;
+//     $anchor-color-hover: scale-color($anchor-color, $lightness: -20%);
+//     color: $anchor-color;
+//     &:hover {
+//       color: $anchor-color-hover;
+//     }
+//   }
+
+//   &.blue-bright-hover {
+//     &:hover {
+//       color: $teal-medium;
+//     }
+//   }
+// }
+
+.arrow {
+  display: inline-flex;
+  align-items: center;
+  // margin-right: 1rem;
+
+  &:last-of-type {
+    // margin-right: 0;
+  }
+
+  &::after {
+    position: unset;
+    right: unset;
+    width: unset;
+    height: unset;
+    margin-top: unset;
+    margin-left: 0.5rem;
+    content: "\e907";
+    background: unset;
+    font-family: "Cognizant-Icons";
+    font-weight: bold;
+    color: inherit;
+  }
+
+  &.arrow-solid {
+    &::after {
+      content: "\e908";
+      font-family: "Cognizant-Icons";
+    }
+  }
+
+  &.arrow-down {
+    &::after {
+      content: "\e903";
+    }
+    &::before {
+      content: "";
+    }
+  }
+
+  &.arrow-tail {
+    &::after {
+      content: "\e98b";
+    }
+    &::before {
+      content: "";
+    }
+  }
+
+  &.arrow-small {
+    &::after {
+      @extend small;
+    }
+  }
+
+  &.hollow {
+    // transition: $transition-fast;
+    border-color: $blue-dark;
+    color: $blue-dark;
+
+    &:hover {
+      border-color: $blue;
+      color: $blue;
+    }
+
+    // &.white {
+    //   border-color: $white;
+    //   color: $white;
+    //   background: none;
+
+    //   &:hover {
+    //     background: none;
+    //   }
+
+    //   &:after {
+    //     color: inherit;
+    //   }
+    // }
+  }
+}
+
+.arrow-end {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    right: 0.5rem;
+    content: "\e907";
+    font-family: "Cognizant-Icons";
+    font-weight: bold;
+    margin-left: 0.2rem;
+  }
+}
+
+[class*="button-group"] {
+  // background: unset;
+
+  & .button {
+    margin-left: 0;
+  }
+}

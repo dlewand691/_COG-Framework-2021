@@ -1,0 +1,89 @@
+// ======================================================================
+// ██████   █████   ██████ ██   ██  ██████  ██████   ██████  ██    ██ ███    ██ ██████
+// ██   ██ ██   ██ ██      ██  ██  ██       ██   ██ ██    ██ ██    ██ ████   ██ ██   ██
+// ██████  ███████ ██      █████   ██   ███ ██████  ██    ██ ██    ██ ██ ██  ██ ██   ██
+// ██   ██ ██   ██ ██      ██  ██  ██    ██ ██   ██ ██    ██ ██    ██ ██  ██ ██ ██   ██
+// ██████  ██   ██  ██████ ██   ██  ██████  ██   ██  ██████   ██████  ██   ████ ██████
+//  ██████  ██████   █████  ██████  ██ ███████ ███    ██ ████████ ███████
+// ██       ██   ██ ██   ██ ██   ██ ██ ██      ████   ██    ██    ██
+// ██   ███ ██████  ███████ ██   ██ ██ █████   ██ ██  ██    ██    ███████
+// ██    ██ ██   ██ ██   ██ ██   ██ ██ ██      ██  ██ ██    ██         ██
+//  ██████  ██   ██ ██   ██ ██████  ██ ███████ ██   ████    ██    ███████
+// ======================================================================
+
+$bg-grd-theme-1: linear-gradient(35deg, #2d2d8f 10%, #006fba 50%, #21fceb 94%);
+
+$bg-grd-theme-2: linear-gradient(35deg, #010065 15%, #d43635 65%, #f3c9ce 100%);
+
+$bg-grd-theme-3: linear-gradient(
+  35deg,
+  #5e93ef 10%,
+  #c7ed88 65%,
+  #eee2a0 85%,
+  #efe34a 100%
+);
+
+.bg-grd-theme-1 {
+  background: $bg-grd-theme-1;
+  border: none;
+  color: contrast-checker($dark);
+}
+.bg-grd-theme-2 {
+  background: $bg-grd-theme-2;
+  border: none;
+  color: contrast-checker($dark);
+}
+.bg-grd-theme-3 {
+  background: $bg-grd-theme-3;
+  border: none;
+  color: $blue;
+  color: contrast-checker($light);
+}
+
+%bg-grd-blue-radial,
+.bg-grd-blue-radial {
+  background: radial-gradient(circle, $blue-dark 0%, $blue 85%);
+}
+
+%bg-grd-blue-radial-top,
+.bg-grd-blue-radial-top {
+  background: radial-gradient(circle at top center, $blue-dark 0%, $blue 85%);
+}
+
+.bg-grd-blue-radial-bottom {
+  background: radial-gradient(
+    circle at bottom center,
+    $blue-dark 0%,
+    $blue 85%
+  );
+}
+
+.bg-grd-dark-blue-dark {
+  background: linear-gradient(90deg, $blue 0%, $blue-dark 50%, $blue 100%);
+}
+
+.bg-grd-tb-dark-blue-medium {
+  background: linear-gradient(0deg, $blue 0%, $blue-dark 100%);
+}
+
+.bg-grd-bt-dark-blue-medium {
+  background: linear-gradient(180deg, $blue 0%, $blue-dark 100%);
+}
+
+.bg-grd-lr-dark-blue-medium {
+  background: linear-gradient(90deg, $blue 0%, $blue-dark 100%);
+}
+
+.bg-grd-rl-dark-blue-medium {
+  background: linear-gradient(-90deg, $blue 0%, $blue-dark 100%);
+}
+
+.bg-grd-tb-dark-blue {
+  background: linear-gradient(0deg, $blue 0%, $blue-dark 100%);
+}
+
+.bg-grd-lr-dark-blue {
+  background: linear-gradient(90deg, $blue 0%, $blue-dark 100%);
+}
+
+// -----  End of BACKGROUND GRADIENTS  ----------
