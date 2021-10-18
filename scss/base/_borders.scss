@@ -11,10 +11,9 @@ $border-side: (
   "t": top,
   "r": right,
   "b": bottom,
-  "l": left
+  "l": left,
 );
 $radius-sizes: 10;
-
 
 @each $size in $breakpoint-classes {
   @include breakpoint($size) {
@@ -74,7 +73,7 @@ $radius-sizes: 10;
       // ===================================================================================
       @for $i from 0 through $radius-sizes {
         .#{$size}-bd-radius-#{$i} {
-          border-radius: $i*0.25 + rem !important;
+          border-radius: $i * 0.25 + rem !important;
         }
       }
     } @else {
@@ -133,10 +132,42 @@ $radius-sizes: 10;
       // ===================================================================================
       @for $i from 0 through $radius-sizes {
         .bd-radius-#{$i} {
-          border-radius: $i*0.25 + rem !important;
+          border-radius: $i * 0.25 + rem !important;
         }
       }
-
     }
   }
+}
+
+[class*="bd-grd-theme"] {
+  border-width: 4px;
+  border-style: solid;
+  border-color: transparent;
+  // background-clip: padding-box;
+  // position: relative;
+  &:before {
+    // content: "";
+    // position: absolute;
+    // inset: 0;
+    // z-index: -1;
+    // border-radius: inherit;
+  }
+}
+
+.bd-grd-theme-1 {
+  // background: linear-gradient(to right, red, orange) padding-box;
+  background: linear-gradient(white, white) padding-box,
+    $bg-grd-theme-1 border-box;
+}
+
+.bd-grd-theme-2 {
+  // background: linear-gradient(to right, red, orange) padding-box;
+  background: linear-gradient(white, white) padding-box,
+    $bg-grd-theme-2 border-box;
+}
+
+.bd-grd-theme-3 {
+  // background: linear-gradient(to right, red, orange) padding-box;
+  background: linear-gradient(white, white) padding-box,
+    $bg-grd-theme-3 border-box;
 }

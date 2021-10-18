@@ -13,16 +13,16 @@ a:link {
   // @include text-crop($top-adjustment: 0.4px, $bottom-adjustment: -0.25px);
   font-weight: $global-weight-bold;
   transition: $transition-fast;
-  // text-decoration: underline;
-  // text-decoration-color: red;
-  // text-decoration-thickness: 1px;
-  // text-underline-offset: 0.1rem;
-  // text-decoration-skip-ink: auto;
   // color: link-contrast-checker($anchor-color);
 
   &:hover {
     transition: $transition-fast;
     color: $primary;
+    // text-decoration: underline;
+    // text-decoration-color: inherit;
+    // text-decoration-thickness: 1px;
+    // text-underline-offset: 0.1rem;
+    // text-decoration-skip-ink: auto;
     // color: scale-color($anchor-color, $lightness: -20%);
   }
 
@@ -39,6 +39,10 @@ a:link {
 a.small,
 a.tiny {
   text-decoration: underline;
+  text-decoration-color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.1rem;
+  text-decoration-skip-ink: auto;
 }
 
 a.link-coverAll::before {
@@ -50,6 +54,15 @@ a.link-coverAll::before {
   bottom: 0;
   width: 100%;
   height: 100%;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+  a,
+  a:link {
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 .link-white {
@@ -72,46 +85,3 @@ a.link-coverAll::before {
     font-weight: normal;
   }
 }
-
-// ======================================================================
-// LIGHT GREEN LINKS ON SPECIFIC BACKGROUNDS
-// ======================================================================
-[class*="bg-black"],
-[class*="bg-primary"],
-.bg-gray-dark,
-.bg-red {
-  a:not(.button),
-  a:link:not(.button) {
-    // color: $green-light;
-    // color: $anchor-color-light;
-
-    &:hover:not(.button) {
-      // color: scale-color($anchor-color, $lightness: 50%);
-    }
-  }
-
-  .hollow {
-    border-color: $anchor-color-light;
-    // color: $anchor-color-light;
-    background: none;
-
-    &:hover {
-      border-color: scale-color($anchor-color-light, $lightness: 50%);
-      // color: scale-color($anchor-color-light, $lightness: 50%);
-      background: none;
-    }
-  }
-}
-
-// ======================================================================
-// GREEN LINKS ON WHITE BACKGROUNDS
-// ======================================================================
-.bg-transparent {
-  background: transparent !important;
-}
-
-.bg-none {
-  background: none !important;
-}
-
-/* ----  End of LINKS  ---------------------------- */

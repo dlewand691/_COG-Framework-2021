@@ -4,8 +4,20 @@
   font-weight: $global-weight-bold;
   margin-right: 1rem;
 
+  &.small {
+    border-radius: $global-radius / 1.5;
+  }
+
+  &.tiny {
+    border-radius: $global-radius / 2;
+  }
+
   &:last-of-type {
     margin-right: 0;
+  }
+
+  &.hollow:hover {
+    // border-color: $button-hollow-hover-lightness;
   }
 
   &.back {

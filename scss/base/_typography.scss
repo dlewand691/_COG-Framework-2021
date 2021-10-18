@@ -131,7 +131,7 @@ h1 {
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 36px, 84px);
   @include fluidSize(line-height, 320px, $cog-bp--desktop-xl, 36px, 92.4px);
   font-weight: bold;
-  font-feature-settings: "ss00", "ss07";
+  font-feature-settings: "ss00";
   // @include font-size(84px);
   // font-size     : var(--step-5);
   // line-height   : 1.1;
@@ -144,7 +144,7 @@ h2 {
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 32px, 63px);
   @include fluidSize(line-height, 320px, $cog-bp--desktop-xl, 32px, 69.3px);
   font-weight: bold;
-  font-feature-settings: "ss00", "ss07";
+  font-feature-settings: "ss00";
   // @include font-size(63px);
   // font-size  : var(--step-4);
   // line-height: 1.1;
@@ -155,7 +155,7 @@ h2 {
 h3 {
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 28px, 47px);
   font-weight: bold;
-  font-feature-settings: "ss00", "ss07";
+  font-feature-settings: "ss00";
   // @include font-size(47px);
   // font-size: var(--step-3);
 }
@@ -165,7 +165,7 @@ h3 {
 h4 {
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 25px, 36px);
   font-weight: 300;
-  font-feature-settings: "ss00", "ss07";
+  font-feature-settings: "ss00";
   color: $accent2-dark;
   // @include font-size(36px);
   // font-size: var(--step-2);
@@ -177,7 +177,7 @@ h5 {
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 22px, 27px);
   font-weight: $global-weight-normal;
   font-weight: normal;
-  font-feature-settings: "ss00", "ss07";
+  font-feature-settings: "ss00";
   color: $accent2-dark;
   // @include font-size(27px);
   // font-size: var(--step-1);
@@ -189,7 +189,7 @@ h6 {
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 20px, 20px);
   font-weight: $global-weight-bold;
   font-weight: bold;
-  font-feature-settings: "ss01", "ss07";
+  font-feature-settings: "ss01";
   color: $accent2-dark;
   // @include font-size(20px);
   // font-size: var(--step-0);
@@ -363,40 +363,9 @@ $text-alignments: ("left", "right", "center");
   }
 }
 
-.text-white {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  li,
-  p {
-    color: $white;
-  }
-}
-
 // ======================================================================
 // WHITE TEXT ON SPECIFIC BACKGROUNDS
 // ======================================================================
-[class*="bg-black"],
-.bg-primary,
-.bg-primary-85,
-[class*="bg"][class*="dark"],
-.bg-accent2-medium,
-.bg-accent2-light,
-.bg-gray,
-.bg-red,
-[class*="bgOverlay"][class*="dark"],
-.bgOverlay-primary,
-.bgOverlay-black {
-  // color: $white;
-
-  span {
-    // color: $white;
-  }
-}
-
 .text-wrap {
   white-space: normal;
 }

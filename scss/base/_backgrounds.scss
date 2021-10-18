@@ -17,13 +17,21 @@ $breakpoint-classes: (small);
       @if $size != $-zf-zero-breakpoint {
         .#{$size}-bg-#{$color-name} {
           // background-color: var(--#{$color-name});
-          // background-color: #{$color} !important;
+          // background-color: #{$color};
           background-color: #{$color};
           color: contrast-checker($color);
+
+          & :is(h1, h2, h3, p, ul, li, ol, em, strong) {
+            color: inherit;
+          }
 
           & a:not(.button),
           a:link:not(.button) {
             color: link-contrast-checker($color);
+
+            &:hover {
+              color: link-contrast-checker-hover($color);
+            }
           }
 
           .button.hollow {
@@ -31,8 +39,8 @@ $breakpoint-classes: (small);
             border-color: link-contrast-checker($color);
 
             &:hover {
-              color: link-contrast-checker($color);
-              border-color: link-contrast-checker($color);
+              color: link-contrast-checker-hover($color);
+              border-color: link-contrast-checker-hover($color);
             }
           }
         }
@@ -42,9 +50,17 @@ $breakpoint-classes: (small);
           background-color: #{$color};
           color: contrast-checker($color);
 
+          & :is(h1, h2, h3, p, ul, li, ol, em, strong) {
+            color: inherit;
+          }
+
           & a:not(.button),
           a:link:not(.button) {
             color: link-contrast-checker($color);
+
+            &:hover {
+              color: link-contrast-checker-hover($color);
+            }
           }
 
           .button.hollow {
@@ -52,8 +68,8 @@ $breakpoint-classes: (small);
             border-color: link-contrast-checker($color);
 
             &:hover {
-              color: link-contrast-checker($color);
-              border-color: link-contrast-checker($color);
+              color: link-contrast-checker-hover($color);
+              border-color: link-contrast-checker-hover($color);
             }
           }
         }
@@ -63,19 +79,41 @@ $breakpoint-classes: (small);
 }
 
 [class*="bg-accent3"],
-.bg-accent3-dark,
 .bg-accent1-light,
 .bg-accent1-medium,
 .bg-accent2-light,
 .bg-accent2-medium,
+.bg-accent3-dark,
 .bg-gray-light,
 .bg-gray-medium {
   color: $primary;
 
+  & :is(h1, h2, h3, p, ul, li, ol, em, strong) {
+    color: inherit;
+  }
+
   & a,
   & a:link {
     color: $primary !important;
+
+    &:hover {
+      color: $anchor-color-hover;
+    }
   }
+}
+
+[class*="bg-accent3"] {
+  .button {
+    background-color: $white;
+  }
+}
+
+.bg-transparent {
+  background: transparent !important;
+}
+
+.bg-none {
+  background: none !important;
 }
 
 /* ----  End of BACKGROUND COLOR -------------------------------- */
@@ -127,7 +165,7 @@ $breakpoint-classes: (small);
 // @for $i from 1 through $background-tints {
 //     @each $color-name, $color in $background-palette {
 //         .bg-#{$color-name}-tint#{$i} {
-//             background-color: lighten($color, percentage($i / 12)) !important;
+//             background-color: darken($color, percentage($i / 12));
 //         }
 //     }
 // }
@@ -168,11 +206,11 @@ $bg-pos: (
     @each $side, $side-name in $bg-pos {
       @if $size != $-zf-zero-breakpoint {
         .#{$size}-bg-pos-#{$side} {
-          background-position: #{$side-name} !important;
+          background-position: #{$side-name};
         }
       } @else {
         .bg-pos-#{$side} {
-          background-position: #{$side-name} !important;
+          background-position: #{$side-name};
         }
       }
     }
@@ -204,12 +242,12 @@ $bg-size: (
     @each $size-option, $bg-size-option in $bg-size {
       @if $size != $-zf-zero-breakpoint {
         .#{$size}-bg-size-#{$size-option} {
-          background-size: #{$bg-size-option} !important;
+          background-size: #{$bg-size-option};
           background-repeat: no-repeat;
         }
       } @else {
         .bg-size-#{$size-option} {
-          background-size: #{$bg-size-option} !important;
+          background-size: #{$bg-size-option};
           background-repeat: no-repeat;
         }
       }
@@ -233,7 +271,7 @@ $bg-size: (
 // ====================================================================================
 .bg-attach-fixed {
   @include breakpoint(xlarge) {
-    background-attachment: fixed !important;
+    background-attachment: fixed;
   }
 }
 // -----  End of BACKGROUND ATTACHMENT  ----------

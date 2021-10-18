@@ -14,6 +14,13 @@
     @return $light-link;
   }
 }
+@function link-contrast-checker-hover($color) {
+  @if (lightness($color) > 70) {
+    @return $dark-link-hover;
+  } @else {
+    @return $light-link-hover;
+  }
+}
 
 $primary: #000048 !default;
 $accent1-light: #85a0f9 !default;
@@ -41,6 +48,10 @@ $dark: $primary;
 $light: $white;
 $dark-link: $accent2-dark;
 $light-link: $accent3-medium;
+$dark-link-hover: $primary;
+// $dark-link-hover: scale-color($accent2-dark, $lightness: -40%);
+$light-link-hover: scale-color($accent3-medium, $lightness: 75%);
+// $light-link-hover: $accent3-light;
 
 // ======================================================================
 // FOUNDATION PALETTE OVERRIDES
@@ -117,6 +128,8 @@ $border-palette: (
   gray-dark: $gray-dark,
   gray-medium: $gray-medium,
   gray-light: $gray-light,
+  gray-lighter: $gray-lighter,
+  gray-lightest: $gray-lightest,
   "white": $white,
 );
 
@@ -143,18 +156,6 @@ $gradient-overlay-palette: (
   black-60: rgba($black, 0.6),
   black-85: rgba($black, 0.85),
 );
-
-// ======================================================================
-// ANCHOR COLORS
-// ======================================================================
-// $anchor-color: $accent2-dark !default;
-$anchor-color-light: $accent3-medium !default;
-$anchor-color-medium: $accent2-medium !default;
-$anchor-color-dark: $accent2-dark !default;
-$anchor-color-hover: $accent2-dark !default;
-$anchor-color-hover-light: $accent3-dark !default;
-$anchor-color-hover-medium: $accent2-dark !default;
-$anchor-color-hover-dark: $accent2-dark !default;
 
 // ======================================================================
 // CSS VARIABLE COLORS

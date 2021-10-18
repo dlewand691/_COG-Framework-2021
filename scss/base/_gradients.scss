@@ -26,73 +26,135 @@ $bg-grd-theme-3: linear-gradient(
 .bg-grd-theme-1 {
   background: $bg-grd-theme-1;
   border: none;
-  color: contrast-checker($dark);
+  color: contrast-checker($dark) !important;
+
+  & :is(h1, h2, h3, h4, h5, h6, p, ul, li, ol, em, strong) {
+    color: inherit;
+  }
 }
 .bg-grd-theme-2 {
   background: $bg-grd-theme-2;
   border: none;
-  color: contrast-checker($dark);
+  color: contrast-checker($dark) !important;
+
+  & :is(h1, h2, h3, h4, h5, h6, p, ul, li, ol, em, strong) {
+    color: inherit;
+  }
 }
 .bg-grd-theme-3 {
   background: $bg-grd-theme-3;
   border: none;
   color: $primary;
-  color: contrast-checker($light);
+  color: contrast-checker($light) !important;
+
+  & :is(h1, h2, h3, h4, h5, h6, p, ul, li, ol, em, strong) {
+    color: inherit;
+  }
 }
 
 %bg-grd-accent2-radial,
 .bg-grd-accent2-radial {
+  color: contrast-checker($dark);
   background: radial-gradient(circle, $accent2-dark 0%, $primary 85%);
+
+  & :is(h1, h2, h3, h4, h5, h6, p, ul, li, ol, em, strong) {
+    color: inherit;
+  }
 }
 
 %bg-grd-accent2-radial-top,
 .bg-grd-accent2-radial-top {
+  color: contrast-checker($dark);
   background: radial-gradient(
     circle at top center,
     $accent2-dark 0%,
     $primary 85%
   );
+
+  & :is(h1, h2, h3, h4, h5, h6, p, ul, li, ol, em, strong) {
+    color: inherit;
+  }
 }
 
 .bg-grd-accent2-radial-bottom {
+  color: contrast-checker($dark);
   background: radial-gradient(
     circle at bottom center,
     $accent2-dark 0%,
     $primary 85%
   );
+
+  & :is(h1, h2, h3, h4, h5, h6, p, ul, li, ol, em, strong) {
+    color: inherit;
+  }
 }
 
 .bg-grd-dark-accent2-dark {
+  color: contrast-checker($dark);
   background: linear-gradient(
     90deg,
     $primary 0%,
     $accent2-dark 50%,
     $primary 100%
   );
+
+  & :is(h1, h2, h3, h4, h5, h6, p, ul, li, ol, em, strong) {
+    color: inherit;
+  }
 }
 
 .bg-grd-tb-dark-accent2-medium {
+  color: contrast-checker($dark);
   background: linear-gradient(0deg, $primary 0%, $accent2-dark 100%);
+
+  & :is(h1, h2, h3, h4, h5, h6, p, ul, li, ol, em, strong) {
+    color: inherit;
+  }
 }
 
 .bg-grd-bt-dark-accent2-medium {
+  color: contrast-checker($dark);
   background: linear-gradient(180deg, $primary 0%, $accent2-dark 100%);
+
+  & :is(h1, h2, h3, h4, h5, h6, p, ul, li, ol, em, strong) {
+    color: inherit;
+  }
 }
 
 .bg-grd-lr-dark-accent2-medium {
+  color: contrast-checker($dark);
   background: linear-gradient(90deg, $primary 0%, $accent2-dark 100%);
+
+  & :is(h1, h2, h3, h4, h5, h6, p, ul, li, ol, em, strong) {
+    color: inherit;
+  }
 }
 
 .bg-grd-rl-dark-accent2-medium {
+  color: contrast-checker($dark);
   background: linear-gradient(-90deg, $primary 0%, $accent2-dark 100%);
+
+  & :is(h1, h2, h3, h4, h5, h6, p, ul, li, ol, em, strong) {
+    color: inherit;
+  }
 }
 
 .bg-grd-tb-dark-primary {
+  color: contrast-checker($dark);
   background: linear-gradient(0deg, $primary 0%, $accent2-dark 100%);
+
+  & :is(h1, h2, h3, h4, h5, h6, p, ul, li, ol, em, strong) {
+    color: inherit;
+  }
 }
 
 .bg-grd-lr-dark-primary {
+  color: contrast-checker($dark);
   background: linear-gradient(90deg, $primary 0%, $accent2-dark 100%);
+
+  & :is(h1, h2, h3, h4, h5, h6, p, ul, li, ol, em, strong) {
+    color: inherit;
+  }
 }
 
 // -----  End of BACKGROUND GRADIENTS  ----------

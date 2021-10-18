@@ -59,3 +59,20 @@ hr.dark {
   border-image: $primary;
 }
 /* ----  End of DIVIDERS  ---------------------------- */
+
+hr {
+  &.bd-grd-theme-1 {
+    border-image: $bg-grd-theme-1 1;
+    border-width: 2px;
+  }
+
+  &.bd-grd-theme-2 {
+    border-image: $bg-grd-theme-2 1;
+    border-width: 2px;
+  }
+
+  &.bd-grd-theme-3 {
+    border-image: $bg-grd-theme-3 1;
+    border-width: 2px;
+  }
+}
