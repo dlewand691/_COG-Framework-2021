@@ -9,26 +9,16 @@
 =========================================================================================== */
 a,
 a:link {
-  // @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 16px, 20px);
-  // @include text-crop($top-adjustment: 0.4px, $bottom-adjustment: -0.25px);
   font-weight: $global-weight-bold;
   transition: $transition-fast;
-  // color: link-contrast-checker($anchor-color);
 
   &:hover {
     transition: $transition-fast;
     color: $primary;
-    // text-decoration: underline;
-    // text-decoration-color: inherit;
-    // text-decoration-thickness: 1px;
-    // text-underline-offset: 0.1rem;
-    // text-decoration-skip-ink: auto;
-    // color: scale-color($anchor-color, $lightness: -20%);
   }
 
   &:hover:not(.button) {
     transition: $transition-fast;
-    // color: scale-color($anchor-color, $lightness: -20%);
   }
 
   &.large {

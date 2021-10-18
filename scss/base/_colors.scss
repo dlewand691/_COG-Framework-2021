@@ -21,6 +21,15 @@
     @return $light-link-hover;
   }
 }
+@function heading-contrast-checker($color) {
+  @if (lightness($color) > 59) {
+    @return $accent2-dark;
+  } @else if (lightness($color) > 48) {
+    @return $accent2-dark;
+  } @else {
+    @return $accent2-light;
+  }
+}
 
 $primary: #000048 !default;
 $accent1-light: #85a0f9 !default;
@@ -52,6 +61,10 @@ $dark-link-hover: $primary;
 // $dark-link-hover: scale-color($accent2-dark, $lightness: -40%);
 $light-link-hover: scale-color($accent3-medium, $lightness: 75%);
 // $light-link-hover: $accent3-light;
+$dark-heading: $primary;
+$light-heading: $accent2-dark;
+$lighter-heading: $accent2-medium;
+$lightest-heading: $white;
 
 // ======================================================================
 // FOUNDATION PALETTE OVERRIDES

@@ -25,6 +25,10 @@ $breakpoint-classes: (small);
             color: inherit;
           }
 
+          & :is(h4, h5, h6) {
+            color: heading-contrast-checker($color);
+          }
+
           & a:not(.button),
           a:link:not(.button) {
             color: link-contrast-checker($color);
@@ -52,6 +56,10 @@ $breakpoint-classes: (small);
 
           & :is(h1, h2, h3, p, ul, li, ol, em, strong) {
             color: inherit;
+          }
+
+          & :is(h4, h5, h6) {
+            color: heading-contrast-checker($color);
           }
 
           & a:not(.button),
@@ -99,6 +107,18 @@ $breakpoint-classes: (small);
     &:hover {
       color: $anchor-color-hover;
     }
+  }
+}
+
+.bg-accent1-medium {
+  & :is(h4, h5, h6) {
+    color: $primary;
+  }
+}
+
+.bg-accent3-dark {
+  & :is(h4, h5, h6) {
+    color: $accent2-dark;
   }
 }
 
