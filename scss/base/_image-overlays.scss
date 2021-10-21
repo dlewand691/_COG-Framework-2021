@@ -54,6 +54,12 @@ $breakpoint-classes: (small medium large);
   %gradient-overlay-#{$color-name},
   .gradient-overlay-#{$color-name} {
     position: relative;
+    // background-color: $color;
+    // color: contrast-checker($color) !important;
+
+    & * {
+      // color: contrast-checker($color) !important;
+    }
 
     &::after {
       background-image: linear-gradient(
@@ -72,8 +78,13 @@ $breakpoint-classes: (small medium large);
   %gradient-overlay-#{$color-name}-full,
   .gradient-overlay-#{$color-name}-full {
     position: relative;
+    // background-color: $color;
     // color: contrast-checker($color-name);
-    color: contrast-checker($color);
+    // color: contrast-checker($color) !important;
+
+    & * {
+      // color: contrast-checker($color) !important;
+    }
 
     &::after {
       background-image: linear-gradient(
@@ -92,7 +103,12 @@ $breakpoint-classes: (small medium large);
   %gradient-overlay-#{$color-name}-angled,
   .gradient-overlay-#{$color-name}-angled {
     position: relative;
-    color: contrast-checker($color);
+    // background-color: $color;
+    // color: contrast-checker($color) !important;
+
+    & * {
+      // color: contrast-checker($color) !important;
+    }
 
     &::after {
       background-image: linear-gradient(
@@ -132,19 +148,29 @@ $breakpoint-classes: (small medium large);
     @each $color-name, $color in $image-color-overlay-palette {
       @if $size != $-zf-zero-breakpoint {
         .#{$size}-bgOverlay-#{$color-name} {
+          // background-color: $color;
           background-image: linear-gradient(
             rgba($color, 0.55),
             rgba($color, 0.55)
           );
-          color: contrast-checker($color);
+          color: header-contrast-checker($color) !important;
+
+          & * {
+            // color: contrast-checker($color) !important;
+          }
         }
       } @else {
         .bgOverlay-#{$color-name} {
+          // background-color: $color;
           background-image: linear-gradient(
             rgba($color, 0.55),
             rgba($color, 0.55)
           );
-          color: contrast-checker($color);
+          color: contrast-checker($color) !important;
+
+          & * {
+            // color: contrast-checker($color) !important;
+          }
         }
       }
     }

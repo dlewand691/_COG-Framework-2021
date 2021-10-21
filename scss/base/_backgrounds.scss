@@ -21,11 +21,11 @@ $breakpoint-classes: (small);
           background-color: #{$color};
           color: contrast-checker($color);
 
-          & :is(h1, h2, h3, p, ul, li, ol, em, strong) {
+          & :is(h1, h2, h3, p, ul, li, ol, em, strong):not(.menu) {
             color: inherit;
           }
 
-          & :is(h4, h5, h6) {
+          & :is(h4, h5, h6):not(.menu) {
             color: heading-contrast-checker($color);
           }
 
@@ -54,11 +54,11 @@ $breakpoint-classes: (small);
           background-color: #{$color};
           color: contrast-checker($color);
 
-          & :is(h1, h2, h3, p, ul, li, ol, em, strong) {
+          & :is(h1, h2, h3, p, ul, li, ol, em, strong):not(.menu) {
             color: inherit;
           }
 
-          & :is(h4, h5, h6) {
+          & :is(h4, h5, h6):not(.menu) {
             color: heading-contrast-checker($color);
           }
 
@@ -96,7 +96,7 @@ $breakpoint-classes: (small);
 .bg-gray-medium {
   color: $primary;
 
-  & :is(h1, h2, h3, p, ul, li, ol, em, strong) {
+  & :is(h1, h2, h3, p, ul, li, ol, em, strong):not(.menu) {
     color: inherit;
   }
 

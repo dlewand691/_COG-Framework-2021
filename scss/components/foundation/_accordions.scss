@@ -143,6 +143,22 @@ a.accordion-title:hover {
   .accordion-gradient-#{$i} {
     background: mix($accent2-dark, $primary, $i);
   }
+  .accordion-gradient-theme-2-#{$i} {
+    background: mix($red, $primary, $i);
+  }
+  .accordion-gradient-theme-3-#{$i} {
+    background: mix($yellow, $accent2-dark, $i);
+  }
+}
+
+[class*="accordion-gradient-theme-3"] {
+  .accordion-title {
+    color: $primary !important;
+
+    &:before {
+      color: $primary !important;
+    }
+  }
 }
 /* ==============================  BLUE BACKGROUND COLOR STEPS  ============================== */
 @for $i from 0 through 100 {

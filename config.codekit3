@@ -9,6 +9,12 @@
   ],
   "creatorBuild" : "34214",
   "files" : {
+    "\/_BUILD" : {
+      "ft" : 65536,
+      "oA" : 1,
+      "oAP" : "\/_BUILD\/_BUILD",
+      "oF" : 0
+    },
     "\/.history" : {
       "ft" : 65536,
       "oA" : 1,
@@ -126,13 +132,13 @@
       "sC" : 3,
       "tS" : 1
     },
-    "\/js\/cognizant-framework-2020.js" : {
+    "\/js\/cognizant-framework-2021.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 3,
       "mi" : 2,
       "oA" : 1,
-      "oAP" : "\/_BUILD\/js\/min\/cognizant-framework-2020-min.js",
+      "oAP" : "\/_BUILD\/js\/min\/cognizant-framework-2021-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -744,6 +750,17 @@
       "mi" : 2,
       "oA" : 1,
       "oAP" : "\/_BUILD\/node_modules\/motion-ui\/dist\/min\/motion-ui-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/node_modules\/swiper\/swiper-bundle.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 3,
+      "mi" : 2,
+      "oA" : 1,
+      "oAP" : "\/_BUILD\/node_modules\/swiper\/min\/swiper-bundle-min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1

@@ -61,7 +61,7 @@
 // ======================================================================
 // @codekit-prepend 'lazysizes/lazysizes.js'
 // @codekit-prepend 'lazysizes/plugins/unveilhooks/ls.unveilhooks.js'
-// @codekit-prepend 'swiper/swiper-bundle.min.js'
+// @codekit-prepend "swiper/swiper-bundle.js"
 // @codekit-prepend 'aos/dist/aos.js'
 
 $(document).foundation();
@@ -181,30 +181,32 @@ $(document).ready(function () {
 //      ██ ██ ███ ██ ██ ██      ██      ██   ██
 // ███████  ███ ███  ██ ██      ███████ ██   ██
 // ======================================================================
-var swiper = new Swiper(".swiper-container", {
-  loop: true,
-  autoHeight: true,
-  centeredSlides: true,
-  grabCursor: true,
-  preloadImages: false,
-  lazy: {
-    loadPrevNext: true,
-    loadPrevNextAmount: 5,
-  },
-  loadOnTransitionStart: true,
-  keyboard: {
-    enabled: true,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    type: "bullets",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  // observer: true,
-  // observeParents: true
-});
+window.onload = function () {
+  const swiper = new Swiper(".swiper", {
+    loop: true,
+    autoHeight: true,
+    centeredSlides: true,
+    grabCursor: true,
+    preloadImages: false,
+    lazy: {
+      loadPrevNext: true,
+      loadPrevNextAmount: 5,
+    },
+    loadOnTransitionStart: true,
+    keyboard: {
+      enabled: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    // observer: true,
+    // observeParents: true
+  });
+};
 // -----  End of SWIPER  -----------------------------------

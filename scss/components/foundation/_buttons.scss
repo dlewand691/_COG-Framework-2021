@@ -90,24 +90,18 @@
     }
   }
 
-  // &.white {
-  //   color: $accent3-dark;
-  //   background: $white;
+  &.white {
+    color: $accent2-dark;
+    background: $white;
 
-  //   &:after {
-  //     color: $accent3-dark;
-  //   }
+    &:after {
+      color: $accent2-dark;
+    }
 
-  //   &:hover {
-  //     background: darken($white, 5%);
-  //   }
-
-  //   &.accent2-bright-hover {
-  //     &:hover {
-  //       color: $accent3-medium;
-  //     }
-  //   }
-  // }
+    &:hover {
+      background: darken($white, 5%);
+    }
+  }
 
   // &.disabled {
   //   background: rgba($black, 0.15);
@@ -287,6 +281,7 @@
     &::after {
       content: "\e908";
       font-family: "Cognizant-Icons";
+      position: unset;
     }
   }
 

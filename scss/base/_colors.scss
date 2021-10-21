@@ -103,6 +103,9 @@ $text-color-palette: (
 // ======================================================================
 $background-palette: (
   primary: $primary,
+  primary-30: rgba($primary, 0.3),
+  primary-60: rgba($primary, 0.6),
+  primary-85: rgba($primary, 0.85),
   accent1-light: $accent1-light,
   accent1-medium: $accent1-medium,
   accent1-dark: $accent1-dark,
@@ -114,9 +117,7 @@ $background-palette: (
   accent3-dark: $accent3-dark,
   "white": $white,
   white-60: rgba($white, 0.6),
-  "black": $black,
-  black-30: rgba($black, 0.3),
-  black-60: rgba($black, 0.6),
+  white-85: rgba($white, 0.85),
   gray-dark: $gray-dark,
   gray-medium: $gray-medium,
   gray-light: $gray-light,

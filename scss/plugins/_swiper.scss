@@ -57,7 +57,7 @@ $themeColor: $accent3-medium;
 
 // ====================  BLUE ARROWS  ====================
 .accent2-arrows {
-  --swiper-navigation-color: #{$primary};
+  --swiper-navigation-color: #{$accent2-medium};
   color: var(--swiper-navigation-color);
 }
 
@@ -76,7 +76,7 @@ $themeColor: $accent3-medium;
 // ====================  WHITE ARROWS  ====================
 .white-arrows {
   --swiper-navigation-color: #{$white};
-  color: var(--swiper-navigation-color);
+  // color: var(--swiper-navigation-color);
 }
 
 // ===================================================================================
@@ -108,7 +108,7 @@ $themeColor: $accent3-medium;
   width: 2rem;
   height: 5px;
   margin: 0 5px;
-  border-radius: 0;
+  border-radius: 0 !important;
 }
 
 /* ==============================  WHITE CONTROLS  ============================== */
@@ -124,7 +124,7 @@ $themeColor: $accent3-medium;
 
 /* ==============================  BLUE CONTROLS  ============================== */
 .accent2-pagination [class*="swiper-pagination"] [class*="swiper-pagination"] {
-  --swiper-pagination-color: #{$primary};
+  --swiper-pagination-color: #{$accent2-medium};
   background: var(--swiper-pagination-color);
 }
 

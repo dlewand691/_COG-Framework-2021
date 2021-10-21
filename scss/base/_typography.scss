@@ -351,11 +351,13 @@ $text-alignments: ("left", "right", "center");
   @include breakpoint($size) {
     @each $color-name, $color in $text-color-palette {
       @if $size != $-zf-zero-breakpoint {
-        .#{$size}-text-#{$color-name} {
+        .#{$size}-text-#{$color-name},
+        .#{$size}-text-#{$color-name} *:not(a, a:link, i, span) {
           color: $color !important;
         }
       } @else {
-        .text-#{$color-name} {
+        .text-#{$color-name},
+        .text-#{$color-name} *:not(a, a:link, i, span) {
           color: $color !important;
         }
       }
