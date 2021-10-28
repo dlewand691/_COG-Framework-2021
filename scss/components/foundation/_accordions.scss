@@ -160,29 +160,6 @@ a.accordion-title:hover {
     }
   }
 }
-/* ==============================  BLUE BACKGROUND COLOR STEPS  ============================== */
-@for $i from 0 through 100 {
-  .bg-steps-accent2-#{$i} {
-    background: mix($accent2-dark, $primary, $i);
-
-    > a {
-      background: none !important;
-      box-shadow: none !important;
-    }
-  }
-}
-/* ==============================  GREEN BACKGROUND COLOR STEPS  ============================== */
-// @for $i from 0 through 100 {
-//     .bg-steps-green-#{$i} {
-//         background: mix($green-dark, $green, $i);
-//
-//         > a {
-//             background: none !important;
-//             box-shadow: none !important;
-//         }
-//     }
-// }
-// -----  End of BACKGROUND GRADIENT STEPS  ----------
 
 // ===================================================================================
 // ██████   █████  ██████  ██   ██     ███    ███  ██████  ██████  ███████

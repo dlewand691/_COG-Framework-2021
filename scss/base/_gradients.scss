@@ -145,4 +145,19 @@
   }
 }
 
+/* ==============================  BLUE BACKGROUND COLOR STEPS  ============================== */
+@for $i from 0 through 100 {
+  .bg-steps-#{$i} {
+    background: mix($accent2-dark, $primary, $i);
+
+    a,
+    a:link {
+      background: none;
+      box-shadow: none;
+      color: $white;
+    }
+  }
+}
+// -----  End of BACKGROUND GRADIENT STEPS  ----------
+
 // -----  End of BACKGROUND GRADIENTS  ----------
