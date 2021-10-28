@@ -130,7 +130,7 @@ body {
 h1 {
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 36px, 84px);
   @include fluidSize(line-height, 320px, $cog-bp--desktop-xl, 36px, 92.4px);
-  font-weight: bold;
+  font-weight: $global-weight-bold;
   font-feature-settings: "ss00";
   // @include font-size(84px);
   // font-size     : var(--step-5);
@@ -143,7 +143,7 @@ h1 {
 h2 {
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 32px, 63px);
   @include fluidSize(line-height, 320px, $cog-bp--desktop-xl, 32px, 69.3px);
-  font-weight: bold;
+  font-weight: $global-weight-bold;
   font-feature-settings: "ss00";
   // @include font-size(63px);
   // font-size  : var(--step-4);
@@ -154,7 +154,7 @@ h2 {
 .h3,
 h3 {
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 28px, 47px);
-  font-weight: bold;
+  font-weight: $global-weight-bold;
   font-feature-settings: "ss00";
   // @include font-size(47px);
   // font-size: var(--step-3);
@@ -176,7 +176,6 @@ h4 {
 h5 {
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 22px, 27px);
   font-weight: $global-weight-normal;
-  font-weight: normal;
   font-feature-settings: "ss00";
   color: $accent2-dark;
   // @include font-size(27px);
@@ -188,7 +187,6 @@ h5 {
 h6 {
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 20px, 20px);
   font-weight: $global-weight-bold;
-  font-weight: bold;
   font-feature-settings: "ss01";
   color: $accent2-dark;
   // @include font-size(20px);

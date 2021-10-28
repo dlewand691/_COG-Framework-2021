@@ -13,6 +13,7 @@ footer,
     font-weight: normal;
     color: $body-font-color;
     transition: $transition-default;
+    text-decoration: none;
 
     &:hover {
       color: $anchor-color;
@@ -25,7 +26,7 @@ footer,
   }
 
   .footer-primary {
-    background-color: $gray-light;
+    background-color: $gray-lighter;
   }
 }
 

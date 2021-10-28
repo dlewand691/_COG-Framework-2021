@@ -62,17 +62,17 @@ hr.dark {
 
 hr {
   &.bd-grd-theme-1 {
-    border-image: $bg-grd-theme-1 1;
+    border-image: $grd-theme-1 1;
     border-width: 4px;
   }
 
   &.bd-grd-theme-2 {
-    border-image: $bg-grd-theme-2 1;
+    border-image: $grd-theme-2 1;
     border-width: 4px;
   }
 
   &.bd-grd-theme-3 {
-    border-image: $bg-grd-theme-3 1;
+    border-image: $grd-theme-3 1;
     border-width: 4px;
   }
 }

@@ -100,8 +100,8 @@ $breakpoint-classes: (small);
     color: inherit;
   }
 
-  & a,
-  & a:link {
+  & > a,
+  & > a:link {
     color: $primary !important;
 
     &:hover {
@@ -112,13 +112,13 @@ $breakpoint-classes: (small);
 
 .bg-accent1-medium {
   & :is(h4, h5, h6) {
-    color: $primary;
+    color: $primary !important;
   }
 }
 
 .bg-accent3-dark {
   & :is(h4, h5, h6) {
-    color: $accent2-dark;
+    color: $accent2-dark !important;
   }
 }
 

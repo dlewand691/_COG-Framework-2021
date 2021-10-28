@@ -25,7 +25,7 @@
   // ======================================================================
   .cog-logo {
     transition: $transition-default;
-    @include fluidSize(width, 320px, $cog-bp--desktop-xl, 100px, 200px);
+    @include fluidSize(width, 320px, $cog-bp--desktop-xl, 150px, 250px);
   }
 
   .secondary-nav .cog-logo {
@@ -212,6 +212,46 @@
     }
   }
 
+  #navSubBar {
+    hyphens: auto;
+  }
+  /* ====================================================================================
+
+███    ██  █████  ██    ██
+████   ██ ██   ██ ██    ██
+██ ██  ██ ████████ ██    ██
+██  ██ ██ ██   ██  ██  ██
+██   ████ ██   ██   ████
+██████  ██      ██    ██ ███████     ██████   █████  ██████
+██   ██ ██      ██    ██ ██          ██   ██ ██   ██ ██   ██
+██████  ██      ██    ██ █████       ██████  ███████ ██████
+██   ██ ██      ██    ██ ██          ██   ██ ██   ██ ██   ██
+██████  ███████  ██████  ███████     ██████  ██   ██ ██   ██
+
+==================================================================================== */
+  .navBarInPage {
+    & a {
+      // color: $white !important;
+
+      &:hover {
+        // color: $accent3-medium !important;
+        background: rgba($white, 0.2) !important;
+      }
+    }
+
+    & a.is-active {
+      // background: transparentize($white, .80) !important;
+      background: $accent3-medium !important;
+      color: $primary !important;
+
+      &:hover {
+        // color: white !important;
+        background: $accent3-dark !important;
+      }
+    }
+  }
+  // -----  End of NAV BLUE BAR  ----------
+
   // ======================================================================
   // ████████ ██ ████████ ██      ███████     ██████   █████  ██████
   //  ██    ██    ██    ██      ██          ██   ██ ██   ██ ██   ██
@@ -293,8 +333,8 @@
 // ======================================================================
 .theme-primary {
   @include nav-overrides(
-    $dropdownmenu-submenu-background: $accent2-dark,
-    $dropdown-menu-item-background-active: $accent2-dark,
+    $dropdownmenu-submenu-background: $primary,
+    $dropdown-menu-item-background-active: $primary,
     $dropdown-arrow-color: $accent3-medium,
     $sticky-background: rgba($primary, 0.85),
     $sticky-background-stuck: rgba($primary, 0.85),
@@ -302,7 +342,7 @@
     $anchor-color: $white,
     $anchor-color-hover: $accent3-medium,
     $secondary-nav-background: $primary,
-    $language-menu-background: $accent2-dark,
+    $language-menu-background: $primary,
     $hamburger-color: $accent3-medium
   );
 }

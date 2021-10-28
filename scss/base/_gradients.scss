@@ -11,20 +11,8 @@
 //  ██████  ██   ██ ██   ██ ██████  ██ ███████ ██   ████    ██    ███████
 // ======================================================================
 
-$bg-grd-theme-1: linear-gradient(35deg, #2d2d8f 10%, #006fba 50%, #21fceb 94%);
-
-$bg-grd-theme-2: linear-gradient(35deg, #010065 15%, #d43635 65%, #f3c9ce 100%);
-
-$bg-grd-theme-3: linear-gradient(
-  35deg,
-  #5e93ef 10%,
-  #c7ed88 65%,
-  #eee2a0 85%,
-  #efe34a 100%
-);
-
 .bg-grd-theme-1 {
-  background: $bg-grd-theme-1;
+  background: $grd-theme-1;
   border: none;
   color: contrast-checker($dark) !important;
 
@@ -33,7 +21,7 @@ $bg-grd-theme-3: linear-gradient(
   }
 }
 .bg-grd-theme-2 {
-  background: $bg-grd-theme-2;
+  background: $grd-theme-2;
   border: none;
   color: contrast-checker($dark) !important;
 
@@ -42,7 +30,7 @@ $bg-grd-theme-3: linear-gradient(
   }
 }
 .bg-grd-theme-3 {
-  background: $bg-grd-theme-3;
+  background: $grd-theme-3;
   border: none;
   color: $primary;
   color: contrast-checker($light) !important;

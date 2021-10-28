@@ -153,8 +153,8 @@
   //   }
   // }
 
-  &.bg-grd-theme-1:hover,
-  &.bg-grd-theme-2:hover {
+  &.grd-theme-1:hover,
+  &.grd-theme-2:hover {
     color: $white;
   }
 
@@ -189,7 +189,7 @@
     }
 
     &:hover:before {
-      background: $bg-grd-theme-1;
+      background: $grd-theme-1;
       opacity: 1;
     }
     &:hover {
@@ -205,7 +205,7 @@
     }
 
     &:hover:before {
-      background: $bg-grd-theme-2;
+      background: $grd-theme-2;
       opacity: 1;
     }
     &:hover {
@@ -220,7 +220,7 @@
     }
 
     &:hover:before {
-      background: $bg-grd-theme-3;
+      background: $grd-theme-3;
       opacity: 1;
     }
     &:hover {

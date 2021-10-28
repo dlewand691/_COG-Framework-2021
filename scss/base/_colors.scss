@@ -67,6 +67,36 @@ $lighter-heading: $accent2-medium;
 $lightest-heading: $white;
 
 // ======================================================================
+// GRADIENTS
+// ======================================================================
+$grd-dir-0deg: 0deg;
+$grd-dir-45deg: 45deg;
+$grd-dir-90deg: 90deg;
+$grd-dir-180deg: 180deg;
+$grd-dir-225deg: 225deg;
+$grd-dir-270deg: 270deg;
+$grd-dir-315deg: 315deg;
+$grd-theme-1: linear-gradient(
+  $grd-dir-45deg,
+  #2d2d8f 10%,
+  #006fba 50%,
+  #21fceb 94%
+);
+$grd-theme-2: linear-gradient(
+  $grd-dir-45deg,
+  #010065 15%,
+  #d43635 65%,
+  #f3c9ce 100%
+);
+$grd-theme-3: linear-gradient(
+  $grd-dir-45deg,
+  #5e93ef 10%,
+  #c7ed88 65%,
+  #eee2a0 85%,
+  #efe34a 100%
+);
+
+// ======================================================================
 // FOUNDATION PALETTE OVERRIDES
 // ======================================================================
 $cog-color-palette: (
@@ -147,6 +177,12 @@ $border-palette: (
   "white": $white,
 );
 
+$border-gradient-palette: (
+  grd-theme-1: $grd-theme-1,
+  grd-theme-2: $grd-theme-2,
+  grd-theme-3: $grd-theme-3,
+);
+
 // ======================================================================
 // OVERLAY COLORS
 // ======================================================================
@@ -155,7 +191,6 @@ $image-color-overlay-palette: (
   accent2-light: $accent2-light,
   accent2-dark: $accent2-dark,
   "white": $white,
-  "black": $black,
 );
 
 // ======================================================================
@@ -165,10 +200,9 @@ $gradient-overlay-palette: (
   primary: $primary,
   accent2-dark: $accent2-dark,
   "white": $white,
-  "black": $black,
-  black-50: rgba($black, 0.5),
-  black-60: rgba($black, 0.6),
-  black-85: rgba($black, 0.85),
+  primary-50: rgba($primary, 0.5),
+  primary-60: rgba($primary, 0.6),
+  primary-85: rgba($primary, 0.85),
 );
 
 // ======================================================================

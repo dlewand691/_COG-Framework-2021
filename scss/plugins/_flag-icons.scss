@@ -1,8 +1,8 @@
-$flag-icon-css-path: '../images/flags';
+$flag-icon-css-path: "../images/flags";
 // @import "flag-icon-css/sass/flag-icon";
 
-@import '../node_modules/flag-icon-css/sass/_variables';
-@import '../node_modules/flag-icon-css/sass/flag-icon-base';
+@import "../node_modules/flag-icon-css/sass/_variables";
+@import "../node_modules/flag-icon-css/sass/flag-icon-base";
 
 @if variable-exists(include) {
   @each $country in $include {
