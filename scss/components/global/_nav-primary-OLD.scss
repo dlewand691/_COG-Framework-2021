@@ -10,10 +10,10 @@
   // position   : absolute;
   // top        : calc(50% - .5rem);
   // right      : 0;
-  content    : "\e908";
-  color      : $green;
+  content: "\e908";
+  color: $green;
   font-family: "Cognizant-Icons";
-  font-size  : $small-font-size;
+  font-size: $small-font-size;
 }
 
 .header-menu {
@@ -23,25 +23,25 @@
   }
 
   i {
-    display     : inline;
+    display: inline;
     padding-left: 0.25rem;
 
     &:after {
       position: relative;
-      top     : -0.05rem;
+      top: -0.05rem;
     }
   }
 
   .nav-primaryLink {
-    position  : relative;
-    display   : inline-block;
+    position: relative;
+    display: inline-block;
     // margin-left: 0.5rem;
-    padding   : 1rem;
+    padding: 1rem;
     transition: all 0.5s ease;
-    color     : $black;
+    color: $black;
 
     &:hover {
-      color     : $white;
+      color: $white;
       background: $blue;
     }
 
@@ -49,11 +49,11 @@
       padding: 1rem 2rem 1rem 1rem;
 
       &::after {
-        position   : absolute;
-        top        : calc(50% - .5rem);
-        right      : 0.75rem;
-        content    : "\e903";
-        color      : $green;
+        position: absolute;
+        top: calc(50% - 0.5rem);
+        right: 0.75rem;
+        content: "\e903";
+        color: $green;
         font-family: "Cognizant-Icons";
         font-weight: 600;
       }
@@ -65,8 +65,8 @@
   }
 
   .dropdown-pane {
-    left  : 0 !important;
-    width : 100vw;
+    left: 0 !important;
+    width: 100vw;
     height: 100vh;
 
     div {
@@ -75,7 +75,7 @@
 
     li {
       margin-bottom: 0;
-      transition   : all 0.5s ease;
+      transition: all 0.5s ease;
 
       &:hover {
         background: darken($blue, 5%);
@@ -83,11 +83,11 @@
     }
 
     a {
-      display    : inline-block;
-      padding    : 0.35rem 0.5rem 0.5rem;
-      color      : $white;
+      display: inline-block;
+      padding: 0.35rem 0.5rem 0.5rem;
+      color: $white;
       font-weight: normal;
-      width      : 100%;
+      width: 100%;
 
       &:hover {
         background: initial;
@@ -98,7 +98,7 @@
         // display: inline;
       }
 
-      // &.no-arrow:after {
+      // &.no-arrow::after {
       //     content: '';
       // }
     }
@@ -127,8 +127,8 @@
   }
 
   a {
-    display    : inline;
-    color      : $black;
+    display: inline;
+    color: $black;
     font-weight: normal;
 
     &:hover {

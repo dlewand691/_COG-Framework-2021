@@ -11,9 +11,9 @@
 //  ██████  ██████  ███████  ██████  ██   ██ ███████
 // ===================================================================================
 $breakpoint-classes: (small);
-@each $size in $breakpoint-classes {
-  @include breakpoint($size) {
-    @each $color-name, $color in $background-palette {
+@each $color-name, $color in $background-palette {
+  @each $size in $breakpoint-classes {
+    @include breakpoint($size) {
       @if $size != $-zf-zero-breakpoint {
         .#{$size}-bg-#{$color-name} {
           // background-color: var(--#{$color-name});
@@ -94,12 +94,6 @@ $breakpoint-classes: (small);
 .bg-accent3-dark,
 .bg-gray-light,
 .bg-gray-medium {
-  color: $primary;
-
-  & :is(h1, h2, h3, p, ul, li, ol, em, strong):not(.menu) {
-    color: inherit;
-  }
-
   & > a,
   & > a:link {
     color: $primary !important;
@@ -107,18 +101,6 @@ $breakpoint-classes: (small);
     &:hover {
       color: $anchor-color-hover;
     }
-  }
-}
-
-.bg-accent1-medium {
-  & :is(h4, h5, h6) {
-    color: $primary !important;
-  }
-}
-
-.bg-accent3-dark {
-  & :is(h4, h5, h6) {
-    color: $accent2-dark !important;
   }
 }
 

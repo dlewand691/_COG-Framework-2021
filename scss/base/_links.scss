@@ -29,13 +29,15 @@ a:link {
   }
 }
 
+p a,
+p a:link,
 a.small,
 a.tiny {
-  // text-decoration: underline;
-  // text-decoration-color: inherit;
-  // text-decoration-thickness: 1px;
-  // text-underline-offset: 0.1rem;
-  // text-decoration-skip-ink: auto;
+  text-decoration: underline;
+  text-decoration-color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.1rem;
+  text-decoration-skip-ink: auto;
 }
 
 a.link-coverAll::before {
@@ -59,13 +61,6 @@ a.link-coverAll::before {
   a,
   a:link {
     color: $white;
-  }
-}
-
-.link-black {
-  a,
-  a:link {
-    color: $black;
   }
 }
 

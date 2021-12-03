@@ -32,8 +32,8 @@ $sidelines-double-line-spacing: 0.5em !default;
     padding-right: $text-padding;
     padding-left: $text-padding;
 
-    &:after,
-    &:before {
+    &::after,
+    &::before {
       position: absolute;
       top: 50%;
       width: $line-length;
@@ -56,11 +56,11 @@ $sidelines-double-line-spacing: 0.5em !default;
       }
     }
 
-    &:before {
+    &::before {
       right: 100%;
     }
 
-    &:after {
+    &::after {
       left: 100%;
     }
   }

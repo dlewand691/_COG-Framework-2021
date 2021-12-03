@@ -21,13 +21,14 @@
   }
 
   &.back {
-    &:after {
+    // padding-left: 0.9rem;
+    &::after {
       content: "";
     }
-    &:before {
+    &::before {
       margin-right: 0.5rem;
+      margin-left: -2px;
       content: "\e905";
-      // color: $white;
       font-family: "Cognizant-Icons";
       font-weight: 600;
       font-size: initial;
@@ -37,7 +38,7 @@
   }
 
   &.download {
-    &:after {
+    &::after {
       position: unset;
       right: unset;
       width: unset;
@@ -51,12 +52,12 @@
       font-size: initial;
     }
 
-    &:before {
+    &::before {
       content: "";
     }
   }
 
-  &.video:after {
+  &.video::after {
     position: unset;
     right: unset;
     width: unset;
@@ -85,7 +86,7 @@
       font-size: 1.2em;
     }
 
-    &:before {
+    &::before {
       content: "";
     }
   }
@@ -94,7 +95,7 @@
     color: $accent2-dark;
     background: $white;
 
-    &:after {
+    &::after {
       color: $accent2-dark;
     }
 
@@ -188,7 +189,7 @@
       opacity: 0;
     }
 
-    &:hover:before {
+    &:hover::before {
       background: $grd-theme-1;
       opacity: 1;
     }
@@ -204,7 +205,7 @@
       opacity: 0;
     }
 
-    &:hover:before {
+    &:hover::before {
       background: $grd-theme-2;
       opacity: 1;
     }
@@ -219,7 +220,7 @@
       opacity: 0;
     }
 
-    &:hover:before {
+    &:hover::before {
       background: $grd-theme-3;
       opacity: 1;
     }
@@ -257,6 +258,8 @@
 .arrow {
   display: inline-flex;
   align-items: center;
+  padding-right: 0.9rem;
+  display: inline-block;
   // margin-right: 1rem;
 
   &:last-of-type {
@@ -275,6 +278,7 @@
     font-family: "Cognizant-Icons";
     font-weight: bold;
     color: inherit;
+    display: inline-block;
   }
 
   &.arrow-solid {
@@ -328,7 +332,7 @@
     //     background: none;
     //   }
 
-    //   &:after {
+    //   &::after {
     //     color: inherit;
     //   }
     // }

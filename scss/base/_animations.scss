@@ -620,8 +620,8 @@ $chevron-base: 5px;
     will-change: auto;
   }
 
-  .chevron:after,
-  .chevron:before {
+  .chevron::after,
+  .chevron::before {
     content: "";
     position: absolute;
     top: 0;
@@ -630,12 +630,12 @@ $chevron-base: 5px;
     background: $color;
   }
 
-  .chevron:before {
+  .chevron::before {
     left: 0px;
     transform: skewY(45deg);
   }
 
-  .chevron:after {
+  .chevron::after {
     right: 0px;
     width: 50%;
     transform: skewY(-45deg);

@@ -1,3 +1,17 @@
+// Adapted backgrounds
+// https://medium.com/societe-generale-design/adaptive-accessible-and-automated-colour-for-design-systems-6b4b9e2942e8
+// @each $background in $sgbs-adaptive-backgrounds {
+//   @each $name, $color in map-get($sgbs-adaptive-palette, $background) {
+//     $adapted_color: map-get(
+//       map-get($sgbs-adaptive-palette, $background),
+//       $name
+//     );
+//     .#{$background} .bg-#{$name} {
+//       background-color: $color !important;
+//     }
+//   }
+// }
+
 // Dynamically change text color based on its background with Sass
 // http://zerosixthree.se/dynamically-change-text-color-with-sass/
 @function contrast-checker($color) {
@@ -7,13 +21,15 @@
     @return $white;
   }
 }
+
 @function link-contrast-checker($color) {
-  @if (lightness($color) > 70) {
+  @if (lightness($color) > 50) {
     @return $dark-link;
   } @else {
     @return $light-link;
   }
 }
+
 @function link-contrast-checker-hover($color) {
   @if (lightness($color) > 70) {
     @return $dark-link-hover;
@@ -21,13 +37,14 @@
     @return $light-link-hover;
   }
 }
+
 @function heading-contrast-checker($color) {
-  @if (lightness($color) > 59) {
+  @if (lightness($color) > 79) {
     @return $accent2-dark;
   } @else if (lightness($color) > 48) {
-    @return $accent2-dark;
+    @return $primary;
   } @else {
-    @return $accent2-light;
+    @return $white;
   }
 }
 
@@ -118,12 +135,11 @@ $text-color-palette: (
   accent2-light: $accent2-light,
   accent2-medium: $accent2-medium,
   accent2-dark: $accent2-dark,
-  accent3-light: $accent3-light,
-  accent3-medium: $accent3-medium,
-  accent3-dark: $accent3-dark,
   "white": $white,
   "black": $black,
   "gray-light": $gray-light,
+  "gray-lighter": $gray-lighter,
+  "gray-lightest": $gray-lightest,
   gray-medium: $gray-medium,
   gray-dark: $gray-dark,
 );
@@ -142,9 +158,6 @@ $background-palette: (
   accent2-light: $accent2-light,
   accent2-medium: $accent2-medium,
   accent2-dark: $accent2-dark,
-  accent3-light: $accent3-light,
-  accent3-medium: $accent3-medium,
-  accent3-dark: $accent3-dark,
   "white": $white,
   white-60: rgba($white, 0.6),
   white-85: rgba($white, 0.85),
@@ -166,9 +179,6 @@ $border-palette: (
   accent2-light: $accent2-light,
   accent2-medium: $accent2-medium,
   accent2-dark: $accent2-dark,
-  accent3-light: $accent3-light,
-  accent3-medium: $accent3-medium,
-  accent3-dark: $accent3-dark,
   gray-dark: $gray-dark,
   gray-medium: $gray-medium,
   gray-light: $gray-light,

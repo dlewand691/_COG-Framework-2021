@@ -34,22 +34,22 @@ $themeColor: $accent3-medium;
 // ██   ██ ██   ██ ██   ██ ██    ██ ██ ███ ██      ██
 // ██   ██ ██   ██ ██   ██  ██████   ███ ███  ███████
 // ===================================================================================
-.swiper-button-next:after,
-.swiper-button-prev:after {
+.swiper-button-next::after,
+.swiper-button-prev::after {
   font-family: "Cognizant-Icons";
   @include fluidSize(font-size, 20rem, 70rem, 1.25rem, 2rem);
   font-weight: 600;
 }
 
 .swiper-button-prev {
-  &:after {
+  &::after {
     content: "\e905";
   }
   @include fluidSize(left, 20rem, 70rem, 0rem, 0.5rem);
 }
 
 .swiper-button-next {
-  &:after {
+  &::after {
     content: "\e907";
   }
   @include fluidSize(right, 20rem, 70rem, 0rem, 0.5rem);
@@ -123,24 +123,24 @@ $themeColor: $accent3-medium;
 }
 
 /* ==============================  BLUE CONTROLS  ============================== */
-.accent2-pagination [class*="swiper-pagination"] [class*="swiper-pagination"] {
-  --swiper-pagination-color: #{$accent2-medium};
+.accent3-pagination [class*="swiper-pagination"] [class*="swiper-pagination"] {
+  --swiper-pagination-color: #{$accent3-medium};
   background: var(--swiper-pagination-color);
 }
 
 /* ==============================  BLUE MEDIUM CONTROLS  ============================== */
-.accent2-medium-pagination
+.accent3-medium-pagination
   [class*="swiper-pagination"]
   [class*="swiper-pagination"] {
-  --swiper-pagination-color: #{$accent2-medium};
+  --swiper-pagination-color: #{$accent3-medium};
   background: var(--swiper-pagination-color);
 }
 
 /* ==============================  BLUE LIGHT CONTROLS  ============================== */
-.accent2-light-pagination
+.accent3-light-pagination
   [class*="swiper-pagination"]
   [class*="swiper-pagination"] {
-  --swiper-pagination-color: #{$accent2-light};
+  --swiper-pagination-color: #{$accent3-light};
   background: var(--swiper-pagination-color);
 }
 
