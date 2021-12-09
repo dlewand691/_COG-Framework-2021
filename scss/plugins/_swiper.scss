@@ -34,6 +34,14 @@ $themeColor: $accent3-medium;
 // ██   ██ ██   ██ ██   ██ ██    ██ ██ ███ ██      ██
 // ██   ██ ██   ██ ██   ██  ██████   ███ ███  ███████
 // ===================================================================================
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-pagination-bullet {
+  transition: opacity 0.25s ease-out;
+  &:hover {
+    opacity: 0.75;
+  }
+}
 .swiper-button-next::after,
 .swiper-button-prev::after {
   font-family: "Cognizant-Icons";
@@ -108,7 +116,8 @@ $themeColor: $accent3-medium;
   width: 2rem;
   height: 5px;
   margin: 0 5px;
-  border-radius: 0 !important;
+  // border-radius: 0 !important;
+  @include border-rounded;
 }
 
 /* ==============================  WHITE CONTROLS  ============================== */

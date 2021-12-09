@@ -90,7 +90,7 @@ $global-padding: 1rem;
 $global-position: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
-$global-radius: 0rem;
+$global-radius: 0.5rem;
 $global-menu-padding: 0.75rem 1rem;
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
@@ -312,7 +312,7 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // ----------
 
 $button-font-family: inherit !default;
-$button-padding: 0.85em 1em !default;
+$button-padding: 0.75em 1.25em !default;
 $button-margin: 0 0 $global-margin 0 !default;
 $button-fill: solid !default;
 $button-background: $accent3-medium !default;
@@ -321,8 +321,8 @@ $button-background-hover: scale-color(
   $lightness: 60%
 ) !default;
 $button-color: $primary !default;
-$button-color-alt: $primary !default;
-$button-radius: $global-radius !default;
+$button-color-alt: $white !default;
+$button-radius: $global-radius * 1000 !default;
 $button-hollow-border-width: 2px !default;
 $button-sizes: (
   tiny: 0.6rem,
@@ -331,8 +331,8 @@ $button-sizes: (
   large: 1.25rem,
   xlarge: 1.5rem,
 ) !default;
-$button-palette: $foundation-palette !default;
-// $button-palette: $button-palette !default;
+// $button-palette: $foundation-palette !default;
+$button-palette: $button-palette !default;
 $button-opacity-disabled: 0.25 !default;
 $button-background-hover-lightness: -20% !default;
 $button-hollow-hover-lightness: -60% !default;
@@ -369,7 +369,7 @@ $card-font-color: $body-font-color;
 $card-divider-background: $white;
 $card-border: 1px solid $light-gray;
 $card-shadow: none;
-$card-border-radius: $global-radius;
+$card-border-radius: $global-radius * 0;
 $card-padding: $global-padding;
 $card-margin-bottom: $global-margin;
 
@@ -484,19 +484,19 @@ $input-shadow-focus: 0 0 5px $primary-color;
 $input-cursor-disabled: not-allowed;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 $input-number-spinners: true;
-$input-radius: $global-radius / 2;
-$form-button-radius: $global-radius;
+$input-radius: $global-radius;
+$form-button-radius: $button-radius;
 
 // 21. Label
 // ---------
 
-$label-background: $primary-color;
+$label-background: $primary;
 $label-color: $white;
 $label-color-alt: $white;
 $label-palette: $foundation-palette;
 $label-font-size: rem-calc(15);
-$label-padding: 0.33333rem 0.5rem;
-$label-radius: $global-radius / 2;
+$label-padding: 0.25rem 0.5rem;
+$label-radius: $global-radius * 0;
 
 // 22. Media Object
 // ----------------
@@ -575,7 +575,7 @@ $pagination-margin-bottom: $global-margin;
 $pagination-item-color: $anchor-color;
 $pagination-item-padding: rem-calc(3 10);
 $pagination-item-spacing: rem-calc(1);
-$pagination-radius: $global-radius;
+$pagination-radius: $global-radius * 0;
 $pagination-item-background-hover: lighten($accent2-light, 20%);
 $pagination-item-background-current: $accent2-dark;
 $pagination-item-color-current: $white;
@@ -665,7 +665,9 @@ $prototype-position-z-index: 975;
 // ---------------------
 
 $prototype-rounded-breakpoints: $global-prototype-breakpoints;
-$prototype-border-radius: rem-calc(8);
+// $prototype-border-radius: rem-calc(8);
+// $prototype-border-radius: 0.5rem;
+$prototype-border-radius: $global-radius;
 
 // 39. Prototype Separator
 // -----------------------
@@ -768,7 +770,7 @@ $switch-radius: $global-radius / 2;
 $switch-margin: $global-margin;
 $switch-paddle-background: $white;
 $switch-paddle-offset: 0.25rem;
-$switch-paddle-radius: $global-radius;
+$switch-paddle-radius: $global-radius / 2;
 $switch-paddle-transition: all 0.25s ease-out;
 
 // 50. Table
@@ -818,7 +820,7 @@ $thumbnail-margin-bottom: $global-margin;
 $thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
 $thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
 $thumbnail-transition: box-shadow 200ms ease-out;
-$thumbnail-radius: $global-radius;
+$thumbnail-radius: $global-radius * 0;
 
 // 53. Title Bar
 // -------------

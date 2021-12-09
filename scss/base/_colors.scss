@@ -23,18 +23,22 @@
 }
 
 @function link-contrast-checker($color) {
-  @if (lightness($color) > 50) {
-    @return $dark-link;
+  @if (lightness($color) > 82) {
+    @return $accent2-dark;
+  } @else if (lightness($color) > 50) {
+    @return $primary;
   } @else {
-    @return $light-link;
+    @return $accent3-medium;
   }
 }
 
 @function link-contrast-checker-hover($color) {
-  @if (lightness($color) > 70) {
-    @return $dark-link-hover;
+  @if (lightness($color) > 82) {
+    @return $primary;
+  } @else if (lightness($color) > 50) {
+    @return rgba($primary, .5);
   } @else {
-    @return $light-link-hover;
+    @return scale-color($accent3-medium, $lightness: 75%);
   }
 }
 
@@ -48,40 +52,30 @@
   }
 }
 
-$primary: #000048 !default;
-$accent1-light: #85a0f9 !default;
-$accent1-medium: #7373d8 !default;
-$accent1-dark: #2e308e !default;
-$accent2-light: #92bbe6 !default;
-$accent2-medium: #6aa2dc !default;
-$accent2-dark: #2f78c4 !default;
-$accent3-light: #97f5f7 !default;
-$accent3-medium: #26efe9 !default;
-$accent3-dark: #06c7cc !default;
-$white: #ffffff !default;
-$black: $primary !default;
-$gray-lightest: #f5f5f2 !default;
-$gray-lighter: #e8e8e6 !default;
-$gray-light: #d0d0ce !default;
-$gray-medium: #97999b !default;
-$gray-dark: #53565a !default;
-$dark-mode-black: rgba(25, 25, 25, 1) !default;
-$red: #b81f2d !default;
-$yellow: #e9c71d !default;
-$green: #2db81f !default;
+$primary: #000048;
+$accent1-light: #85a0f9;
+$accent1-medium: #7373d8;
+$accent1-dark: #2e308e;
+$accent2-light: #92bbe6;
+$accent2-medium: #6aa2dc;
+$accent2-dark: #2f78c4;
+$accent3-light: #97f5f7;
+$accent3-medium: #26efe9;
+$accent3-dark: #06c7cc;
+$white: #ffffff;
+$black: $primary;
+$gray-lightest: #f5f5f2;
+$gray-lighter: #e8e8e6;
+$gray-light: #d0d0ce;
+$gray-medium: #97999b;
+$gray-dark: #53565a;
+$dark-mode-black: rgba(25, 25, 25, 1);
+$red: #b81f2d;
+$yellow: #e9c71d;
+$green: #2db81f;
 
 $dark: $primary;
 $light: $white;
-$dark-link: $accent2-dark;
-$light-link: $accent3-medium;
-$dark-link-hover: $primary;
-// $dark-link-hover: scale-color($accent2-dark, $lightness: -40%);
-$light-link-hover: scale-color($accent3-medium, $lightness: 75%);
-// $light-link-hover: $accent3-light;
-$dark-heading: $primary;
-$light-heading: $accent2-dark;
-$lighter-heading: $accent2-medium;
-$lightest-heading: $white;
 
 // ======================================================================
 // GRADIENTS
@@ -125,6 +119,17 @@ $cog-color-palette: (
 );
 
 // ======================================================================
+// BUTTON COLORS
+// ======================================================================
+$button-palette: (
+  primary: $accent3-medium,
+  secondary: $gray-lighter,
+  success: $green,
+  warning: $yellow,
+  alert: $red,
+);
+
+// ======================================================================
 // TEXT COLORS
 // ======================================================================
 $text-color-palette: (
@@ -148,16 +153,6 @@ $text-color-palette: (
 // BACKGROUND COLORS
 // ======================================================================
 $background-palette: (
-  primary: $primary,
-  primary-30: rgba($primary, 0.3),
-  primary-60: rgba($primary, 0.6),
-  primary-85: rgba($primary, 0.85),
-  accent1-light: $accent1-light,
-  accent1-medium: $accent1-medium,
-  accent1-dark: $accent1-dark,
-  accent2-light: $accent2-light,
-  accent2-medium: $accent2-medium,
-  accent2-dark: $accent2-dark,
   "white": $white,
   white-60: rgba($white, 0.6),
   white-85: rgba($white, 0.85),
@@ -166,6 +161,17 @@ $background-palette: (
   gray-light: $gray-light,
   gray-lighter: $gray-lighter,
   gray-lightest: $gray-lightest,
+  accent1-light: $accent1-light,
+  accent1-medium: $accent1-medium,
+  accent1-dark: $accent1-dark,
+  accent2-light: $accent2-light,
+  accent2-medium: $accent2-medium,
+  accent2-dark: $accent2-dark,
+  primary: $primary,
+  primary-30: rgba($primary, 0.3),
+  primary-60: rgba($primary, 0.6),
+  primary-85: rgba($primary, 0.85),
+  steps: $primary,
 );
 
 // ======================================================================

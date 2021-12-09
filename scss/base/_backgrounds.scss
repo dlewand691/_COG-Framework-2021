@@ -86,30 +86,6 @@ $breakpoint-classes: (small);
   }
 }
 
-[class*="bg-accent3"],
-.bg-accent1-light,
-.bg-accent1-medium,
-.bg-accent2-light,
-.bg-accent2-medium,
-.bg-accent3-dark,
-.bg-gray-light,
-.bg-gray-medium {
-  & > a,
-  & > a:link {
-    color: $primary !important;
-
-    &:hover {
-      color: $anchor-color-hover;
-    }
-  }
-}
-
-[class*="bg-accent3"] {
-  .button {
-    background-color: $white;
-  }
-}
-
 .bg-transparent {
   background: transparent !important;
 }

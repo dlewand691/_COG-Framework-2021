@@ -48,7 +48,7 @@ a.accordion-title,
 a.accordion-title:focus,
 a.accordion-title:hover {
   // color: $white;
-  color: contrast-checker($dark-link);
+  color: contrast-checker($accent2-dark);
   background: initial;
 }
 
@@ -57,7 +57,7 @@ a.accordion-title:hover {
   padding: 0;
   content: "\e907";
   transform: rotate(90deg);
-  color: contrast-checker($dark-link);
+  color: contrast-checker($accent2-dark);
   font-family: "Cognizant-Icons";
   font-size: inherit;
   font-weight: 600;

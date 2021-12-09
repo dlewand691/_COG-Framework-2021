@@ -13,7 +13,7 @@ $border-side: (
   "b": bottom,
   "l": left,
 );
-$radius-sizes: 10;
+// $radius-sizes: 4;
 
 @each $size in $breakpoint-classes {
   @include breakpoint($size) {
@@ -117,11 +117,11 @@ $radius-sizes: 10;
       // ██   ██ ██   ██ ██   ██ ██ ██    ██      ██
       // ██   ██ ██   ██ ██████  ██  ██████  ███████
       // ===================================================================================
-      @for $i from 0 through $radius-sizes {
-        .#{$size}-bd-radius-#{$i} {
-          border-radius: $i * 0.25 + rem !important;
-        }
-      }
+      // @for $i from 0 through $radius-sizes {
+      //   .#{$size}-bd-radius-#{$i} {
+      //     border-radius: $i * 0.25 + rem !important;
+      //   }
+      // }
     } @else {
       // ====================================================================================
       // NO BORDER
@@ -201,11 +201,11 @@ $radius-sizes: 10;
       // ██   ██ ██   ██ ██   ██ ██ ██    ██      ██
       // ██   ██ ██   ██ ██████  ██  ██████  ███████
       // ===================================================================================
-      @for $i from 0 through $radius-sizes {
-        .bd-radius-#{$i} {
-          border-radius: $i * 0.25 + rem !important;
-        }
-      }
+      // @for $i from 0 through $radius-sizes {
+      //   .bd-radius-#{$i} {
+      //     border-radius: $i * 0.25 + rem !important;
+      //   }
+      // }
     }
   }
 }

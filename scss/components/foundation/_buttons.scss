@@ -5,11 +5,11 @@
   margin-right: 1rem;
 
   &.small {
-    border-radius: $global-radius / 1.5;
+    // border-radius: $global-radius / 1.5;
   }
 
   &.tiny {
-    border-radius: $global-radius / 2;
+    // border-radius: $global-radius / 2;
   }
 
   &:last-of-type {
@@ -26,8 +26,8 @@
       content: "";
     }
     &::before {
-      margin-right: 0.5rem;
-      margin-left: -2px;
+      margin-right: 0.5em;
+      margin-left: -.2em;
       content: "\e905";
       font-family: "Cognizant-Icons";
       font-weight: 600;
@@ -44,7 +44,7 @@
       width: unset;
       height: unset;
       margin-top: unset;
-      margin-left: 0.5rem;
+      margin-left: 0.5em;
       content: "\e920";
       background: unset;
       font-family: "Cognizant-Icons";
@@ -63,7 +63,7 @@
     width: unset;
     height: unset;
     margin-top: unset;
-    margin-left: 0.5rem;
+    margin-left: 0.5em;
     content: "\e94b";
     background: unset;
     font-family: "Cognizant-Icons";
@@ -78,7 +78,7 @@
       width: unset;
       height: unset;
       margin-top: unset;
-      margin-left: 0.5rem;
+      margin-left: 0.5em;
       content: "\e935";
       background: unset;
       font-family: "Cognizant-Icons";
@@ -118,17 +118,17 @@
   //     background: $button-background-hover;
   //   }
 
-  //   &.hollow {
-  //     background: none;
-  //     color: $button-background;
-  //     border-color: $button-background;
+    &.hollow {
+      background: none;
+      color: $accent2-dark;
+      border-color: $accent2-dark;
 
-  //     &:hover {
-  //       background: none;
-  //       color: $button-background-hover;
-  //       border-color: $button-background-hover;
-  //     }
-  //   }
+      &:hover {
+        background: none;
+        color: $primary;
+        border-color: $primary;
+      }
+    }
   // }
 
   // &.accent2-bright {
@@ -154,80 +154,80 @@
   //   }
   // }
 
-  &.grd-theme-1:hover,
-  &.grd-theme-2:hover {
-    color: $white;
-  }
+  // &.grd-theme-1:hover,
+  // &.grd-theme-2:hover {
+  //   color: $white;
+  // }
 
-  &.hover-grd-theme-1,
-  &.hover-grd-theme-2,
-  &.hover-grd-theme-3 {
-    border: none;
-    transition: $transition-default;
-    background: linear-gradient(35deg, $button-background, $button-background);
-    position: relative;
-    z-index: 1;
+  // &.hover-grd-theme-1,
+  // &.hover-grd-theme-2,
+  // &.hover-grd-theme-3 {
+  //   border: none;
+  //   transition: $transition-default;
+  //   background: linear-gradient(35deg, $button-background, $button-background);
+  //   position: relative;
+  //   z-index: 1;
 
-    &::before {
-      content: "";
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      position: absolute;
-      z-index: -1;
-      opacity: 0;
-      transition: $transition-fast;
-      border-radius: $button-radius;
-    }
-  }
+  //   &::before {
+  //     content: "";
+  //     width: 100%;
+  //     height: 100%;
+  //     top: 0;
+  //     left: 0;
+  //     position: absolute;
+  //     z-index: -1;
+  //     opacity: 0;
+  //     transition: $transition-fast;
+  //     border-radius: $button-radius;
+  //   }
+  // }
 
-  &.hover-grd-theme-1 {
-    color: $white;
-    background: $accent1-dark;
-    &:before {
-      opacity: 0;
-    }
+  // &.hover-grd-theme-1 {
+  //   color: $white;
+  //   background: $accent1-dark;
+  //   &:before {
+  //     opacity: 0;
+  //   }
 
-    &:hover::before {
-      background: $grd-theme-1;
-      opacity: 1;
-    }
-    &:hover {
-      color: $white;
-    }
-  }
+  //   &:hover::before {
+  //     background: $grd-theme-1;
+  //     opacity: 1;
+  //   }
+  //   &:hover {
+  //     color: $white;
+  //   }
+  // }
 
-  &.hover-grd-theme-2 {
-    color: $white;
-    background: $primary;
-    &:before {
-      opacity: 0;
-    }
+  // &.hover-grd-theme-2 {
+  //   color: $white;
+  //   background: $primary;
+  //   &:before {
+  //     opacity: 0;
+  //   }
 
-    &:hover::before {
-      background: $grd-theme-2;
-      opacity: 1;
-    }
-    &:hover {
-      color: $white;
-    }
-  }
+  //   &:hover::before {
+  //     background: $grd-theme-2;
+  //     opacity: 1;
+  //   }
+  //   &:hover {
+  //     color: $white;
+  //   }
+  // }
 
-  &.hover-grd-theme-3 {
-    background: $accent2-medium;
-    &:before {
-      opacity: 0;
-    }
+  // &.hover-grd-theme-3 {
+  //   background: $accent2-medium;
+  //   &:before {
+  //     opacity: 0;
+  //   }
 
-    &:hover::before {
-      background: $grd-theme-3;
-      opacity: 1;
-    }
-    &:hover {
-      // color: contrast-checker($light);
-    }
-  }
+  //   &:hover::before {
+  //     background: $grd-theme-3;
+  //     opacity: 1;
+  //   }
+  //   &:hover {
+  //     // color: contrast-checker($light);
+  //   }
+  // }
 }
 
 // a:not(.button) {
@@ -258,7 +258,7 @@
 .arrow {
   display: inline-flex;
   align-items: center;
-  padding-right: 0.9rem;
+  padding-right: 1.1em;
   display: inline-block;
   // margin-right: 1rem;
 
@@ -272,7 +272,7 @@
     width: unset;
     height: unset;
     margin-top: unset;
-    margin-left: 0.5rem;
+    margin-left: 0.5em;
     content: "\e907";
     background: unset;
     font-family: "Cognizant-Icons";
@@ -344,11 +344,11 @@
 
   &::before {
     position: absolute;
-    right: 0.5rem;
+    right: 0.5em;
     content: "\e907";
     font-family: "Cognizant-Icons";
     font-weight: bold;
-    margin-left: 0.2rem;
+    margin-left: 0.2em;
   }
 }
 

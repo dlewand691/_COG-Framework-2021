@@ -7,7 +7,7 @@
       "uuidString" : "1FE06257-3F05-4FB3-9FB6-DB4AEA620DD6"
     }
   ],
-  "creatorBuild" : "34214",
+  "creatorBuild" : "34264",
   "files" : {
     "\/_BUILD" : {
       "ft" : 65536,
@@ -801,6 +801,21 @@
       "ma" : 3,
       "oA" : 1,
       "oAP" : "\/_BUILD\/css\/_css-grid.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 2,
+      "sct" : 0
+    },
+    "\/scss\/_reset.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 2,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 3,
+      "oA" : 1,
+      "oAP" : "\/_BUILD\/css\/_reset.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 2,
@@ -2910,6 +2925,9 @@
       },
       "no-unused-labels" : {
         "active" : 1
+      },
+      "no-unused-private-class-members" : {
+        "active" : 0
       },
       "no-unused-vars" : {
         "active" : 1,
