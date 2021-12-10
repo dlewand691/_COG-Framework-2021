@@ -18,6 +18,7 @@
   background-position: right center;
   font-size: $small-font-size;
   z-index: 10;
+  @include border-radius;
 
   &::before {
     content: "BACK TO TOP";
@@ -32,6 +33,7 @@
     background: $primary;
     font-family: "Cognizant-Icons";
     font-weight: bold;
+    @include border-radius;
   }
 
   &.scrollup--show {

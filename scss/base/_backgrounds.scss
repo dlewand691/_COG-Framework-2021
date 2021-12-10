@@ -16,12 +16,10 @@ $breakpoint-classes: (small);
     @include breakpoint($size) {
       @if $size != $-zf-zero-breakpoint {
         .#{$size}-bg-#{$color-name} {
-          // background-color: var(--#{$color-name});
-          // background-color: #{$color};
           background-color: #{$color};
           color: contrast-checker($color);
 
-          & :is(h1, h2, h3, p, ul, li, ol, em, strong):not(.menu) {
+          & :is(h1, h2, h3, p, ul, li, ol, em, strong, [src$=".jpg"] ):not(.menu) {
             color: inherit;
           }
 
@@ -50,7 +48,6 @@ $breakpoint-classes: (small);
         }
       } @else {
         .bg-#{$color-name} {
-          // background-color: var(--#{$color-name});
           background-color: #{$color};
           color: contrast-checker($color);
 
@@ -253,3 +250,56 @@ $bg-size: (
   }
 }
 // -----  End of BACKGROUND ATTACHMENT  ----------
+
+
+// For reference
+// .text-color-name .absolute - for image absolute
+// .text-color-name .grid-x *:not(a, a:link, i, span,button) - for data-bg,data-interchange
+// .absolute ~ .relative.text-#{$color-name}- for curtain js
+  // .absolute ~ .relative.text-#{$color-name} *:not(a, a:link, i, span,button) - for curtain js
+// @each $color-name, $color in $background-palette {
+// [style*="url"] {
+//       background-color: $primary;
+//       color: contrast-checker($color);
+//       // color: red;
+// }
+// }
+
+// @each $color-name, $color in $background-palette {
+// .text-#{$color-name} .absolute,
+//   .text-#{$color-name} .grid-x *:not(a, a:link, i, span,button),
+//   .absolute ~ .relative.text-#{$color-name},
+//   .absolute ~ .relative.text-#{$color-name} *:not(a, a:link, i, span,button){
+//     color: $color;
+//     & a:link:not(.button),& a:not(.button){
+//       color: bg-image-link-contrast-checker($color) !important;
+
+//       &:hover {
+//         color: bg-image-link-contrast-checker-hover($color)!important;
+//       }
+//     }
+//   }
+// }
+
+
+// .text-white wrapper containing any bg-white children class
+
+// .text-white{
+//   .bg-white{
+//     & :is(h1,h2,h3, p, ul, li, ol, em, strong):not(.menu){
+//       color: $primary !important;
+//     }
+//     & :is(h4,h5,h6):not(.menu){
+//       color: heading-contrast-checker($accent2-dark) !important;
+//     }
+//     & a:link:not(.button),& a:not(.button){
+//       color: bg-image-link-contrast-checker($white) !important;
+
+//       &:hover {
+//         color: bg-image-link-contrast-checker-hover($white)!important;
+//       }
+//     }
+//   }
+// }
+
+// // solution 2 ends

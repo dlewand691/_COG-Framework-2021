@@ -351,28 +351,28 @@ $text-alignments: ("left", "right", "center");
       @if $size != $-zf-zero-breakpoint {
         .#{$size}-text-#{$color-name},
         .#{$size}-text-#{$color-name} *:not(a, i, span, button, [style^="background"]) {
-          color: $color;
+          color: $color !important;
 
           a:not(.button),
           a:link:not(.button) {
-            color: link-contrast-checker($color);
+            color: link-contrast-checker($color) !important;
 
             &:hover {
-              color: link-contrast-checker-hover($color);
+              color: link-contrast-checker-hover($color) !important;
             }
           }
         }
       } @else {
         .text-#{$color-name},
         .text-#{$color-name} *:not(a, i, span, button, [style^="background"]) {
-          color: $color;
+          color: $color !important;
 
           a:not(.button),
           a:link:not(.button) {
-            color: link-contrast-checker($color);
+            color: link-contrast-checker($color) !important;
 
             &:hover {
-              color: link-contrast-checker-hover($color);
+              color: link-contrast-checker-hover($color) !important;
             }
           }
         }
