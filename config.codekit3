@@ -9,12 +9,6 @@
   ],
   "creatorBuild" : "34264",
   "files" : {
-    "\/_BUILD" : {
-      "ft" : 65536,
-      "oA" : 1,
-      "oAP" : "\/_BUILD\/_BUILD",
-      "oF" : 0
-    },
     "\/.history" : {
       "ft" : 65536,
       "oA" : 1,

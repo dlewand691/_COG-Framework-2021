@@ -30,9 +30,7 @@ a:link {
 }
 
 p a,
-p a:link,
-a.small,
-a.tiny {
+p a:link {
   text-decoration: underline;
   text-decoration-color: inherit;
   text-decoration-thickness: 0.1em;

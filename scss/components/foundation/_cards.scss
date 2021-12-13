@@ -21,7 +21,9 @@
     padding-top: 0;
 }
 
-.card-divider > :last-child {
+.card-divider {
+  background: none;
+  & > :last-child {
     margin-bottom: auto;
-}
+}}
 // -----  End of CARDS  ----------

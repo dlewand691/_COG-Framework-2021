@@ -153,14 +153,14 @@ $text-color-palette: (
 // BACKGROUND COLORS
 // ======================================================================
 $background-palette: (
-  "white": $white,
-  white-60: rgba($white, 0.6),
-  white-85: rgba($white, 0.85),
   gray-dark: $gray-dark,
   gray-medium: $gray-medium,
   gray-light: $gray-light,
   gray-lighter: $gray-lighter,
   gray-lightest: $gray-lightest,
+  white-85: rgba($white, 0.85),
+  white-60: rgba($white, 0.6),
+  "white": $white,
   accent1-light: $accent1-light,
   accent1-medium: $accent1-medium,
   accent1-dark: $accent1-dark,

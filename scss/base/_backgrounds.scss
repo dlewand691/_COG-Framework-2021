@@ -11,15 +11,17 @@
 //  ██████  ██████  ███████  ██████  ██   ██ ███████
 // ===================================================================================
 $breakpoint-classes: (small);
-@each $color-name, $color in $background-palette {
+
+@each $color-name,
+$color in $background-palette {
   @each $size in $breakpoint-classes {
     @include breakpoint($size) {
-      @if $size != $-zf-zero-breakpoint {
+      @if $size !=$-zf-zero-breakpoint {
         .#{$size}-bg-#{$color-name} {
           background-color: #{$color};
           color: contrast-checker($color);
 
-          & :is(h1, h2, h3, p, ul, li, ol, em, strong, [src$=".jpg"] ):not(.menu) {
+          & :is(h1, h2, h3, p, ul, li, ol, em, strong):not(.menu) {
             color: inherit;
           }
 
@@ -45,8 +47,18 @@ $breakpoint-classes: (small);
               border-color: link-contrast-checker-hover($color);
             }
           }
+
+          & .card:not([class*="bg-"]) {
+
+            & a:not(.button),
+            a:link:not(.button) {
+              color: $anchor-color;
+            }
+          }
         }
-      } @else {
+      }
+
+      @else {
         .bg-#{$color-name} {
           background-color: #{$color};
           color: contrast-checker($color);
@@ -75,6 +87,14 @@ $breakpoint-classes: (small);
             &:hover {
               color: link-contrast-checker-hover($color);
               border-color: link-contrast-checker-hover($color);
+            }
+          }
+
+          & .card:not([class*="bg-"]) {
+
+            & a:not(.button),
+            a:link:not(.button) {
+              color: $anchor-color;
             }
           }
         }
@@ -160,8 +180,7 @@ $breakpoint-classes: (small);
 ██       ██████  ███████ ██    ██    ██  ██████  ██   ████ ███████
 
 ==================================================================================== */
-$bg-pos: (
-  "left": "left",
+$bg-pos: ("left": "left",
   "right": "right",
   "top": "top",
   "bottom": "bottom",
@@ -176,14 +195,19 @@ $bg-pos: (
   "center-center": "center center",
   "center-right": "center right",
 );
+
 @each $size in $breakpoint-classes {
   @include breakpoint($size) {
-    @each $side, $side-name in $bg-pos {
-      @if $size != $-zf-zero-breakpoint {
+
+    @each $side,
+    $side-name in $bg-pos {
+      @if $size !=$-zf-zero-breakpoint {
         .#{$size}-bg-pos-#{$side} {
           background-position: #{$side-name};
         }
-      } @else {
+      }
+
+      @else {
         .bg-pos-#{$side} {
           background-position: #{$side-name};
         }
@@ -207,20 +231,24 @@ $bg-pos: (
 // ███████ ██ ███████ ███████
 // ====================================================================================
 
-$bg-size: (
-  "unset": "unset",
+$bg-size: ("unset": "unset",
   "cover": "cover",
   "contain": "contain",
 );
+
 @each $size in $breakpoint-classes {
   @include breakpoint($size) {
-    @each $size-option, $bg-size-option in $bg-size {
-      @if $size != $-zf-zero-breakpoint {
+
+    @each $size-option,
+    $bg-size-option in $bg-size {
+      @if $size !=$-zf-zero-breakpoint {
         .#{$size}-bg-size-#{$size-option} {
           background-size: #{$bg-size-option};
           background-repeat: no-repeat;
         }
-      } @else {
+      }
+
+      @else {
         .bg-size-#{$size-option} {
           background-size: #{$bg-size-option};
           background-repeat: no-repeat;
@@ -249,6 +277,7 @@ $bg-size: (
     background-attachment: fixed;
   }
 }
+
 // -----  End of BACKGROUND ATTACHMENT  ----------
 
 
@@ -256,7 +285,7 @@ $bg-size: (
 // .text-color-name .absolute - for image absolute
 // .text-color-name .grid-x *:not(a, a:link, i, span,button) - for data-bg,data-interchange
 // .absolute ~ .relative.text-#{$color-name}- for curtain js
-  // .absolute ~ .relative.text-#{$color-name} *:not(a, a:link, i, span,button) - for curtain js
+// .absolute ~ .relative.text-#{$color-name} *:not(a, a:link, i, span,button) - for curtain js
 // @each $color-name, $color in $background-palette {
 // [style*="url"] {
 //       background-color: $primary;
