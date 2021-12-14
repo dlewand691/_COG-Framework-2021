@@ -5,24 +5,29 @@
 ██  ██  ██ ██      ██  ██ ██ ██    ██            ██  ██  ██      ██   ██    ██    ██ ██      ██   ██ ██
 ██      ██ ███████ ██   ████  ██████              ████   ███████ ██   ██    ██    ██  ██████ ██   ██ ███████
 ========================================================================================= */
-.menu,
-.menu a {
+.menu {
   line-height: $paragraph-lineheight;
-}
 
-.menu.vertical {
-  & > li {
-    // margin: 0;
+  & a {
+    line-height: $paragraph-lineheight;
+  }
 
-    & .active {
-      color: $white;
-      background: $accent3-medium;
+  &.vertical {
+    & > li {
+      // margin: 0;
+
+      & .active {
+        color: $white;
+        background: $accent3-medium;
+      }
     }
   }
 }
 
+
 .submenu {
-  border-radius: 0 $global-radius $global-radius;
+  background-color: $white;
+  // border-radius: 0 $global-radius $global-radius;
 }
 
 .dropdown.menu li a {

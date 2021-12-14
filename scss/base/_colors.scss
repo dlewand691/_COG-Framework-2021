@@ -158,9 +158,6 @@ $background-palette: (
   gray-light: $gray-light,
   gray-lighter: $gray-lighter,
   gray-lightest: $gray-lightest,
-  white-85: rgba($white, 0.85),
-  white-60: rgba($white, 0.6),
-  "white": $white,
   accent1-light: $accent1-light,
   accent1-medium: $accent1-medium,
   accent1-dark: $accent1-dark,
@@ -171,6 +168,9 @@ $background-palette: (
   primary-30: rgba($primary, 0.3),
   primary-60: rgba($primary, 0.6),
   primary-85: rgba($primary, 0.85),
+  white-85: rgba($white, 0.85),
+  white-60: rgba($white, 0.6),
+  "white": $white,
   steps: $primary,
 );
 

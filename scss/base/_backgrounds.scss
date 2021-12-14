@@ -30,7 +30,7 @@ $color in $background-palette {
           }
 
           & a:not(.button),
-          a:link:not(.button) {
+          & a:link:not(.button) {
             color: link-contrast-checker($color);
 
             &:hover {

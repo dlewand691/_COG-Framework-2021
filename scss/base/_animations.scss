@@ -281,6 +281,7 @@ $transition-fastest: all 0.1s ease;
 .hover-hide-show {
   position: relative;
   overflow: hidden;
+  border-radius: $global-radius;
 
   .hide-on-hover {
     transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -323,12 +324,13 @@ $transition-fastest: all 0.1s ease;
 .hover-slide-up {
   position: relative;
   min-height: 280px;
+  border-radius: $global-radius;
 
   .slide-up-section1 {
     position: absolute;
     bottom: 0;
     height: 50%;
-    padding: 2rem 1rem 1rem;
+    padding: 1rem;
     transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
     background: $white;
   }
@@ -448,6 +450,7 @@ $transition-fastest: all 0.1s ease;
 ==================================================================================== */
 .anim-slide-up {
   min-height: 200px;
+  border-radius: $global-radius;
 
   .slide-up-section1,
   .slide-up-section2 {
@@ -501,6 +504,7 @@ $transition-fastest: all 0.1s ease;
 .panel-slide-up {
   overflow: hidden;
   position: relative;
+  border-radius: $global-radius;
 
   .panel {
     transform: translateY(100%);
@@ -519,6 +523,7 @@ $transition-fastest: all 0.1s ease;
 .panel-slide-down {
   overflow: hidden;
   position: relative;
+  border-radius: $global-radius;
 
   .panel {
     transform: translateY(-100%);
@@ -537,6 +542,7 @@ $transition-fastest: all 0.1s ease;
 .panel-slide-left {
   overflow: hidden;
   position: relative;
+  border-radius: $global-radius;
 
   .panel {
     transform: translateX(100%);
@@ -555,6 +561,7 @@ $transition-fastest: all 0.1s ease;
 .panel-slide-right {
   overflow: hidden;
   position: relative;
+  border-radius: $global-radius;
 
   .panel {
     transform: translateX(-100%);
@@ -573,6 +580,7 @@ $transition-fastest: all 0.1s ease;
 .panel-fade-in {
   overflow: hidden;
   position: relative;
+  border-radius: $global-radius;
 
   .panel {
     opacity: 0;
