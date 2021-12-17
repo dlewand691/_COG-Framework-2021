@@ -478,12 +478,14 @@ $transition-fastest: all 0.1s ease;
   transform: translateY(100%);
   opacity: 0;
   transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius: $global-radius;
 }
 
 .anim-slide-in-up-active {
   transform: translateY(0%);
   opacity: 1;
   transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius: $global-radius;
 }
 
 // ===================================================================================

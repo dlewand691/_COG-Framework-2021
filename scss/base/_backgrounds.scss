@@ -21,11 +21,11 @@ $color in $background-palette {
           background-color: #{$color};
           color: contrast-checker($color);
 
-          & :is(h1, h2, h3, p, ul, li, ol, em, strong):not(.menu) {
+          & :is(h1, h2, h3, p, ul, li, ol, em, strong):not(.menu, i) {
             color: inherit;
           }
 
-          & :is(h4, h5, h6):not(.menu) {
+          & :is(h4, h5, h6):not(.menu, i) {
             color: heading-contrast-checker($color);
           }
 
@@ -63,11 +63,11 @@ $color in $background-palette {
           background-color: #{$color};
           color: contrast-checker($color);
 
-          & :is(h1, h2, h3, p, ul, li, ol, em, strong):not(.menu) {
+          & :is(h1, h2, h3, p, ul, li, ol, em, strong):not(.menu, i) {
             color: inherit;
           }
 
-          & :is(h4, h5, h6):not(.menu) {
+          & :is(h4, h5, h6):not(.menu, i) {
             color: heading-contrast-checker($color);
           }
 
