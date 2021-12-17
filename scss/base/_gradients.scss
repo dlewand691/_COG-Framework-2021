@@ -11,33 +11,28 @@
 //  ██████  ██   ██ ██   ██ ██████  ██ ███████ ██   ████    ██    ███████
 // ======================================================================
 
-.bg-grd-theme-1 {
+[class*="bg-grd-"] {
+  border: none;
+
+   & :is(h1, h2, h3, h4, h5, h6, p, ul, li, ol, em, strong) {
+    color: inherit;
+  }
+}
+
+.bg-grd-theme-1, .bg-grd-mesh-theme-1 {
   background: $grd-theme-1;
-  border: none;
   color: contrast-checker($dark) !important;
-
-  & :is(h1, h2, h3, h4, h5, h6, p, ul, li, ol, em, strong) {
-    color: inherit;
-  }
 }
-.bg-grd-theme-2 {
+
+.bg-grd-theme-2, .bg-grd-mesh-theme-2 {
   background: $grd-theme-2;
-  border: none;
   color: contrast-checker($dark) !important;
-
-  & :is(h1, h2, h3, h4, h5, h6, p, ul, li, ol, em, strong) {
-    color: inherit;
-  }
 }
-.bg-grd-theme-3 {
+
+.bg-grd-theme-3, .bg-grd-mesh-theme-3 {
   background: $grd-theme-3;
-  border: none;
   color: $primary;
   color: contrast-checker($light) !important;
-
-  & :is(h1, h2, h3, h4, h5, h6, p, ul, li, ol, em, strong) {
-    color: inherit;
-  }
 }
 
 .bg-grd-mesh-theme-1 {
