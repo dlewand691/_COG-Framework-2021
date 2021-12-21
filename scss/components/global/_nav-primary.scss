@@ -6,12 +6,12 @@
   $dropdown-menu-item-color-active: $white,
   $dropdown-menu-item-background-active: $primary,
   $dropdown-hover-color: $accent2-dark,
-  $dropdown-arrow-color: $accent2-light,
-  $sticky-background: transparent,
-  $sticky-background-stuck: $white,
+  $dropdown-arrow-color: $accent2-medium,
+  $sticky-background: $primary,
+  $sticky-background-stuck: $primary,
   $titlebar-background: $white,
   $anchor-color: $body-font-color,
-  $anchor-color-hover: $accent2-medium,
+  $anchor-color-hover: $accent2-dark,
   $secondary-nav-background: $gray-lighter,
   $language-menu-background: $white,
   $hamburger-color: $anchor-color
@@ -49,7 +49,7 @@
     // STUCK STYLES
     // ===================================================================================
     .is-at-top.is-stuck {
-      background: $sticky-background-stuck !important;
+      background: $sticky-background-stuck;
 
       .top-bar {
         @include breakpoint(medium-xxl down) {
@@ -97,7 +97,6 @@
     // ===================================================================================
     .language-menu {
       background: $language-menu-background;
-      // width     : unset;
 
       &::before {
         @include css-triangle(
@@ -114,15 +113,6 @@
       .flag-icon {
         box-shadow: 0 0 0 1px rgba($gray-medium, 0.5);
         background-size: cover !important;
-      }
-    }
-
-    // ======================================================================
-    // STYLES FOR SUBMENU AND LANGUAGE MENU
-    // ======================================================================
-    &[class*="theme-primary"] {
-      .cog-logo {
-        filter: grayscale(1) brightness(100);
       }
     }
   }
@@ -179,7 +169,7 @@
           > a {
             padding: 1rem 2.2rem 1rem 1rem;
 
-            &:after {
+            &::after {
               font-family: "Cognizant-Icons";
               content: "\e903";
               color: $dropdown-arrow-color;
@@ -214,6 +204,10 @@
 
   #navSubBar {
     hyphens: auto;
+
+    .menu a::after {
+      border-color: $accent2-medium transparent transparent;
+    }
   }
   /* ====================================================================================
 
@@ -231,22 +225,18 @@
 ==================================================================================== */
   .navBarInPage {
     & a {
-      // color: $white !important;
+      color: $white !important;
 
       &:hover {
-        // color: $accent3-medium !important;
-        background: rgba($white, 0.2) !important;
+        background: $accent2-dark !important;
       }
     }
 
     & a.is-active {
-      // background: transparentize($white, .80) !important;
-      background: $accent3-medium !important;
-      color: $primary !important;
+      background: rgba($accent2-dark, .6) !important;
 
       &:hover {
-        // color: white !important;
-        background: $accent3-dark !important;
+        background: $accent2-dark !important;
       }
     }
   }
@@ -297,6 +287,10 @@
     .cog-logo {
       filter: grayscale(1) brightness(100);
     }
+
+    .language-menu {
+      // color: $button-color-alt;
+    }
   }
 
   // ======================================================================
@@ -332,6 +326,7 @@
 // ██████  ███████  ██████  ███████
 // ======================================================================
 .theme-primary {
+  background-color: rgba($primary, 0.85);
   @include nav-overrides(
     $dropdownmenu-submenu-background: $primary,
     $dropdown-menu-item-background-active: $primary,
@@ -356,6 +351,7 @@
 // ██████  ███████  ██████  ███████     ██████  ██   ██ ██   ██ ██   ██
 // ======================================================================
 .theme-accent2-dark {
+  background-color: rgba($accent2-dark, 0.85);
   @include nav-overrides(
     $dropdownmenu-submenu-background: darken($primary, 10%),
     $dropdown-menu-item-background-active: darken($primary, 10%),
@@ -381,6 +377,7 @@
 //  ██████ ██       ██████   ███ ███
 // ======================================================================
 .theme-cfow {
+  background-color: rgba($gray-dark, 0.97);
   @include nav-overrides(
     $topbar-background: transparent,
     $topbar-submenu-background: transparent,

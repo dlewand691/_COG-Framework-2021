@@ -12,7 +12,7 @@
 
     &.bg-none {
       .card-section, .card-divider {
-        background: none;
+        background-color: none;
       }
     }
 }
@@ -22,7 +22,7 @@
 }
 
 .card-divider {
-  background: none;
+  background-color: none;
   & > :last-child {
     margin-bottom: auto;
 }}

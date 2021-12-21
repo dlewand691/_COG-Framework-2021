@@ -10,98 +10,87 @@
 // ██      ██    ██ ██      ██    ██ ██   ██      ██
 //  ██████  ██████  ███████  ██████  ██   ██ ███████
 // ===================================================================================
-$breakpoint-classes: (small);
+// $breakpoint-classes: (small);
 
 @each $color-name,
 $color in $background-palette {
-  @each $size in $breakpoint-classes {
-    @include breakpoint($size) {
-      @if $size !=$-zf-zero-breakpoint {
-        .#{$size}-bg-#{$color-name} {
-          background-color: #{$color};
-          color: contrast-checker($color);
+  .bg-#{$color-name} {
+    background-color: #{$color};
+    color: contrast-checker($color);
 
-          & :is(h1, h2, h3, p, ul, li, ol, em, strong):not(.menu, i) {
-            color: inherit;
-          }
+    :is(h1, .h1, h2, .h2, h3, .h3, p, ul, li, ol, em, strong):not(.menu, i) {
+      // color: inherit;
+    }
 
-          & :is(h4, h5, h6):not(.menu, i) {
-            color: heading-contrast-checker($color);
-          }
+    :is(h4, .h4, h5, .h5, h6, .h6):not(.menu, i) {
+      color: heading-contrast-checker($color);
+    }
 
-          & a:not(.button),
-          & a:link:not(.button) {
-            color: link-contrast-checker($color);
 
-            &:hover {
-              color: link-contrast-checker-hover($color);
-            }
-          }
+    a:not(.button),
+    a:link:not(.button) {
+      color: link-contrast-checker($color);
 
-          .button.hollow {
-            color: link-contrast-checker($color);
-            border-color: link-contrast-checker($color);
-
-            &:hover {
-              color: link-contrast-checker-hover($color);
-              border-color: link-contrast-checker-hover($color);
-            }
-          }
-
-          & .card:not([class*="bg-"]) {
-
-            & a:not(.button),
-            a:link:not(.button) {
-              color: $anchor-color;
-            }
-          }
-        }
+      &:hover {
+        color: link-contrast-checker-hover($color);
       }
+    }
 
-      @else {
-        .bg-#{$color-name} {
-          background-color: #{$color};
-          color: contrast-checker($color);
+    .button.hollow {
+      color: link-contrast-checker($color);
+      border-color: link-contrast-checker($color);
 
-          & :is(h1, h2, h3, p, ul, li, ol, em, strong):not(.menu, i) {
-            color: inherit;
-          }
+      &:hover {
+        color: link-contrast-checker-hover($color);
+        border-color: link-contrast-checker-hover($color);
+      }
+    }
 
-          & :is(h4, h5, h6):not(.menu, i) {
-            color: heading-contrast-checker($color);
-          }
+    .card:not([class*="bg-"]) {
 
-          & a:not(.button),
-          a:link:not(.button) {
-            color: link-contrast-checker($color);
-
-            &:hover {
-              color: link-contrast-checker-hover($color);
-            }
-          }
-
-          .button.hollow {
-            color: link-contrast-checker($color);
-            border-color: link-contrast-checker($color);
-
-            &:hover {
-              color: link-contrast-checker-hover($color);
-              border-color: link-contrast-checker-hover($color);
-            }
-          }
-
-          & .card:not([class*="bg-"]) {
-
-            & a:not(.button),
-            a:link:not(.button) {
-              color: $anchor-color;
-            }
-          }
-        }
+      a:not(.button),
+      a:link:not(.button) {
+        color: $anchor-color;
       }
     }
   }
 }
+
+// [class*="-medium"] :is(h4, .h4, h5, .h5, h6, .h6) {
+//       color: $primary;
+// }
+
+// .bg-white > .bg-primary {
+//     :is(h4, .h4, h5, .h5, h6, .h6):not(.menu, i) {
+//       color: $white;
+//     }
+
+//    a:not(.button),
+//    a:link:not(.button) {
+//       color: $accent3-medium;
+
+//       &:hover {
+//         color: $accent3-medium;
+//       }
+//     }
+// }
+
+// .bg-primary > .bg-white {
+//   :is(h4, .h4, h5, .h5, h6, .h6):not(.menu, i) {
+//       color: $accent2-dark;
+//     }
+
+//    a:not(.button),
+//    a:link:not(.button) {
+//       color: $accent2-dark;
+
+//       &:hover {
+//         color: $accent2-dark;
+//       }
+//     }
+// }
+
+
 
 .bg-transparent {
   background: transparent !important;

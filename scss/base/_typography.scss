@@ -166,7 +166,7 @@ h4 {
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 25px, 36px);
   font-weight: 300;
   font-feature-settings: "ss00";
-  color: $accent2-dark;
+  // color: $accent2-dark;
   // @include font-size(36px);
   // font-size: var(--step-2);
 }
@@ -177,7 +177,7 @@ h5 {
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 22px, 27px);
   font-weight: $global-weight-normal;
   font-feature-settings: "ss00";
-  color: $accent2-dark;
+  // color: $accent2-dark;
   // @include font-size(27px);
   // font-size: var(--step-1);
 }
@@ -188,7 +188,7 @@ h6 {
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 20px, 20px);
   font-weight: $global-weight-bold;
   font-feature-settings: "ss01";
-  color: $accent2-dark;
+  // color: $accent2-dark;
   // @include font-size(20px);
   // font-size: var(--step-0);
 }
@@ -349,30 +349,28 @@ $text-alignments: ("left", "right", "center");
   @include breakpoint($size) {
     @each $color-name, $color in $text-color-palette {
       @if $size != $-zf-zero-breakpoint {
-        .#{$size}-text-#{$color-name},
-        .#{$size}-text-#{$color-name} > :not(a, span, button, [style^="background"]) {
-          color: $color;
+        .#{$size}-text-#{$color-name} {
+          color: $color !important;
 
           a:not(.button),
           a:link:not(.button) {
-            color: link-contrast-checker($color);
+            // color: link-contrast-checker($color);
 
             &:hover {
-              color: link-contrast-checker-hover($color);
+              // color: link-contrast-checker-hover($color);
             }
           }
         }
       } @else {
-        .text-#{$color-name},
-        .text-#{$color-name} > :not(a, span, button, [style^="background"]) {
-          color: $color;
+        .text-#{$color-name} {
+          color: $color !important;
 
           a:not(.button),
           a:link:not(.button) {
-            color: link-contrast-checker($color);
+            // color: link-contrast-checker($color);
 
             &:hover {
-              color: link-contrast-checker-hover($color);
+              // color: link-contrast-checker-hover($color);
             }
           }
         }
