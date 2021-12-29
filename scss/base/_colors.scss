@@ -36,7 +36,7 @@
   @if (lightness($color) > 82) {
     @return $primary;
   } @else if (lightness($color) > 50) {
-    @return rgba($primary, .5);
+    @return rgba($primary, 0.5);
   } @else {
     @return scale-color($accent3-medium, $lightness: 75%);
   }
@@ -74,8 +74,9 @@ $red: #b81f2d;
 $yellow: #e9c71d;
 $green: #2db81f;
 
-$dark: $primary;
-$light: $white;
+$color-dark: $primary;
+$color-light: $white;
+$color-medium: $accent1-medium;
 
 // ======================================================================
 // GRADIENTS
@@ -172,6 +173,9 @@ $background-palette: (
   white-60: rgba($white, 0.6),
   "white": $white,
   steps: $primary,
+  color-dark: $color-dark,
+  color-light: $color-light,
+  color-medium: $accent1-medium,
 );
 
 // ======================================================================
@@ -222,13 +226,22 @@ $gradient-overlay-palette: (
 );
 
 // ======================================================================
-// CSS VARIABLE COLORS
+// ████████    ███████████████████████ ███    ███
+//  ██     ██    ████        ██  ██    ██████  ████
+//  ██     ██    █████████   ██  ██    ████ ████ ██
+//  ██     ██    ██     ██   ██  ██    ████  ██  ██
+//   ██████ ██████ ███████   ██   ██████ ██      ██
+//  ██████ ██████  ██████ ██████ █████████████████████████████████████
+//  ██   ████   ████    ████   ████     ██   ██  ██   ████     ██
+//  ██████ ██████ ██    ████████ █████  ██████   ██   ███████  ███████
+//  ██     ██   ████    ████     ██     ██   ██  ██   ████          ██
+//  ██     ██   ██ ██████ ██     █████████   ██  ██   ████████████████
 // ======================================================================
-// :root {
-//   @each $name, $color in $cog-color-palette {
-//     --#{$name}: #{$color};
-//   }
-// }
+:root {
+  --heading-color: #{$accent2-dark};
+  --link-color: #{$accent2-dark};
+  --link-hover-color: #{$primary};
+}
 
 // ===================================================================================
 // ██████   █████  ██████  ██   ██     ███    ███  ██████  ██████  ███████

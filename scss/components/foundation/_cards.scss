@@ -8,22 +8,39 @@
 
 ==================================================================================== */
 .card {
-    flex-grow: 1;
+  flex-grow: 1;
 
-    &.bg-none {
-      .card-section, .card-divider {
-        background-color: none;
-      }
+  &.bg-none {
+    .card-section,
+    .card-divider {
+      background: none;
     }
+  }
 }
 
 .card-section + .card-section {
-    padding-top: 0;
+  padding-top: 0;
 }
 
 .card-divider {
   background-color: none;
   & > :last-child {
     margin-bottom: auto;
-}}
+  }
+}
+
+.card:not([class*="bg-"]) :not([class*="bg-"]),
+.card:not([class*="bg-"]) > {
+  :is(h4, h5, h6) {
+    color: $accent2-dark;
+  }
+  a:not(.button),
+  a:link:not(.button) {
+    color: $anchor-color;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
 // -----  End of CARDS  ----------

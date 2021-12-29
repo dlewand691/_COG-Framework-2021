@@ -1,23 +1,10 @@
 .button {
-  // color: contrast-checker($light-link);
   text-decoration: none !important;
   font-weight: $global-weight-bold;
   margin-right: 1rem;
 
-  &.small {
-    // border-radius: $global-radius / 1.5;
-  }
-
-  &.tiny {
-    // border-radius: $global-radius / 2;
-  }
-
   &:last-of-type {
     margin-right: 0;
-  }
-
-  &.hollow:hover {
-    // border-color: $button-hollow-hover-lightness;
   }
 
   &.back {
@@ -27,7 +14,7 @@
     }
     &::before {
       margin-right: 0.5em;
-      margin-left: -.2em;
+      margin-left: -0.2em;
       content: "\e905";
       font-family: "Cognizant-Icons";
       font-weight: 600;
@@ -91,180 +78,22 @@
     }
   }
 
-  &.white {
-    color: $accent2-dark;
-    background: $white;
-
-    &::after {
-      color: $accent2-dark;
-    }
+  &.hollow {
+    color: var(--link-color);
+    border-color: var(--link-color);
 
     &:hover {
-      background: darken($white, 5%);
+      color: var(--link-hover-color);
+      border-color: var(--link-hover-color);
     }
   }
-
-  // &.disabled {
-  //   background: rgba($black, 0.15);
-  // }
-
-  // &.primary {
-  //   $button-background: $accent2-light;
-  //   $button-background-hover: scale-color($button-background, $lightness: -20%);
-
-  //   background: $button-background;
-
-  //   &:hover {
-  //     background: $button-background-hover;
-  //   }
-
-    &.hollow {
-      background: none;
-      color: $accent2-dark;
-      border-color: $accent2-dark;
-
-      &:hover {
-        background: none;
-        color: $primary;
-        border-color: $primary;
-      }
-    }
-  // }
-
-  // &.accent2-bright {
-  //   $button-background: $accent3-medium;
-  //   $button-background-hover: scale-color($button-background, $lightness: -20%);
-
-  //   background: $button-background;
-
-  //   &:hover {
-  //     background: $button-background-hover;
-  //   }
-
-  //   &.hollow {
-  //     background: none;
-  //     color: $button-background;
-  //     border-color: $button-background;
-
-  //     &:hover {
-  //       background: none;
-  //       color: $button-background-hover;
-  //       border-color: $button-background-hover;
-  //     }
-  //   }
-  // }
-
-  // &.grd-theme-1:hover,
-  // &.grd-theme-2:hover {
-  //   color: $white;
-  // }
-
-  // &.hover-grd-theme-1,
-  // &.hover-grd-theme-2,
-  // &.hover-grd-theme-3 {
-  //   border: none;
-  //   transition: $transition-default;
-  //   background: linear-gradient(35deg, $button-background, $button-background);
-  //   position: relative;
-  //   z-index: 1;
-
-  //   &::before {
-  //     content: "";
-  //     width: 100%;
-  //     height: 100%;
-  //     top: 0;
-  //     left: 0;
-  //     position: absolute;
-  //     z-index: -1;
-  //     opacity: 0;
-  //     transition: $transition-fast;
-  //     border-radius: $button-radius;
-  //   }
-  // }
-
-  // &.hover-grd-theme-1 {
-  //   color: $white;
-  //   background: $accent1-dark;
-  //   &:before {
-  //     opacity: 0;
-  //   }
-
-  //   &:hover::before {
-  //     background: $grd-theme-1;
-  //     opacity: 1;
-  //   }
-  //   &:hover {
-  //     color: $white;
-  //   }
-  // }
-
-  // &.hover-grd-theme-2 {
-  //   color: $white;
-  //   background: $primary;
-  //   &:before {
-  //     opacity: 0;
-  //   }
-
-  //   &:hover::before {
-  //     background: $grd-theme-2;
-  //     opacity: 1;
-  //   }
-  //   &:hover {
-  //     color: $white;
-  //   }
-  // }
-
-  // &.hover-grd-theme-3 {
-  //   background: $accent2-medium;
-  //   &:before {
-  //     opacity: 0;
-  //   }
-
-  //   &:hover::before {
-  //     background: $grd-theme-3;
-  //     opacity: 1;
-  //   }
-  //   &:hover {
-  //     // color: contrast-checker($light);
-  //   }
-  // }
 }
-
-// a:not(.button) {
-//   &.primary {
-//     $anchor-color: $accent2-light;
-//     $anchor-color-hover: scale-color($anchor-color, $lightness: -20%);
-//     color: $anchor-color;
-//     &:hover {
-//       color: $anchor-color-hover;
-//     }
-//   }
-//   &.accent2-bright {
-//     $anchor-color: $accent3-medium;
-//     $anchor-color-hover: scale-color($anchor-color, $lightness: -20%);
-//     color: $anchor-color;
-//     &:hover {
-//       color: $anchor-color-hover;
-//     }
-//   }
-
-//   &.accent2-bright-hover {
-//     &:hover {
-//       color: $accent3-medium;
-//     }
-//   }
-// }
 
 .arrow {
   display: inline-flex;
   align-items: center;
   padding-right: 1.1em;
   display: inline-block;
-  // margin-right: 1rem;
-
-  &:last-of-type {
-    // margin-right: 0;
-  }
 
   &::after {
     position: unset;
@@ -314,28 +143,13 @@
   }
 
   &.hollow {
-    // transition: $transition-fast;
-    border-color: $accent2-dark;
-    color: $accent2-dark;
+    color: var(--link-color);
+    border-color: var(--link-color);
 
     &:hover {
-      border-color: $primary;
-      color: $primary;
+      color: var(--link-hover-color);
+      border-color: var(--link-hover-color);
     }
-
-    // &.white {
-    //   border-color: $white;
-    //   color: $white;
-    //   background: none;
-
-    //   &:hover {
-    //     background: none;
-    //   }
-
-    //   &::after {
-    //     color: inherit;
-    //   }
-    // }
   }
 }
 
@@ -353,8 +167,6 @@
 }
 
 [class*="button-group"] {
-  // background: unset;
-
   & .button {
     margin-left: 0;
   }

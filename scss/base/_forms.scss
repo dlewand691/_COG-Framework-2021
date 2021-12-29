@@ -7,18 +7,6 @@
 // ===================================================================================
 
 form {
-  * {
-    &:focus {
-      // box-shadow: 0 0 5px $accent2-dark !important;
-    }
-  }
-
-  &.white {
-    *:focus {
-      // box-shadow: 0 0 5px $white !important;
-    }
-  }
-
   [type="color"],
   [type="date"],
   [type="datetime"],
@@ -35,11 +23,6 @@ form {
   [type="week"],
   textarea {
     height: initial;
-  }
-
-  button {
-    font-family: $body-font-family;
-    font-weight: bold;
   }
 
   :disabled:is(button, optgroup, option, select, textarea, input) {
@@ -259,15 +242,15 @@ form {
   }
 
   @mixin float-label {
-    > span,
+    > span:not(.form-error),
     label {
       position: absolute;
-      top: 0;
+      top: 0rem;
       left: 1rem;
       cursor: text;
       transition: all 0.2s;
-      opacity: 1;
-      font-size: 75%;
+      transform: scale(0.65) translateY(15%);
+      transform-origin: top left;
       @content;
     }
   }
@@ -275,8 +258,6 @@ form {
   @mixin float-label-input {
     &::placeholder {
       transition: all 0.2s;
-      opacity: 1;
-      // color: rgba($primary, 0.3);
       color: $accent2-light;
     }
 
@@ -287,9 +268,7 @@ form {
 
   @mixin float-label-scaled {
     &:placeholder-shown:not(:focus) + * {
-      top: 0.6rem;
-      opacity: 1;
-      font-size: inherit;
+      transform: translateY(33.333%);
       @content;
     }
   }
@@ -301,25 +280,21 @@ form {
     & input,
     & textarea {
       padding-top: 1.2rem;
+      padding-left: 1rem;
       border: 0;
       border-bottom: 1px solid $gray-light;
       border-radius: $global-radius;
       background: $gray-lightest;
       box-shadow: none;
-      font-size: inherit;
 
       @include float-label-input;
 
-      @include float-label-scaled {
-        // top: 0.5rem;
-      }
+      @include float-label-scaled;
 
       &:focus {
         border-width: 0 0 1px 0;
         border-color: $accent2-medium;
-        outline: none;
         background: none;
-        box-shadow: none;
         box-shadow: 0 1px 0 $accent2-medium;
       }
     }
@@ -337,12 +312,13 @@ form {
       border-radius: $global-radius;
       background: $gray-lightest;
       box-shadow: none;
-      font-size: inherit;
     }
 
-    & input:focus + span,
-    & textarea:focus + span {
-      color: $accent2-dark;
+    & input:focus,
+    & textarea:focus {
+      + span {
+        color: $accent2-dark;
+      }
     }
 
     & .form-error {
@@ -390,6 +366,14 @@ form {
 
     & input:focus + span {
       color: $white;
+    }
+
+    .is-invalid-input {
+      color: $primary;
+
+      + span {
+        color: $primary;
+      }
     }
   }
 

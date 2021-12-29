@@ -120,9 +120,11 @@
 $tiny-font-size: 60%;
 
 body {
-  // font-size: var(--step-0);
-  // @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 20px, 20px);
   font-feature-settings: "ss01";
+}
+
+:is(h4, .h4, h5, .h5, h6, .h6) {
+  color: var(--heading-color);
 }
 
 %h1,
@@ -166,7 +168,7 @@ h4 {
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 25px, 36px);
   font-weight: 300;
   font-feature-settings: "ss00";
-  color: $accent2-dark;
+  // color: $accent2-dark;
   // @include font-size(36px);
   // font-size: var(--step-2);
 }
@@ -177,7 +179,7 @@ h5 {
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 22px, 27px);
   font-weight: $global-weight-normal;
   font-feature-settings: "ss00";
-  color: $accent2-dark;
+  // color: $accent2-dark;
   // @include font-size(27px);
   // font-size: var(--step-1);
 }
@@ -188,7 +190,7 @@ h6 {
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 20px, 20px);
   font-weight: $global-weight-bold;
   font-feature-settings: "ss01";
-  color: $accent2-dark;
+  // color: $accent2-dark;
   // @include font-size(20px);
   // font-size: var(--step-0);
 }
@@ -350,31 +352,16 @@ $text-alignments: ("left", "right", "center");
     @each $color-name, $color in $text-color-palette {
       @if $size != $-zf-zero-breakpoint {
         .#{$size}-text-#{$color-name} {
-          color: $color !important;
-
-          a:not(.button),
-          a:link:not(.button) {
-            // color: link-contrast-checker($color);
-
-            &:hover {
-              // color: link-contrast-checker-hover($color);
-            }
-          }
+          color: $color;
+          //change the color depends on parent's class text color
+          --heading-color: #{$color};
         }
       } @else {
         .text-#{$color-name} {
-          color: $color !important;
+          color: $color;
 
-          a:not(.button),
-          a:link:not(.button) {
-            // color: link-contrast-checker($color);
-            color: inherit;
-
-            &:hover {
-              // color: link-contrast-checker-hover($color);
-              color: inherit;
-            }
-          }
+          //change the color depends on parent's class text color
+          --heading-color: #{$color};
         }
       }
     }

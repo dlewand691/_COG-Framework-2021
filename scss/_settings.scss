@@ -336,7 +336,8 @@ $button-palette: $button-palette !default;
 $button-opacity-disabled: 0.25 !default;
 $button-background-hover-lightness: -20% !default;
 $button-hollow-hover-lightness: -60% !default;
-$button-transition: background-color 0.25s ease-out, color 0.25s ease-out !default;
+$button-transition: background-color 0.25s ease-out, color 0.25s ease-out,
+  border-color 0.25s ease-out !default;
 $button-responsive-expanded: true !default;
 
 // 12. Button Group
@@ -579,7 +580,7 @@ $pagination-radius: $global-radius * 0;
 $pagination-item-background-hover: lighten($accent2-light, 20%);
 $pagination-item-background-current: $accent2-dark;
 $pagination-item-color-current: $white;
-$pagination-item-color-disabled: $gray-light;
+$pagination-item-color-disabled: $gray-medium;
 $pagination-ellipsis-color: $body-font-color;
 $pagination-mobile-items: true;
 $pagination-mobile-current-item: true;
