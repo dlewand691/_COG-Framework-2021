@@ -33,27 +33,6 @@ $border-side: (
         }
       }
       // ====================================================================================
-      // GRADIENT BORDER ALL SIDES
-      // ====================================================================================
-      @for $i from 1 through $border-width {
-        .#{$size}-bd-grd-theme-1-#{$i} {
-          border-width: #{$i}px;
-          border-style: solid;
-          border-image: $grd-theme-1 1;
-        }
-      }
-      // ====================================================================================
-      // GRADIENT BORDER, INDIVIDUAL SIDES
-      // ====================================================================================
-      @for $i from 1 through $border-width {
-        @each $side-name, $side in $border-side {
-          .#{$size}-bd-#{$side-name}-#{$i} {
-            border-#{$side}: #{$i}px solid;
-            border-image: $grd-theme-1 1;
-          }
-        }
-      }
-      // ====================================================================================
       // BORDER, INDIVIDUAL SIDES, GRAY LIGHT 2
       // ====================================================================================
       @for $i from 1 through $border-width {
@@ -104,6 +83,7 @@ $border-side: (
         @each $side-name, $side in $border-side {
           @each $color-name, $color in $border-gradient-palette {
             .#{$size}-bd-#{$side-name}-#{$color-name}-#{$i} {
+              border: 0;
               border-#{$side}: #{$i}px solid;
               border-image: $color 1;
             }
@@ -188,6 +168,7 @@ $border-side: (
         @each $side-name, $side in $border-side {
           @each $color-name, $color in $border-gradient-palette {
             .bd-#{$side-name}-#{$color-name}-#{$i} {
+              border: 0;
               border-#{$side}: #{$i}px solid;
               border-image: $color 1;
             }

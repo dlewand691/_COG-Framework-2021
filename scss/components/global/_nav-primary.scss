@@ -145,6 +145,11 @@
             font-weight: normal;
             color: $anchor-color;
             transition: $transition-default;
+
+            &:hover {
+              background: $primary;
+              color: $white;
+            }
           }
         }
 
@@ -233,7 +238,7 @@
     }
 
     & a.is-active {
-      background: rgba($accent2-dark, .6) !important;
+      background: rgba($accent2-dark, 0.6) !important;
 
       &:hover {
         background: $accent2-dark !important;

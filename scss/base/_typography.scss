@@ -352,14 +352,17 @@ $text-alignments: ("left", "right", "center");
     @each $color-name, $color in $text-color-palette {
       @if $size != $-zf-zero-breakpoint {
         .#{$size}-text-#{$color-name} {
-          color: $color;
-          //change the color depends on parent's class text color
+          color: $color !important;
+          //change the heading color depends on parent's class text color
           --heading-color: #{$color};
         }
       } @else {
-        .text-#{$color-name} {
-          color: $color;
-
+        // .text-#{$color-name}, .text-#{$color-name}.card, a:link.text-#{$color-name}:not(.button), a.text-#{$color-name}:not(.button)  {
+        //card level with text color issue fixes
+        .text-#{$color-name},
+        .text-#{$color-name}.card {
+          // color: $color; adding important for textcolor in anchor tag
+          color: $color !important;
           //change the color depends on parent's class text color
           --heading-color: #{$color};
         }

@@ -15,20 +15,25 @@ a:link {
   font-weight: $global-weight-bold;
   transition: $transition-fast;
 
-  &:hover {
-    transition: $transition-fast;
+  &:not(.button):hover {
     color: var(--link-hover-color);
   }
 }
 
-:is(p, ul, ol, dl):not(.accordion, .menu, .tabs, .pagination) {
-  a,
-  a:link {
-    text-decoration: underline;
-    text-decoration-color: inherit;
-    text-decoration-thickness: 0.1em;
-    text-underline-offset: 0.05em;
-    text-decoration-skip-ink: auto;
+// p, ul, ol, dl {
+//   :not(.accordion, .menu, .tabs, .pagination){
+p,
+ul,
+ol,
+dl {
+  &:not(.accordion, .menu, .tabs, .pagination) {
+    & a {
+      text-decoration: underline;
+      text-decoration-color: inherit;
+      text-decoration-thickness: 0.1em;
+      text-underline-offset: 0.05em;
+      text-decoration-skip-ink: auto;
+    }
   }
 }
 

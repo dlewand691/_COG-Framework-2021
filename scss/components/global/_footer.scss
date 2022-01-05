@@ -6,14 +6,13 @@
 ██       ██████   ██████     ██    ███████ ██   ██
 ==================================================================================== */
 
-footer,
-.footer {
+.footer-site-map {
   a,
   a:link {
     font-weight: normal;
     color: $body-font-color;
     transition: $transition-default;
-    text-decoration: none;
+    text-decoration: none !important;
 
     &:hover {
       color: $anchor-color;
@@ -21,8 +20,7 @@ footer,
   }
 
   ul li {
-    margin: 0.25rem;
-    // line-height: 1.3rem;
+    margin: 0.25rem 0;
   }
 
   .footer-primary {
@@ -51,14 +49,10 @@ footer.theme-primary {
 
   li a:link {
     color: $anchor-color;
-
-    &:hover {
-      color: $anchor-color-hover;
-    }
   }
 
   .footer-primary {
-    background-color: rgba($black, 0.3);
+    background-color: rgba($primary, 0.3);
   }
 
   .footer-site-map {
@@ -70,7 +64,7 @@ footer.theme-accent2-dark {
   background-color: $accent2-dark;
 
   .footer-primary {
-    background-color: rgba($black, 0.3);
+    background-color: rgba($primary, 0.3);
   }
 
   .footer-site-map {
@@ -79,11 +73,10 @@ footer.theme-accent2-dark {
 }
 
 footer.theme-accent2-dark-gradient {
-  // background-color: .bg-grd-accent2-radial-top;
   @extend .bg-grd-accent2-radial-top;
 
   .footer-primary {
-    background-color: rgba($black, 0.3);
+    background-color: rgba($primary, 0.3);
   }
 
   .footer-site-map {
