@@ -54,11 +54,11 @@ $breakpoint-classes: (small medium large);
   %gradient-overlay-#{$color-name},
   .gradient-overlay-#{$color-name} {
     position: relative;
-    // background-color: $color;
-    // color: contrast-checker($color) !important;
 
-    & * {
-      // color: contrast-checker($color) !important;
+    a:not(.button),
+    a:link:not(.button) {
+      color: contrast-checker($color);
+      --link-color: #{link-contrast-checker($color)};
     }
 
     &::after {
@@ -78,12 +78,12 @@ $breakpoint-classes: (small medium large);
   %gradient-overlay-#{$color-name}-full,
   .gradient-overlay-#{$color-name}-full {
     position: relative;
-    // background-color: $color;
-    // color: contrast-checker($color-name);
-    // color: contrast-checker($color) !important;
+    color: contrast-checker($color);
 
-    & * {
-      // color: contrast-checker($color) !important;
+    a:not(.button),
+    a:link:not(.button) {
+      color: link-contrast-checker($color);
+      --link-color: #{link-contrast-checker($color)};
     }
 
     &::after {
@@ -103,11 +103,12 @@ $breakpoint-classes: (small medium large);
   %gradient-overlay-#{$color-name}-angled,
   .gradient-overlay-#{$color-name}-angled {
     position: relative;
-    // background-color: $color;
-    // color: contrast-checker($color) !important;
+    color: contrast-checker($color);
 
-    & * {
-      // color: contrast-checker($color) !important;
+    a:not(.button),
+    a:link:not(.button) {
+      color: link-contrast-checker($color);
+      --link-color: #{link-contrast-checker($color)};
     }
 
     &::after {
@@ -148,29 +149,19 @@ $breakpoint-classes: (small medium large);
     @each $color-name, $color in $image-color-overlay-palette {
       @if $size != $-zf-zero-breakpoint {
         .#{$size}-bgOverlay-#{$color-name} {
-          // background-color: $color;
           background-image: linear-gradient(
             rgba($color, 0.55),
             rgba($color, 0.55)
           );
-          color: header-contrast-checker($color) !important;
-
-          & * {
-            // color: contrast-checker($color) !important;
-          }
+          color: contrast-checker($color);
         }
       } @else {
         .bgOverlay-#{$color-name} {
-          // background-color: $color;
           background-image: linear-gradient(
             rgba($color, 0.55),
             rgba($color, 0.55)
           );
-          color: contrast-checker($color) !important;
-
-          & * {
-            // color: contrast-checker($color) !important;
-          }
+          color: contrast-checker($color);
         }
       }
     }

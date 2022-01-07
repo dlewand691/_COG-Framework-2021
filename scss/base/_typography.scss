@@ -123,89 +123,74 @@ body {
   font-feature-settings: "ss01";
 }
 
-:is(h4, .h4, h5, .h5, h6, .h6) {
-  color: var(--heading-color);
-}
-
-%h1,
-.h1,
-h1 {
+@mixin h1 {
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 36px, 84px);
   @include fluidSize(line-height, 320px, $cog-bp--desktop-xl, 36px, 92.4px);
   font-weight: $global-weight-bold;
   font-feature-settings: "ss00";
-  // @include font-size(84px);
-  // font-size     : var(--step-5);
-  // line-height   : 1.1;
-  // letter-spacing: -1px;
+}
+.h1,
+h1 {
+  @include h1;
 }
 
-%h2,
-.h2,
-h2 {
+@mixin h2 {
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 32px, 63px);
   @include fluidSize(line-height, 320px, $cog-bp--desktop-xl, 32px, 69.3px);
   font-weight: $global-weight-bold;
   font-feature-settings: "ss00";
-  // @include font-size(63px);
-  // font-size  : var(--step-4);
-  // line-height: 1.1;
+}
+.h2,
+h2 {
+  @include h2;
 }
 
-%h3,
-.h3,
-h3 {
+@mixin h3 {
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 28px, 47px);
   font-weight: $global-weight-bold;
   font-feature-settings: "ss00";
-  // @include font-size(47px);
-  // font-size: var(--step-3);
+}
+.h3,
+h3 {
+  @include h3;
 }
 
-%h4,
-.h4,
-h4 {
+@mixin h4 {
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 25px, 36px);
   font-weight: 300;
   font-feature-settings: "ss00";
-  // color: $accent2-dark;
-  // @include font-size(36px);
-  // font-size: var(--step-2);
+  color: var(--heading-color);
+}
+.h4,
+h4 {
+  @include h4;
 }
 
-%h5,
-.h5,
-h5 {
+@mixin h5 {
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 22px, 27px);
   font-weight: $global-weight-normal;
   font-feature-settings: "ss00";
-  // color: $accent2-dark;
-  // @include font-size(27px);
-  // font-size: var(--step-1);
+  color: var(--heading-color);
+}
+.h5,
+h5 {
+  @include h5;
 }
 
-%h6,
-.h6,
-h6 {
+@mixin h6 {
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 20px, 20px);
   font-weight: $global-weight-bold;
   font-feature-settings: "ss01";
-  // color: $accent2-dark;
-  // @include font-size(20px);
-  // font-size: var(--step-0);
+  color: var(--heading-color);
+}
+.h6,
+h6 {
+  @include h6;
 }
 
-%p,
 .p,
 p {
-  // @include font-size(20px);
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 16px, 20px);
-  font-weight: $global-weight-normal;
-  // @include text-crop($top-adjustment: 0.4px, $bottom-adjustment: -0.25px);
-  // font-size: var(--step-0);
-  // line-height: calc(1ex / 0.32) !important;
-  // width: 60ch;
-  // max-width: 100%;
 
   &:last-of-type {
     // margin-bottom: 0;
@@ -222,34 +207,21 @@ p {
 // }
 
 .extra-large {
-  // @include font-size(140px);
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 40px, 112px);
   @include fluidSize(line-height, 320px, $cog-bp--desktop-xl, 1, 1.1);
 }
 
 .super-size {
-  // @include font-size(140px);
   @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 48px, 140px);
   @include fluidSize(line-height, 320px, $cog-bp--desktop-xl, 1, 1.1);
 }
 
-%small,
 .small {
-  // font-size: $small-font-size;
-  // @include font-size(16px);
   @include fluidSize(font-size, 320px, $cog-bp--desktop, 12px, 15px);
 }
 
-%tiny,
 .tiny {
-  // font-size: 60%;
-  // @include font-size(12px);
   @include fluidSize(font-size, 320px, $cog-bp--desktop, 9px, 12px);
-}
-
-sup {
-  // top      : -0.4em;
-  // font-size: $tiny-font-size;
 }
 
 code {
@@ -290,7 +262,6 @@ $font-two-styles: (
   "normal-light" "normal" "normal"
 );
 @each $font-style, $font-weight, $font-variation in $font-two-styles {
-  %text-#{$font-style},
   .text-#{$font-style} {
     font-weight: #{$font-weight};
     font-style: #{$font-variation} !important;
@@ -299,7 +270,6 @@ $font-two-styles: (
 
 $font-transforms: ("caps" "uppercase", "title" "capitalize");
 @each $font-style, $font-transform in $font-transforms {
-  %text-#{$font-style},
   .text-#{$font-style} {
     text-transform: #{$font-transform};
   }
@@ -310,12 +280,10 @@ $text-alignments: ("left", "right", "center");
   @include breakpoint($size) {
     @each $alignment in $text-alignments {
       @if $size != $-zf-zero-breakpoint {
-        %#{$size}-text-#{$alignment},
         .#{$size}-text-#{$alignment} {
           text-align: #{$alignment};
         }
       } @else {
-        %text-#{$alignment},
         .text-#{$alignment} {
           text-align: #{$alignment};
         }
@@ -359,8 +327,7 @@ $text-alignments: ("left", "right", "center");
       } @else {
         // .text-#{$color-name}, .text-#{$color-name}.card, a:link.text-#{$color-name}:not(.button), a.text-#{$color-name}:not(.button)  {
         //card level with text color issue fixes
-        .text-#{$color-name},
-        .text-#{$color-name}.card {
+        .text-#{$color-name} {
           // color: $color; adding important for textcolor in anchor tag
           color: $color !important;
           //change the color depends on parent's class text color
@@ -414,9 +381,8 @@ blockquote {
   font-weight: bold;
   font-style: italic;
 
-  @extend %h5;
+  @include h5;
 
-  %cite,
   cite {
     margin-top: 1.875rem;
     font-weight: normal;

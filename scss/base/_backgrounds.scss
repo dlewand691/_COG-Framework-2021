@@ -13,10 +13,10 @@
 // $breakpoint-classes: (small);
 
 @each $color-name, $color in $background-palette {
-  // in card with background, text color issue fixes - it creates high priority than default card text color custom property
+  // in card with background, text color issue fixes - it creates high priority than default card  text color custom property
   .bg-#{$color-name},
   .bg-#{$color-name}.card {
-    // Reduce the number of line in css when color-medium,color-dark,color-light it wont added the background color.
+    // Reduce the number of line in css when color -medium,color-dark,color-light it wont added the background color.
     @if not(index("color-medium" "color-dark" "color-light", $color-name)) {
       background-color: #{$color};
     }

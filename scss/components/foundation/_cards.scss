@@ -9,13 +9,6 @@
 ==================================================================================== */
 .card {
   flex-grow: 1;
-
-  &.bg-none {
-    .card-section,
-    .card-divider {
-      background: none;
-    }
-  }
 }
 
 .card-section + .card-section {
@@ -23,24 +16,25 @@
 }
 
 .card-divider {
-  background: none;
   & > :last-child {
     margin-bottom: auto;
   }
 }
+// @each $color-name, $color in $background-palette {
+// .card:not([class*="bg-"]) :not([class*="bg-"]),
+// .card:not([class*="bg-"]) > {
+//   :is(h4, h5, h6) {
+//     color: $accent2-dark;
+//   }
+//   a:not(.button),
+//   a:link:not(.button) {
+//     color: contrast-checker($color);
+//     --link-color: #{link-contrast-checker($color)};
 
-.card:not([class*="bg-"]) :not([class*="bg-"]),
-.card:not([class*="bg-"]) > {
-  :is(h4, h5, h6) {
-    color: $accent2-dark;
-  }
-  a:not(.button),
-  a:link:not(.button) {
-    color: $anchor-color;
-
-    &:hover {
-      color: $primary;
-    }
-  }
-}
+//     &:hover {
+//       color: $primary;
+//     }
+//   }
+// }
+// }
 // -----  End of CARDS  ----------
