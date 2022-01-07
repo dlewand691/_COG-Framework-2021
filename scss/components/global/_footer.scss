@@ -5,8 +5,8 @@
 ██      ██    ██ ██    ██    ██    ██      ██   ██
 ██       ██████   ██████     ██    ███████ ██   ██
 ==================================================================================== */
-
-.footer-site-map {
+footer,
+[class*="footer"] {
   a,
   a:link {
     font-weight: normal;
@@ -18,13 +18,15 @@
       color: $anchor-color;
     }
   }
+}
 
+.footer-primary {
+  background-color: $gray-lighter;
+}
+
+.footer-site-map {
   ul li {
     margin: 0.25rem 0;
-  }
-
-  .footer-primary {
-    background-color: $gray-lighter;
   }
 }
 
