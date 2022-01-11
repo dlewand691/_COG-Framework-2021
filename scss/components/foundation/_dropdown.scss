@@ -1,0 +1,12 @@
+.dropdown {
+  .is-dropdown-submenu,
+  .is-dropdown-submenu-parent {
+    a {
+      // background: none !important;
+      // margin-left: -0.5rem;
+      &:hover {
+        background-color: rgba($accent2-light, 0.2);
+      }
+    }
+  }
+}

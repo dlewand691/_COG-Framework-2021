@@ -90,13 +90,10 @@
 }
 
 .arrow {
-  display: inline-flex;
-  align-items: center;
   padding-right: 1.1em;
-  display: inline-block;
 
   &::after {
-    position: unset;
+    position: unset !important;
     right: unset;
     width: unset;
     height: unset;

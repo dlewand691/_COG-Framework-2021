@@ -1,13 +1,11 @@
 mixin bannerConsulting
-  img.mb1(src="https://www.cognizant.com/content/dam/cognizant_foundation/images/CBC_360x100_navIMAGE.jpg", title alt="Megamenu")
-  h6.mb1 COGNIZANT CONSULTING
+  img.mb1(src="https://www.cognizant.com/content/dam/cognizant_foundation/images/CBC_360x100_navIMAGE.jpg")
+  h6.mb1 Cognizant Consulting
   p Helping organizations engage people and uncover insight from data to shape the products, services and experiences they offer
-  a.arrow.arrow-solid.arrow-small.mln-half(href="/consulting", title="Learn More")
-    | Learn More
-    //- i.arrow-solid-right.small
+  a.arrow.arrow-small.mln-half(href="#") Learn More
 
 mixin bannerAppStore
-  .grid-x.grid-padding-x(style="background:url(images/LTmenu-mobile.jpg) no-repeat; background-size: 100% auto; height: 250px;", alt="Megamenu")
+  .grid-x.grid-padding-x(style="background:url(images/LTmenu-mobile.jpg) no-repeat; background-size: 100% auto; height: 250px;")
     .cell.large-6.medium-6.small-12.align-self-bottom
       a.-p0(href="https://itunes.apple.com/us/app/cognizant-perspectives/id439247923?mt=8", title="Download the iPad app", target="_blank")
         img(src="https://www.cognizant.com/content/dam/cognizant_foundation/images/app-store-logo.png")
@@ -243,9 +241,9 @@ mixin primaryNav
     // ██      ██  ██████  ██████  ██ ███████ ███████
     // ======================================================================
     #stickyTitleBar.stickyTitleBar(data-sticky-container="")
-      .sticky(data-sticky="" data-margin-top="0" data-top-anchor="stickyTitleBar:bottom" data-sticky-on="small")
+      .sticky(data-sticky="" data-margin-top="0" data-top-anchor="stickyTitleBar:bottom")
         .title-bar.px-half(data-responsive-toggle="primary-nav", data-hide-for="large")
-          button.w100.hamburger.hamburger--spin(type="button", data-toggle)
+          button.w100.hamburger.hamburger--spin(type="button", data-toggle="")
             .title-bar-title.flex-container.align-justify.align-middle
               a(href="index.html")
                 img.cog-logo.lazyload(title="Cognizant Technology Solutions", alt="Cognizant Technology Solutions", data-sizes="auto" data-src="images/COG-logo-2021.svg")
@@ -262,7 +260,7 @@ mixin primaryNav
     // ██      ██   ██ ██ ██  ██  ██ ██   ██ ██   ██    ██
     // ██      ██   ██ ██ ██      ██ ██   ██ ██   ██    ██
     // ======================================================================
-    #primary-nav.primary-nav.top-bar.grid-container.px0.large-px-half.py0.large-py1.stacked-for-large.z3(data-animate="hinge-in-from-top hinge-out-from-top")
+    #primary-nav.primary-nav.top-bar.grid-container.px0.large-px-half.py0.large-py1.stacked-for-large.z2(data-animate="hinge-in-from-top hinge-out-from-top")
       .top-bar-left.show-for-large
         a(href="index.html")
           img.cog-logo.lazyload(title="Cognizant Technology Solutions", alt="Cognizant Technology Solutions", data-sizes="auto" data-src="images/COG-logo-2021.svg")
@@ -285,75 +283,24 @@ mixin primaryNav
                 .grid-container
                   .grid-x.grid-margin-x.large-h100vh
                     .cell.auto
-                      ul.no-bullet.menu.vertical
-                        li.m0(role="menuitem")
-                          a.flex-container.align-middle.arrow.arrow-solid.arrow-small(href="/automotive-technology-solutions", title="Automotive", rel="noopener noreferrer")
-                            | Automotive
-                            //- i.small.arrow-solid-right.m0
-                        li.m0(role="menuitem")
-                          a.flex-container.align-middle.arrow.arrow-solid.arrow-small(href="/banking-technology-solutions", title="Banking", rel="noopener noreferrer")
-                            | Banking
-                            //- i.small.arrow-solid-right.m0
-                        li.m0(role="menuitem")
-                          a.flex-container.align-middle.arrow.arrow-solid.arrow-small(href="/capital-markets-technology-solutions", title="Capital Markets", rel="noopener noreferrer")
-                            | Capital Markets
-                            //- i.small.arrow-solid-right.m0
-                        li.m0(role="menuitem")
-                          a.flex-container.align-middle.arrow.arrow-solid.arrow-small(href="/cmt-solutions", title="Communications, Media & Technology", rel="noopener noreferrer")
-                            | Communications, Media &amp; Technology
-                            //- i.small.arrow-solid-right.m0
-                        li.m0(role="menuitem")
-                          a.flex-container.align-middle.arrow.arrow-solid.arrow-small(href="/consumer-goods-technology-solutions", title="Consumer Goods", rel="noopener noreferrer")
-                            | Consumer Goods
-                            //- i.small.arrow-solid-right.m0
-                        li.m0(role="menuitem")
-                          a.flex-container.align-middle.arrow.arrow-solid.arrow-small(href="/education-technology-solutions", title="Education", rel="noopener noreferrer")
-                            | Education
-                            //- i.small.arrow-solid-right.m0
+                      a.arrow.arrow-small(href="#") Automotive
+                      a.arrow.arrow-small(href="#") Banking
+                      a.arrow.arrow-small(href="#") Capital Markets
+                      a.arrow.arrow-small(href="#") Communications, Media & Technology
+                      a.arrow.arrow-small(href="#") Consumer Goods
+                      a.arrow.arrow-small(href="#") Education
                     .cell.auto
-                      ul.no-bullet.menu.vertical
-                        li.m0(role="menuitem")
-                          a.flex-container.align-middle.arrow.arrow-solid.arrow-small(href="/healthcare-technology-solutions", title="Healthcare", rel="noopener noreferrer")
-                            | Healthcare
-                            //- i.small.arrow-solid-right.m0
-                        li.m0(role="menuitem")
-                          a.flex-container.align-middle.arrow.arrow-solid.arrow-small(href="/information-services-digital-solutions", title="Information Services", rel="noopener noreferrer")
-                            | Information Services
-                            //- i.small.arrow-solid-right.m0
-                        li.m0(role="menuitem")
-                          a.flex-container.align-middle.arrow.arrow-solid.arrow-small(href="/insurance-digital-transformation", title="Insurance", rel="noopener noreferrer")
-                            | Insurance
-                            //- i.small.arrow-solid-right.m0
-                        li.m0(role="menuitem")
-                          a.flex-container.align-middle.arrow.arrow-solid.arrow-small(href="/life-sciences-technology-solutions", title="Life Sciences", rel="noopener noreferrer")
-                            | Life Sciences
-                            //- i.small.arrow-solid-right.m0
-                        li.m0(role="menuitem")
-                          a.flex-container.align-middle.arrow.arrow-solid.arrow-small(href="/manufacturing-technology-solutions", title="Manufacturing", rel="noopener noreferrer")
-                            | Manufacturing
-                            //- i.small.arrow-solid-right.m0
+                      a.arrow.arrow-small(href="#") Healthcare
+                      a.arrow.arrow-small(href="#") Information Services
+                      a.arrow.arrow-small(href="#") Insurance
+                      a.arrow.arrow-small(href="#") Life Sciences
+                      a.arrow.arrow-small(href="#") Manufacturing
                     .cell.auto
-                      ul.no-bullet.menu.vertical
-                        li.m0(role="menuitem")
-                          a.flex-container.align-middle.arrow.arrow-solid.arrow-small(href="/oil-gas-digital-solutions", title="Oil & Gas", rel="noopener noreferrer")
-                            | Oil &amp; Gas
-                            //- i.small.arrow-solid-right.m0
-                        li.m0(role="menuitem")
-                          a.flex-container.align-middle.arrow.arrow-solid.arrow-small(href="/retail-technology-solutions", title="Retail", rel="noopener noreferrer")
-                            | Retail
-                            //- i.small.arrow-solid-right.m0
-                        li.m0(role="menuitem")
-                          a.flex-container.align-middle.arrow.arrow-solid.arrow-small(href="/transportation-logistics-technology-solutions", title="Transportation & Logistics", rel="noopener noreferrer")
-                            | Transportation &amp; Logistics
-                            //- i.small.arrow-solid-right.m0
-                        li.m0(role="menuitem")
-                          a.flex-container.align-middle.arrow.arrow-solid.arrow-small(href="/travel-hospitality-technology-solutions", title="Travel & Hospitality", rel="noopener noreferrer")
-                            | Travel &amp; Hospitality
-                            //- i.small.arrow-solid-right.m0
-                        li.m0(role="menuitem")
-                          a.flex-container.align-middle.arrow.arrow-solid.arrow-small(href="/utilities-digital-solutions", title="Utilities", rel="noopener noreferrer")
-                            | Utilities
-                            //- i.small.arrow-solid-right.m0
+                      a.arrow.arrow-small(href="#") Oil & Gas
+                      a.arrow.arrow-small(href="#") Retail
+                      a.arrow.arrow-small(href="#") Transportation & Logistics
+                      a.arrow.arrow-small(href="#") Travel & Hospitality
+                      a.arrow.arrow-small(href="#") Utilities
                     .cell.auto
                       +bannerConsulting
 
@@ -371,35 +318,31 @@ mixin primaryNav
                 .grid-container
                   .grid-x.grid-margin-x.large-h100vh
                     .cell.large-6.pr1
-                      h6.small.pl-half DIGITAL BUSINESS & TECHNOLOGY
+                      strong.small.pl-half DIGITAL BUSINESS & TECHNOLOGY
                       hr.my1.lighter
                       .grid-container.full
                         .grid-x
                           .cell.auto
-                            ul.menu.shrink
-                              li
-                                a.arrow.arrow-solid.arrow-small(href="") Application Services & Modernization
-                                a.arrow.arrow-solid.arrow-small(href="") Artificial Intelligence
-                                a.arrow.arrow-solid.arrow-small(href="") Cloud Enablement
-                                a.arrow.arrow-solid.arrow-small(href="") Cognizant Infrastructure Services
-                                a.arrow.arrow-solid.arrow-small(href="") Cognizant Security
-                                a.arrow.arrow-solid.arrow-small(href="") Core Modernization
+                            a.arrow.arrow-small(href="#") Application Services & Modernization
+                            a.arrow.arrow-small(href="#") Artificial Intelligence
+                            a.arrow.arrow-small(href="#") Cloud Enablement
+                            a.arrow.arrow-small(href="#") Cognizant Infrastructure Services
+                            a.arrow.arrow-small(href="#") Cognizant Security
+                            a.arrow.arrow-small(href="#") Core Modernization
                           .cell.auto
-                            ul.menu.shrink
-                              li
-                                a.arrow.arrow-solid.arrow-small(href="") Digital Experience
-                                a.arrow.arrow-solid.arrow-small(href="") Digital Strategy
-                                a.arrow.arrow-solid.arrow-small(href="") Enterprise Application Services
-                                a.arrow.arrow-solid.arrow-small(href="") Internet of Things
-                                a.arrow.arrow-solid.arrow-small(href="") Quality Engineering & Assurance
-                                a.arrow.arrow-solid.arrow-small(href="") Software Product Engineering
+                            a.arrow.arrow-small(href="#") Digital Experience
+                            a.arrow.arrow-small(href="#") Digital Strategy
+                            a.arrow.arrow-small(href="#") Enterprise Application Services
+                            a.arrow.arrow-small(href="#") Internet of Things
+                            a.arrow.arrow-small(href="#") Quality Engineering & Assurance
+                            a.arrow.arrow-small(href="#") Software Product Engineering
                     .cell.auto
-                      h6.small.pl-half DIGITAL BUSINESS OPERATIONS
+                      strong.small.pl-half DIGITAL BUSINESS OPERATIONS
                       hr.my1.lighter
-                      a.arrow.arrow-solid.arrow-small(href="") Business Process Services
-                      a.arrow.arrow-solid.arrow-small(href="") Enterprise Services
-                      a.arrow.arrow-solid.arrow-small(href="") Industry & Platform Solutions
-                      a.arrow.arrow-solid.arrow-small(href="") Intelligent Process Automation
+                      a.arrow.arrow-small(href="#") Business Process Services
+                      a.arrow.arrow-small(href="#") Enterprise Services
+                      a.arrow.arrow-small(href="#") Industry & Platform Solutions
+                      a.arrow.arrow-small(href="#") Intelligent Process Automation
                     .cell.auto
                       +bannerConsulting
 
@@ -417,31 +360,31 @@ mixin primaryNav
                 .grid-container
                   .grid-x.grid-margin-x.large-h100vh
                     .cell.auto
-                      h6.small.pl-half OUR MEDIA & PUBLICATIONS
+                      strong.small.pl-half OUR MEDIA & PUBLICATIONS
                       hr.my1.lighter
-                      a.arrow.arrow-solid.arrow-small(href="") All Latest Thinking
-                      a.arrow.arrow-solid.arrow-small(href="") Browse Case Studies
-                      a.arrow.arrow-solid.arrow-small(href="") Cognizant Podcasts
-                      a.arrow.arrow-solid.arrow-small(href="") Cognizanti Journal
-                      a.arrow.arrow-solid.arrow-small(href="") Digitally Cognizant Blog
-                      a.arrow.arrow-solid.arrow-small(href="") Infographics
-                      a.arrow.arrow-solid.arrow-small(href="") Perspectives
+                      a.arrow.arrow-small(href="#") All Latest Thinking
+                      a.arrow.arrow-small(href="#") Browse Case Studies
+                      a.arrow.arrow-small(href="#") Cognizant Podcasts
+                      a.arrow.arrow-small(href="#") Cognizanti Journal
+                      a.arrow.arrow-small(href="#") Digitally Cognizant Blog
+                      a.arrow.arrow-small(href="#") Infographics
+                      a.arrow.arrow-small(href="#") Perspectives
                     .cell.auto
-                      h6.small.pl-half KEY THEMES
+                      strong.small.pl-half KEY THEMES
                       hr.my1.lighter
-                      a.arrow.arrow-solid.arrow-small(href="") Code Halos
-                      a.arrow.arrow-solid.arrow-small(href="") Digital Maturity Research
-                      a.arrow.arrow-solid.arrow-small(href="") When Machines Do Everything
-                      a.arrow.arrow-solid.arrow-small(href="") World Economic Forum- Davos
+                      a.arrow.arrow-small(href="#") Code Halos
+                      a.arrow.arrow-small(href="#") Digital Maturity Research
+                      a.arrow.arrow-small(href="#") When Machines Do Everything
+                      a.arrow.arrow-small(href="#") World Economic Forum- Davos
                     .cell.auto
-                      h6.small.pl-half CENTER FOR THE FUTURE OF WORK
+                      strong.small.pl-half CENTER FOR THE FUTURE OF WORK
                       hr.my1.lighter
-                      a.arrow.arrow-solid.arrow-small(href="") 21 More Jobs of the Future
-                      a.arrow.arrow-solid.arrow-small(href="") Digital Workforce of the Future
-                      a.arrow.arrow-solid.arrow-small(href="") Explore the Future of Work
-                      a.arrow.arrow-solid.arrow-small(href="") Jobs of the Future Index
-                      a.arrow.arrow-solid.arrow-small(href="") Our Post-COVID Future
-                      a.arrow.arrow-solid.arrow-small(href="") The Work Ahead
+                      a.arrow.arrow-small(href="#") 21 More Jobs of the Future
+                      a.arrow.arrow-small(href="#") Digital Workforce of the Future
+                      a.arrow.arrow-small(href="#") Explore the Future of Work
+                      a.arrow.arrow-small(href="#") Jobs of the Future Index
+                      a.arrow.arrow-small(href="#") Our Post-COVID Future
+                      a.arrow.arrow-small(href="#") The Work Ahead
                     .cell.auto
                       +bannerConsulting
 
@@ -459,26 +402,26 @@ mixin primaryNav
                 .grid-container
                   .grid-x.grid-margin-x.large-h100vh
                     .cell.auto
-                      a.arrow.arrow-solid.arrow-small(href="") 2020 in Focus
-                      a.arrow.arrow-solid.arrow-small(href="") About Cognizant
-                      a.arrow.arrow-solid.arrow-small(href="") Board of Directors
-                      a.arrow.arrow-solid.arrow-small(href="") Client Briefing Program
-                      a.arrow.arrow-solid.arrow-small(href="") Cognizant Events
-                      a.arrow.arrow-solid.arrow-small(href="") Contact Us
+                      a.arrow.arrow-small(href="#") 2020 in Focus
+                      a.arrow.arrow-small(href="#") About Cognizant
+                      a.arrow.arrow-small(href="#") Board of Directors
+                      a.arrow.arrow-small(href="#") Client Briefing Program
+                      a.arrow.arrow-small(href="#") Cognizant Events
+                      a.arrow.arrow-small(href="#") Contact Us
                     .cell.auto
-                      a.arrow.arrow-solid.arrow-small(href="") Corporate Governance
-                      a.arrow.arrow-solid.arrow-small(href="") Corporate Integrity
-                      a.arrow.arrow-solid.arrow-small(href="") Culture & Values
-                      a.arrow.arrow-solid.arrow-small(href="") Diversity & Inclusion
-                      a.arrow.arrow-solid.arrow-small(href="") ESG
-                      a.arrow.arrow-solid.arrow-small(href="") Leadership Team
+                      a.arrow.arrow-small(href="#") Corporate Governance
+                      a.arrow.arrow-small(href="#") Corporate Integrity
+                      a.arrow.arrow-small(href="#") Culture & Values
+                      a.arrow.arrow-small(href="#") Diversity & Inclusion
+                      a.arrow.arrow-small(href="#") ESG
+                      a.arrow.arrow-small(href="#") Leadership Team
                     .cell.auto
-                      a.arrow.arrow-solid.arrow-small(href="") News & Press Releases
-                      a.arrow.arrow-solid.arrow-small(href="") Partnerships
-                      a.arrow.arrow-solid.arrow-small(href="") Public Policy
-                      a.arrow.arrow-solid.arrow-small(href="") Sponsorships
-                      a.arrow.arrow-solid.arrow-small(href="") Talent Worldwide
-                      a.arrow.arrow-solid.arrow-small(href="") Women Empowered
+                      a.arrow.arrow-small(href="#") News & Press Releases
+                      a.arrow.arrow-small(href="#") Partnerships
+                      a.arrow.arrow-small(href="#") Public Policy
+                      a.arrow.arrow-small(href="#") Sponsorships
+                      a.arrow.arrow-small(href="#") Talent Worldwide
+                      a.arrow.arrow-small(href="#") Women Empowered
                     .cell.auto
                       +bannerConsulting
 
@@ -493,75 +436,98 @@ mixin primaryNav
             hr.my1.lighter
             .grid-x.grid-padding-x
               .cell.auto
-                a.m0.p-half(href="") Cognizant.com
-                a.m0.p-half(href="") Industries
-                a.m0.p-half(href="") Services
-                a.m0.p-half(href="") Latest Thinking
+                a.m0.p-half(href="#") Cognizant.com
+                a.m0.p-half(href="#") Industries
+                a.m0.p-half(href="#") Services
+                a.m0.p-half(href="#") Latest Thinking
               .cell.auto
-                a.m0.p-half(href="") Careers
-                a.m0.p-half(href="") News
-                a.m0.p-half(href="") Events
-                a.m0.p-half(href="") Investors
+                a.m0.p-half(href="#") Careers
+                a.m0.p-half(href="#") News
+                a.m0.p-half(href="#") Events
+                a.m0.p-half(href="#") Investors
               .cell
-                a.m0.px-half(href="")
+                a.m0.px-half(href="#")
                   | Search
                   i.search.text-bold.ml-half
 
 
 mixin sectionNav
-  #navSubBar(data-sticky-container)
+  #navSubBar.z1(data-sticky-container="")
     .sticky.w100(data-sticky="" data-margin-top="0" data-top-anchor="navSubBar:bottom")
       .bg-primary
         .grid-container
           .grid-x.grid-padding-x.align-middle.align-justify
-            .cell.auto.pt-half
-              ul.breadcrumbs.mb0
-                li.m0
-                  a.m0.p0(href="#") Find Solutions
-                li.m0
-                  a.m0.p0(href="#") Services
-                li.m0
-                  | Cognizant Digital Business
-                li.m0.disabled
-                  | Disabled
-              ul.vertical.medium-horizontal.dropdown.menu(data-dropdown-menu="")
-                li.m0
-                  a.w100.bg-none.pl0(href="#")
-                    //- img(src="./images/COG-Logo-Digital-Business.svg" style="height: 70px;")
-                    h6.text-normal.m0 Analysen und informationsmanagement
-                  ul.menu.p1.relative.medium-absolute.bg-white
-                    //- li
-                      a.m0.p0(href="#")
-                        //- img(src="./images/COG-Logo-Digital-Business.svg" style="height: 70px;")
-                        //- img(src="./images/COG-Logo-Digital-Operations.svg" style="height: 70px;")
-                        img(src="./images/COG-Logo-Digital-Systems-Technologies.svg" style="height: 70px;")
-                        //- SERVICES
+            .cell.auto
+              // ======================================================================
+              // ██████ ██████ ███████ █████ ██████  ████████████ ██    █████    █████████ ███████
+              // ██   ████   ████     ██   ████   ████     ██   ████    ██████  ██████   ████
+              // ██████ ██████ █████  █████████   ████     ██████ ██    ████ ████ ████████ ███████
+              // ██   ████   ████     ██   ████   ████     ██   ████    ████  ██  ████   ██     ██
+              // ██████ ██   ███████████   ████████  ████████   ██ ██████ ██      ████████ ███████
+              // ======================================================================
+              ul.breadcrumbs.mb0.show-for-large.pt-half
+                li
+                  a(href="#") Bread
+                li
+                  a(href="#") Crumb
+                li Link
+                li.disabled Disabled
+                // ======================================================================
+                // ███    █████████████    ████    ██
+                // ████  ██████     ████   ████    ██
+                // ██ ████ ███████  ██ ██  ████    ██
+                // ██  ██  ████     ██  ██ ████    ██
+                // ██      ███████████   ████ ██████
+                // ======================================================================
+              ul.dropdown.menu(data-dropdown-menu="")
+                li.mln-half.pr-half
+                  a.bg-none.text-normal.text-white(href="#")
+                    | Dropdown
+                  ul.menu.p1.bg-white.w100
+                    small OPTIONAL SECTION DIVIDER
                     li
-                      //- hr.my1
-                      p.mb-half.small.text-caps optional section divider goes here in this area
+                      a(href="#") Link
                     li
-                      a.m0.p0(href="#") Analytics And Information Management
+                      a(href="#") Link
                     li
-                      a.m0.p0(href="#") Insight, Strategy and Design
+                      a(href="#") Link
+                    hr.my1
+                    small OPTIONAL SECTION DIVIDER
                     li
-                      a.m0.p0(href="#") Intelligent Products and Services
+                      a(href="#") Link
                     li
-                      hr.my1
-                      p.mb-half.small.text-caps optional section divider goes here in this area
+                      a(href="#") Link
                     li
-                      a.m0.p0(href="#") Interactive
+                      a(href="#") Link
                     li
-                      a.m0.p0(href="#") Internet of Things
-            .cell.shrink.hide-for-small-only
+                      a(href="#") Link
+                    li
+                      a(href="#") Link
+                    li
+                      a(href="#") Link
+                    li
+                      a(href="#") Link
+                    li
+                      a(href="#") Link
+                    li
+                      a(href="#") Link
+                    li
+                      a(href="#") Link
+                    li
+                      a(href="#") Link
+                    li
+                      a(href="#") Link
+                    li
+                      a(href="#") Link
+            .cell.shrink.show-for-medium
               button.button.m0.small(data-open="contact-widget")
                 i.bubble-chat-typing.p0.mr-half.ml0
                 | CONTACT
 
 
 mixin navBarInPage
-  #navBarInPage.stickyNav.bg-primary(data-sticky-container)
-    .sticky(data-sticky="" data-margin-top="3.75" data-top-anchor="navBarInPage:bottom" data-sticky-on="small")
-      .show-for-medium
+  #navBarInPage.stickyNav.bg-primary.show-for-large(data-sticky-container="")
+    .sticky(data-sticky="" data-margin-top="3.75" data-top-anchor="navBarInPage:bottom")
         .grid-container
           .grid-x.grid-padding-x
             .cell

@@ -208,8 +208,6 @@ $border-gradient-palette: (
 // ======================================================================
 $image-color-overlay-palette: (
   primary: $primary,
-  accent2-light: $accent2-light,
-  accent2-dark: $accent2-dark,
   "white": $white,
 );
 
@@ -218,7 +216,6 @@ $image-color-overlay-palette: (
 // ======================================================================
 $gradient-overlay-palette: (
   primary: $primary,
-  accent2-dark: $accent2-dark,
   "white": $white,
   primary-50: rgba($primary, 0.5),
   primary-60: rgba($primary, 0.6),

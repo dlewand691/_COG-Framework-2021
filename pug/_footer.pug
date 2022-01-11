@@ -7,40 +7,36 @@ mixin footer
     // ██      ██    ██ ██    ██    ██    ██      ██   ██          ██ ██    ██ ██      ██ ██   ██ ██
     // ██       ██████   ██████     ██    ███████ ██   ██     ███████  ██████   ██████ ██ ██   ██ ███████
     // =============================================================================================
-    .footer-primary.bg-gray-lighter
+    .footer-primary
       .grid-container
         .grid-x.grid-padding-x.align-middle.align-justify
-          .small-12.medium-shrink.cell
-            .button-group.m0.flex-wrap
-              a.button.clear.p-half(href="#")
-                h5.m0
-                  i.logo-linkedin
-              a.button.clear.p-half(href="#")
-                h5.m0
-                  i.logo-twitter-bird
-              a.button.clear.p-half(href="#")
-                h5.m0
-                  i.logo-facebook
-              a.button.clear.p-half(href="#")
-                h5.m0
-                  i.rss-feed-solid
+          .small-12.medium-shrink.cell.mln-half.social-media
+            ul.menu.horizontal
+              a.h5(href="#")
+                i.logo-linkedin
+              a.h5(href="#")
+                i.logo-twitter-bird
+              a.h5(href="#")
+                i.logo-facebook
+              a.h5(href="#")
+                i.rss-feed-solid
 
           .small-12.medium-shrink.cell.small
             ul.menu.vertical.medium-horizontal.large-align-right.flex-wrap.pos-inherit.small.collapse
               li
-                a.p-half(href="#") Sitemap
+                a(href="#") Sitemap
 
               li
-                a.p-half(href="#")  Legal
+                a(href="#")  Legal
 
               li
-                a.p-half(href="#")  Privacy Policy
+                a(href="#")  Privacy Policy
 
               li
-                a.p-half(href="#")  Cookie Policy
+                a(href="#")  Cookie Policy
 
-              li
-                .p-half  &copy;2021 Cognizant, all rights reserved
+              li.p-half
+                | &copy;2021 Cognizant, all rights reserved
 
     // =============================================================================================
     // ███████  ██████   ██████  ████████ ███████ ██████
@@ -238,7 +234,7 @@ mixin footer
                 a(href="/about-cognizant/the-cognizant-growth-story" title="The Cognizant Growth Story") The Cognizant Growth Story
               li
                 a(href="/women-empowered" title="Women Empowered") Women Empowered
-            h6 Information For Suppliers
+            h6.m0 Information For Suppliers
             ul.no-bullet.small
               li
                 a(href="/Procure-to-pay" title="Procure-to-Pay") Procure-to-Pay

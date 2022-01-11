@@ -6,23 +6,25 @@
 ██████  ██   ██ ███████ ██   ██ ██████   ██████ ██   ██  ██████  ██      ██ ██████  ███████
 ==================================================================================== */
 .bg-primary .breadcrumbs {
-    li {
-        color: inherit;
+  li {
+    color: inherit;
+    margin: 0;
 
-        &.disabled {
-            color: inherit;
-            opacity: 0.5;
-        }
-
-        a, a:link {
-            color: $accent2-medium;
-            transition: $button-transition;
-            &:hover {
-                color: scale-color($accent2-medium, $lightness: 50%);
-                text-decoration: none;
-            }
-        }
+    &.disabled {
+      color: inherit;
+      opacity: 0.5;
     }
+
+    a,
+    a:link {
+      color: $accent2-medium;
+      transition: $button-transition;
+      &:hover {
+        color: scale-color($accent2-medium, $lightness: 50%);
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 // -----  End of BREADCRUMBS  ----------

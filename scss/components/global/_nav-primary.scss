@@ -161,10 +161,6 @@
           background: $dropdown-menu-item-background-active;
           color: $dropdown-menu-item-color-active;
 
-          &:hover {
-            // background-color: $dropdown-hover-color;
-          }
-
           &::after {
             color: $dropdown-arrow-color;
           }
@@ -175,13 +171,8 @@
             padding: 1rem 2.2rem 1rem 1rem;
 
             &::after {
-              font-family: "Cognizant-Icons";
-              content: "\e903";
-              color: $dropdown-arrow-color;
-              font-weight: 900;
-              border-color: transparent;
-              top: 23%;
-              right: 1.35rem;
+              transform: scale(1.333);
+              right: 1rem;
             }
           }
         }
@@ -208,10 +199,19 @@
   }
 
   #navSubBar {
-    hyphens: auto;
+    .menu {
+      li {
+        transition: $button-transition;
+        &:hover {
+          background-color: rgba($accent2-light, 0.2);
+        }
+      }
 
-    .menu a::after {
-      border-color: $accent2-medium transparent transparent;
+      .submenu {
+        max-height: 65vh;
+        overflow: hidden;
+        overflow-y: scroll;
+      }
     }
   }
   /* ====================================================================================
@@ -228,6 +228,10 @@
 ██████  ███████  ██████  ███████     ██████  ██   ██ ██   ██
 
 ==================================================================================== */
+  #navBarInPage {
+    z-index: 0;
+  }
+
   .navBarInPage {
     & a {
       color: $white !important;
