@@ -90,22 +90,22 @@ $grd-dir-270deg: 270deg;
 $grd-dir-315deg: 315deg;
 $grd-theme-1: linear-gradient(
   $grd-dir-45deg,
-  #2d2d8f 10%,
-  #006fba 50%,
-  #21fceb 94%
+  rgba(45, 45, 143, 1) 10%,
+  rgba(0, 111, 186, 1) 50%,
+  rgba(33, 252, 235, 1) 94%
 );
 $grd-theme-2: linear-gradient(
   $grd-dir-45deg,
-  #010065 15%,
-  #d43635 65%,
-  #f3c9ce 100%
+  rgba(1, 0, 101, 1) 15%,
+  rgba(212, 54, 53, 1) 65%,
+  rgba(243, 201, 206, 1) 100%
 );
 $grd-theme-3: linear-gradient(
   $grd-dir-45deg,
-  #5e93ef 10%,
-  #c7ed88 65%,
-  #eee2a0 85%,
-  #efe34a 100%
+  rgba(94, 147, 239, 1) 10%,
+  rgba(199, 237, 136, 1) 65%,
+  rgba(238, 226, 160, 1) 85%,
+  rgba(239, 227, 74, 1) 100%
 );
 
 // ======================================================================

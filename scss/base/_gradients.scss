@@ -39,46 +39,121 @@
 
 .bg-grd-mesh-theme-1 {
   background-size: cover;
-  background-image: #e6b7c6;
+  background-image: rgb(230, 183, 198);
   background-image: radial-gradient(
-      at 31% 99%,
-      hsla(239, 52%, 37%, 1) 0,
-      transparent 80%
+      at 18% 95%,
+      rgba(3, 0, 96, 1) 0,
+      rgba(3, 0, 96, 0.001) 80%
     ),
-    radial-gradient(at 85% 81%, hsla(180, 100%, 50%, 1) 0, transparent 80%),
-    radial-gradient(at 60% 99%, hsla(175, 98%, 61%, 1) 20%, transparent 50%),
-    radial-gradient(at 39% 2%, hsla(0, 0%, 86%, 1) 0, transparent 60%),
-    radial-gradient(at 0% 98%, hsla(259, 100%, 23%, 1) 0, transparent 85%),
-    radial-gradient(at 98% 3%, hsla(221, 100%, 34%, 1) 0, transparent 85%),
-    radial-gradient(at 76% 2%, hsla(204, 98%, 37%, 1) 10%, transparent 60%);
+    radial-gradient(
+      at 85% 81%,
+      rgba(0, 255, 255, 1) 0,
+      rgba(0, 255, 255, 0.001) 80%
+    ),
+    radial-gradient(
+      at 60% 99%,
+      rgba(58, 253, 237, 1) 10%,
+      rgba(58, 253, 237, 0.001) 50%
+    ),
+    radial-gradient(
+      at 35% 15%,
+      rgba(251, 249, 232, 1) 0,
+      rgba(251, 249, 232, 0.75) 10%,
+      rgba(251, 249, 232, 0.001) 20%
+    ),
+    radial-gradient(
+      at 39% 25%,
+      rgba(252, 247, 231, 1) 0,
+      rgba(252, 247, 231, 0.75) 30%,
+      rgba(252, 247, 231, 0.001) 60%
+    ),
+    radial-gradient(
+      at 2% 2%,
+      rgba(246, 214, 216, 1) 0,
+      rgba(246, 214, 216, 0.001) 55%
+    ),
+    radial-gradient(
+      at 0% 98%,
+      rgba(37, 0, 117, 1) 0,
+      rgba(37, 0, 117, 0.001) 85%
+    ),
+    radial-gradient(
+      at 98% 3%,
+      rgba(0, 55, 173, 1) 0,
+      rgba(0, 55, 173, 0.001) 85%
+    ),
+    radial-gradient(
+      at 76% 2%,
+      rgba(2, 112, 187, 1) 10%,
+      rgba(2, 112, 187, 0.001) 60%
+    );
 }
 
 .bg-grd-mesh-theme-2 {
   background-size: cover;
-  background-image: #010032;
+  background-image: rgb(1, 0, 50);
   background-image: radial-gradient(
       at 1% 2%,
-      hsla(242, 100%, 10%, 1) 0,
-      transparent 76%
+      rgba(2, 0, 51, 1) 0,
+      rgba(2, 0, 51, 0.1) 76%,
+      rgba(2, 0, 51, 0.001) 100%
     ),
-    radial-gradient(at 3% 98%, hsla(353, 64%, 88%, 1) 0, transparent 38%),
-    radial-gradient(at 17% 35%, hsla(242, 100%, 20%, 1) 0, transparent 50%),
-    radial-gradient(at 7% 91%, hsla(356, 94%, 94%, 1) 0, transparent 85%),
-    radial-gradient(at 79% 2%, hsla(358, 97%, 51%, 1) 0, transparent 74%),
-    radial-gradient(at 77% 38%, hsla(360, 64%, 53%, 1) 0, transparent 100%),
-    radial-gradient(at 96% 94%, hsla(0, 100%, 81%, 1) 50%, transparent 100%);
+    radial-gradient(
+      at 3% 98%,
+      rgba(244, 205, 209, 1) 0,
+      rgba(244, 205, 209, 0.001) 38%
+    ),
+    radial-gradient(
+      at 10% 25%,
+      rgba(3, 0, 102, 1) 0,
+      rgba(3, 0, 102, 0.5) 25%,
+      rgba(3, 0, 102, 0.05) 45%,
+      rgba(3, 0, 102, 0.001) 50%
+    ),
+    radial-gradient(
+      at 7% 91%,
+      rgba(254, 225, 227, 1) 0,
+      rgba(254, 225, 227, 0.001) 65%
+    ),
+    radial-gradient(
+      at 79% 2%,
+      rgba(251, 9, 18, 1) 0,
+      rgba(251, 9, 18, 0.001) 100%
+    ),
+    radial-gradient(
+      at 77% 38%,
+      rgba(212, 58, 58, 1) 0,
+      rgba(212, 58, 58, 0.001) 100%
+    ),
+    radial-gradient(
+      at 96% 94%,
+      rgba(255, 158, 158, 1) 50%,
+      rgba(255, 158, 158, 0.001) 100%
+    );
 }
 
 .bg-grd-mesh-theme-3 {
-  background-image: #000048;
+  background-image: rgba(0, 0, 72, 1);
   background-image: radial-gradient(
       at 95% 7%,
-      hsla(186, 55%, 53%, 1) 0,
-      transparent 60%
+      rgba(69, 188, 201, 1) 0,
+      rgba(69, 188, 201, 0.001) 60%
     ),
-    radial-gradient(at 95% 93%, hsla(55, 100%, 49%, 1) 0, transparent 60%),
-    radial-gradient(at 6% 6%, hsla(217, 100%, 49%, 1) 20%, transparent 60%),
-    radial-gradient(at 6% 94%, hsla(0, 0%, 100%, 1) 0, transparent 60%);
+    radial-gradient(
+      at 95% 93%,
+      rgba(250, 229, 0, 1) 0,
+      rgba(250, 229, 0, 0.001) 60%
+    ),
+    radial-gradient(
+      at 6% 6%,
+      rgba(0, 96, 250, 1) 15%,
+      rgba(0, 96, 250, 0.001) 80%
+    ),
+    radial-gradient(
+      at 6% 94%,
+      rgba(255, 255, 255, 1) 0,
+      rgba(255, 255, 255, 0.001) 60%
+    );
 }
 
 %bg-grd-accent2-radial,

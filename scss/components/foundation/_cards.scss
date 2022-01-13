@@ -9,6 +9,17 @@
 ==================================================================================== */
 .card {
   flex-grow: 1;
+
+  --heading-color: #{$accent2-dark};
+  --link-color: #{$accent2-dark};
+  --link-hover-color: #{$primary};
+
+  &.bg-none {
+    .card-section,
+    .card-divider {
+      background: none;
+    }
+  }
 }
 
 .card-section + .card-section {
@@ -20,6 +31,7 @@
     margin-bottom: auto;
   }
 }
+
 // @each $color-name, $color in $background-palette {
 // .card:not([class*="bg-"]) :not([class*="bg-"]),
 // .card:not([class*="bg-"]) > {
