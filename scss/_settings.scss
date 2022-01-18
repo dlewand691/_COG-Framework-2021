@@ -801,10 +801,10 @@ $table-stack-breakpoint: medium;
 // --------
 
 $tab-margin: 0;
-$tab-background: $accent2-light;
-$tab-color: $primary;
+$tab-background: lighten($accent2-light, 20%);
+$tab-color: $anchor-color;
 $tab-background-active: $white;
-$tab-active-color: $accent2-dark;
+$tab-active-color: $primary;
 $tab-item-font-size: rem-calc(20);
 $tab-item-background-hover: $white;
 $tab-item-padding: 1.25rem;

@@ -19,8 +19,9 @@
 
 .icomoon-liga,
 i {
-  display    : inline-block;
-  font-weight: normal;
+  display: inline-block !important;
+  font-weight: normal !important;
+  font-family: "Cognizant-Icons" !important;
 }
 /* -----  End of ICON FONT  ---------- */
 /* ====================================================================================
@@ -33,12 +34,12 @@ i {
 
 ==================================================================================== */
 .icon-left svg {
-  float       : left;
+  float: left;
   margin-right: 0.7em;
 }
 
 .icon-right svg {
-  float      : right;
+  float: right;
   margin-left: 0.85em;
 }
 /* -----  End of ICONS  ---------- */
