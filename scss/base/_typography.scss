@@ -322,7 +322,7 @@ $text-alignments: ("left", "right", "center");
         .#{$size}-text-#{$color-name} {
           color: $color !important;
           //change the heading color depends on parent's class text color
-          --heading-color: #{$color};
+          --heading-color: #{$color} !important;
         }
       } @else {
         // .text-#{$color-name}, .text-#{$color-name}.card, a:link.text-#{$color-name}:not(.button), a.text-#{$color-name}:not(.button)  {
@@ -331,7 +331,7 @@ $text-alignments: ("left", "right", "center");
           // color: $color; adding important for textcolor in anchor tag
           color: $color !important;
           //change the color depends on parent's class text color
-          --heading-color: #{$color};
+          --heading-color: #{$color} !important;
         }
       }
     }

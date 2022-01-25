@@ -7,15 +7,20 @@
 ==================================================================================== */
 footer,
 [class*="footer"] {
+  p,
+  a,
+  li {
+    @include fluidSize(font-size, 320px, $cog-bp--desktop-xl, 15px, 15px);
+  }
   a,
   a:link {
     font-weight: normal;
-    color: $body-font-color;
+    color: var(--link-color-hover);
     transition: $transition-default;
     text-decoration: none;
 
     &:hover {
-      color: $anchor-color;
+      color: var(--link-color);
     }
   }
 }
@@ -23,15 +28,24 @@ footer,
 .footer-primary {
   background-color: $gray-lighter;
 
-  a {
-    padding: 0.5rem;
+  a,
+  a.link {
+    padding: 0.5rem 0.5rem 0.5rem 0;
+  }
+
+  @include breakpoint(large) {
+    a,
+    a.link {
+      padding: 0.5rem;
+    }
   }
 
   .social-media {
-    a {
-      &:link {
-        color: $anchor-color;
-      }
+    a,
+    a:link {
+      padding: 0.5rem;
+      @include h5;
+
       &:hover {
         color: $primary;
       }
@@ -52,24 +66,33 @@ footer,
 //    ██    ██   ██ ██      ██  ██  ██ ██           ██
 //    ██    ██   ██ ███████ ██      ██ ███████ ███████
 // ======================================================================
-footer.theme-primary {
-  $anchor-color: $white;
-  $anchor-color-hover: $accent3-medium;
+.theme-primary {
+  --heading-color: #{$white};
+  --link-color: #{$white};
+  --link-hover-color: #{$accent3-medium};
   color: $white;
   background-color: $primary;
 
-  .button,
-  h5,
-  h6 {
-    color: $white;
-  }
+  a,
+  a:link {
+    color: var(--link-color);
 
-  li a:link {
-    color: $anchor-color;
+    &:hover {
+      color: var(--link-hover-color);
+    }
   }
 
   .footer-primary {
     background-color: rgba($primary, 0.3);
+
+    .social-media {
+      a,
+      a:link {
+        &:hover {
+          color: var(--link-hover-color);
+        }
+      }
+    }
   }
 
   .footer-site-map {
@@ -77,7 +100,7 @@ footer.theme-primary {
   }
 }
 
-footer.theme-accent2-dark {
+.theme-accent2-dark {
   background-color: $accent2-dark;
 
   .footer-primary {
@@ -89,7 +112,7 @@ footer.theme-accent2-dark {
   }
 }
 
-footer.theme-accent2-dark-gradient {
+.theme-accent2-dark-gradient {
   @extend .bg-grd-accent2-radial-top;
 
   .footer-primary {

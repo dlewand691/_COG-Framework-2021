@@ -42,23 +42,23 @@ mixin subnav
           .cell.shrink
             //- img.lazyload.cog-logo(title="Cognizant Technology Solutions", alt="Cognizant Technology Solutions", data-sizes="auto" data-src="images/COG-Logo.svg" style="max-height: 20px;")
             //- span.mx-qtr •
-            a(href="https://www.cognizant.com") Cognizant.com
+            a(href="#") Cognizant.com
             span.mx-qtr •
-            a(href="/industries") Industries
+            a(href="#") Industries
             span.mx-qtr •
-            a(href="/services#") Services
+            a(href="#") Services
             span.mx-qtr •
-            a(href="/latest-thinking") Latest Thinking
+            a(href="#") Latest Thinking
           .cell.shrink
-            a(href="/careers") COVID-19
+            a(href="#") COVID-19
             span.mx-qtr •
-            a(href="/careers") Careers
+            a(href="#") Careers
             span.mx-qtr •
-            a(href="http://news.cognizant.com/") News
+            a(href="#") News
             span.mx-qtr •
-            a(href="/events") Events
+            a(href="#") Events
             span.mx-qtr •
-            a(href="http://investors.cognizant.com/") Investors
+            a(href="#") Investors
             span.mx-half |
             a(data-toggle="language-menu")
               i.globe.mr-qtr
@@ -232,7 +232,7 @@ mixin subnav
               .show-for-sr Search
 
 mixin primaryNav
-  nav&attributes(attributes)
+  nav.relative.z3(style="transform: translate3d(0, 0, 0)")&attributes(attributes)
     // ======================================================================
     // ███    ███  ██████  ██████  ██ ██      ███████
     // ████  ████ ██    ██ ██   ██ ██ ██      ██
@@ -261,198 +261,198 @@ mixin primaryNav
     // ██      ██   ██ ██ ██      ██ ██   ██ ██   ██    ██
     // ======================================================================
     #primary-nav.primary-nav.top-bar.grid-container.px0.large-px-half.py0.large-py1.stacked-for-large.z2(data-animate="hinge-in-from-top hinge-out-from-top")
-      .top-bar-left.show-for-large
-        a(href="index.html")
-          img.cog-logo.lazyload(title="Cognizant Technology Solutions", alt="Cognizant Technology Solutions", data-sizes="auto" data-src="images/COG-logo-2021.svg")
-          |
-          span.text-gray-dark.text-normal.mx-half |
-          span.text-gray-dark.text-normal Artificial Intelligence
-      .top-bar-right
-        ul.vertical.large-horizontal.menu(data-responsive-menu="accordion large-dropdown" data-multi-expand="false" data-alignment="left" data-disable-hover="true" data-click-open="true")
-          // ===========================================================
-          // ███    ███ ███████ ███    ██ ██    ██
-          // ████  ████ ██      ████   ██ ██    ██
-          // ██ ████ ██ █████   ██ ██  ██ ██    ██
-          // ██  ██  ██ ██      ██  ██ ██ ██    ██
-          // ██      ██ ███████ ██   ████  ██████
-          // ===========================================================
-          li.m0
-            a Industries
-            ul.menu.vertical.megamenu.large-fixed.large-pos-left.w100.pt1.bg-primary
-              li
-                .grid-container
-                  .grid-x.grid-margin-x.large-h100vh
-                    .cell.auto
-                      a.arrow.arrow-small(href="#") Automotive
-                      a.arrow.arrow-small(href="#") Banking
-                      a.arrow.arrow-small(href="#") Capital Markets
-                      a.arrow.arrow-small(href="#") Communications, Media & Technology
-                      a.arrow.arrow-small(href="#") Consumer Goods
-                      a.arrow.arrow-small(href="#") Education
-                    .cell.auto
-                      a.arrow.arrow-small(href="#") Healthcare
-                      a.arrow.arrow-small(href="#") Information Services
-                      a.arrow.arrow-small(href="#") Insurance
-                      a.arrow.arrow-small(href="#") Life Sciences
-                      a.arrow.arrow-small(href="#") Manufacturing
-                    .cell.auto
-                      a.arrow.arrow-small(href="#") Oil & Gas
-                      a.arrow.arrow-small(href="#") Retail
-                      a.arrow.arrow-small(href="#") Transportation & Logistics
-                      a.arrow.arrow-small(href="#") Travel & Hospitality
-                      a.arrow.arrow-small(href="#") Utilities
-                    .cell.auto
-                      +bannerConsulting
+        .top-bar-left.show-for-large
+          a(href="index.html")
+            img.cog-logo.lazyload(title="Cognizant Technology Solutions", alt="Cognizant Technology Solutions", data-sizes="auto" data-src="images/COG-logo-2021.svg")
+            |
+            span.text-gray-dark.text-normal.mx-half |
+            span.text-gray-dark.text-normal Artificial Intelligence
+        .top-bar-right
+          ul.vertical.large-horizontal.menu(data-responsive-menu="accordion large-dropdown" data-multi-expand="false" data-alignment="left" data-disable-hover="true" data-click-open="true")
+            // ===========================================================
+            // ███    ███ ███████ ███    ██ ██    ██
+            // ████  ████ ██      ████   ██ ██    ██
+            // ██ ████ ██ █████   ██ ██  ██ ██    ██
+            // ██  ██  ██ ██      ██  ██ ██ ██    ██
+            // ██      ██ ███████ ██   ████  ██████
+            // ===========================================================
+            li.m0
+              a Industries
+              ul.menu.vertical.megamenu.large-fixed.large-pos-left.w100.pt1.bg-primary
+                li
+                  .grid-container
+                    .grid-x.grid-margin-x.large-h100vh
+                      .cell.auto
+                        a.arrow.arrow-small(href="#") Automotive
+                        a.arrow.arrow-small(href="#") Banking
+                        a.arrow.arrow-small(href="#") Capital Markets
+                        a.arrow.arrow-small(href="#") Communications, Media & Technology
+                        a.arrow.arrow-small(href="#") Consumer Goods
+                        a.arrow.arrow-small(href="#") Education
+                      .cell.auto
+                        a.arrow.arrow-small(href="#") Healthcare
+                        a.arrow.arrow-small(href="#") Information Services
+                        a.arrow.arrow-small(href="#") Insurance
+                        a.arrow.arrow-small(href="#") Life Sciences
+                        a.arrow.arrow-small(href="#") Manufacturing
+                      .cell.auto
+                        a.arrow.arrow-small(href="#") Oil & Gas
+                        a.arrow.arrow-small(href="#") Retail
+                        a.arrow.arrow-small(href="#") Transportation & Logistics
+                        a.arrow.arrow-small(href="#") Travel & Hospitality
+                        a.arrow.arrow-small(href="#") Utilities
+                      .cell.auto
+                        +bannerConsulting
 
-          // ===========================================================
-          // ███    ███ ███████ ███    ██ ██    ██
-          // ████  ████ ██      ████   ██ ██    ██
-          // ██ ████ ██ █████   ██ ██  ██ ██    ██
-          // ██  ██  ██ ██      ██  ██ ██ ██    ██
-          // ██      ██ ███████ ██   ████  ██████
-          // ===========================================================
-          li.m0
-            a Services
-            ul.menu.vertical.megamenu.large-fixed.large-pos-left.w100.pt1.bg-primary
-              li
-                .grid-container
-                  .grid-x.grid-margin-x.large-h100vh
-                    .cell.large-6.pr1
-                      strong.small.pl-half DIGITAL BUSINESS & TECHNOLOGY
-                      hr.my1.lighter
-                      .grid-container.full
-                        .grid-x
-                          .cell.auto
-                            a.arrow.arrow-small(href="#") Application Services & Modernization
-                            a.arrow.arrow-small(href="#") Artificial Intelligence
-                            a.arrow.arrow-small(href="#") Cloud Enablement
-                            a.arrow.arrow-small(href="#") Cognizant Infrastructure Services
-                            a.arrow.arrow-small(href="#") Cognizant Security
-                            a.arrow.arrow-small(href="#") Core Modernization
-                          .cell.auto
-                            a.arrow.arrow-small(href="#") Digital Experience
-                            a.arrow.arrow-small(href="#") Digital Strategy
-                            a.arrow.arrow-small(href="#") Enterprise Application Services
-                            a.arrow.arrow-small(href="#") Internet of Things
-                            a.arrow.arrow-small(href="#") Quality Engineering & Assurance
-                            a.arrow.arrow-small(href="#") Software Product Engineering
-                    .cell.auto
-                      strong.small.pl-half DIGITAL BUSINESS OPERATIONS
-                      hr.my1.lighter
-                      a.arrow.arrow-small(href="#") Business Process Services
-                      a.arrow.arrow-small(href="#") Enterprise Services
-                      a.arrow.arrow-small(href="#") Industry & Platform Solutions
-                      a.arrow.arrow-small(href="#") Intelligent Process Automation
-                    .cell.auto
-                      +bannerConsulting
+            // ===========================================================
+            // ███    ███ ███████ ███    ██ ██    ██
+            // ████  ████ ██      ████   ██ ██    ██
+            // ██ ████ ██ █████   ██ ██  ██ ██    ██
+            // ██  ██  ██ ██      ██  ██ ██ ██    ██
+            // ██      ██ ███████ ██   ████  ██████
+            // ===========================================================
+            li.m0
+              a Services
+              ul.menu.vertical.megamenu.large-fixed.large-pos-left.w100.pt1.bg-primary
+                li
+                  .grid-container
+                    .grid-x.grid-margin-x.large-h100vh
+                      .cell.large-6.pr1
+                        strong.small.pl-half DIGITAL BUSINESS & TECHNOLOGY
+                        hr.my1.lighter
+                        .grid-container.full
+                          .grid-x
+                            .cell.auto
+                              a.arrow.arrow-small(href="#") Application Services & Modernization
+                              a.arrow.arrow-small(href="#") Artificial Intelligence
+                              a.arrow.arrow-small(href="#") Cloud Enablement
+                              a.arrow.arrow-small(href="#") Cognizant Infrastructure Services
+                              a.arrow.arrow-small(href="#") Cognizant Security
+                              a.arrow.arrow-small(href="#") Core Modernization
+                            .cell.auto
+                              a.arrow.arrow-small(href="#") Digital Experience
+                              a.arrow.arrow-small(href="#") Digital Strategy
+                              a.arrow.arrow-small(href="#") Enterprise Application Services
+                              a.arrow.arrow-small(href="#") Internet of Things
+                              a.arrow.arrow-small(href="#") Quality Engineering & Assurance
+                              a.arrow.arrow-small(href="#") Software Product Engineering
+                      .cell.auto
+                        strong.small.pl-half DIGITAL BUSINESS OPERATIONS
+                        hr.my1.lighter
+                        a.arrow.arrow-small(href="#") Business Process Services
+                        a.arrow.arrow-small(href="#") Enterprise Services
+                        a.arrow.arrow-small(href="#") Industry & Platform Solutions
+                        a.arrow.arrow-small(href="#") Intelligent Process Automation
+                      .cell.auto
+                        +bannerConsulting
 
-          // ===========================================================
-          // ███    ███ ███████ ███    ██ ██    ██
-          // ████  ████ ██      ████   ██ ██    ██
-          // ██ ████ ██ █████   ██ ██  ██ ██    ██
-          // ██  ██  ██ ██      ██  ██ ██ ██    ██
-          // ██      ██ ███████ ██   ████  ██████
-          // ===========================================================
-          li.m0
-            a Latest Thinking
-            ul.menu.vertical.megamenu.large-fixed.large-pos-left.w100.pt1.bg-primary
-              li
-                .grid-container
-                  .grid-x.grid-margin-x.large-h100vh
-                    .cell.auto
-                      strong.small.pl-half OUR MEDIA & PUBLICATIONS
-                      hr.my1.lighter
-                      a.arrow.arrow-small(href="#") All Latest Thinking
-                      a.arrow.arrow-small(href="#") Browse Case Studies
-                      a.arrow.arrow-small(href="#") Cognizant Podcasts
-                      a.arrow.arrow-small(href="#") Cognizanti Journal
-                      a.arrow.arrow-small(href="#") Digitally Cognizant Blog
-                      a.arrow.arrow-small(href="#") Infographics
-                      a.arrow.arrow-small(href="#") Perspectives
-                    .cell.auto
-                      strong.small.pl-half KEY THEMES
-                      hr.my1.lighter
-                      a.arrow.arrow-small(href="#") Code Halos
-                      a.arrow.arrow-small(href="#") Digital Maturity Research
-                      a.arrow.arrow-small(href="#") When Machines Do Everything
-                      a.arrow.arrow-small(href="#") World Economic Forum- Davos
-                    .cell.auto
-                      strong.small.pl-half CENTER FOR THE FUTURE OF WORK
-                      hr.my1.lighter
-                      a.arrow.arrow-small(href="#") 21 More Jobs of the Future
-                      a.arrow.arrow-small(href="#") Digital Workforce of the Future
-                      a.arrow.arrow-small(href="#") Explore the Future of Work
-                      a.arrow.arrow-small(href="#") Jobs of the Future Index
-                      a.arrow.arrow-small(href="#") Our Post-COVID Future
-                      a.arrow.arrow-small(href="#") The Work Ahead
-                    .cell.auto
-                      +bannerConsulting
+            // ===========================================================
+            // ███    ███ ███████ ███    ██ ██    ██
+            // ████  ████ ██      ████   ██ ██    ██
+            // ██ ████ ██ █████   ██ ██  ██ ██    ██
+            // ██  ██  ██ ██      ██  ██ ██ ██    ██
+            // ██      ██ ███████ ██   ████  ██████
+            // ===========================================================
+            li.m0
+              a Latest Thinking
+              ul.menu.vertical.megamenu.large-fixed.large-pos-left.w100.pt1.bg-primary
+                li
+                  .grid-container
+                    .grid-x.grid-margin-x.large-h100vh
+                      .cell.auto
+                        strong.small.pl-half OUR MEDIA & PUBLICATIONS
+                        hr.my1.lighter
+                        a.arrow.arrow-small(href="#") All Latest Thinking
+                        a.arrow.arrow-small(href="#") Browse Case Studies
+                        a.arrow.arrow-small(href="#") Cognizant Podcasts
+                        a.arrow.arrow-small(href="#") Cognizanti Journal
+                        a.arrow.arrow-small(href="#") Digitally Cognizant Blog
+                        a.arrow.arrow-small(href="#") Infographics
+                        a.arrow.arrow-small(href="#") Perspectives
+                      .cell.auto
+                        strong.small.pl-half KEY THEMES
+                        hr.my1.lighter
+                        a.arrow.arrow-small(href="#") Code Halos
+                        a.arrow.arrow-small(href="#") Digital Maturity Research
+                        a.arrow.arrow-small(href="#") When Machines Do Everything
+                        a.arrow.arrow-small(href="#") World Economic Forum- Davos
+                      .cell.auto
+                        strong.small.pl-half CENTER FOR THE FUTURE OF WORK
+                        hr.my1.lighter
+                        a.arrow.arrow-small(href="#") 21 More Jobs of the Future
+                        a.arrow.arrow-small(href="#") Digital Workforce of the Future
+                        a.arrow.arrow-small(href="#") Explore the Future of Work
+                        a.arrow.arrow-small(href="#") Jobs of the Future Index
+                        a.arrow.arrow-small(href="#") Our Post-COVID Future
+                        a.arrow.arrow-small(href="#") The Work Ahead
+                      .cell.auto
+                        +bannerConsulting
 
-          // ===========================================================
-          // ███    ███ ███████ ███    ██ ██    ██
-          // ████  ████ ██      ████   ██ ██    ██
-          // ██ ████ ██ █████   ██ ██  ██ ██    ██
-          // ██  ██  ██ ██      ██  ██ ██ ██    ██
-          // ██      ██ ███████ ██   ████  ██████
-          // ===========================================================
-          li.m0
-            a About Us
-            ul.menu.vertical.megamenu.large-fixed.large-pos-left.w100.pt1.bg-primary
-              li
-                .grid-container
-                  .grid-x.grid-margin-x.large-h100vh
-                    .cell.auto
-                      a.arrow.arrow-small(href="#") 2020 in Focus
-                      a.arrow.arrow-small(href="#") About Cognizant
-                      a.arrow.arrow-small(href="#") Board of Directors
-                      a.arrow.arrow-small(href="#") Client Briefing Program
-                      a.arrow.arrow-small(href="#") Cognizant Events
-                      a.arrow.arrow-small(href="#") Contact Us
-                    .cell.auto
-                      a.arrow.arrow-small(href="#") Corporate Governance
-                      a.arrow.arrow-small(href="#") Corporate Integrity
-                      a.arrow.arrow-small(href="#") Culture & Values
-                      a.arrow.arrow-small(href="#") Diversity & Inclusion
-                      a.arrow.arrow-small(href="#") ESG
-                      a.arrow.arrow-small(href="#") Leadership Team
-                    .cell.auto
-                      a.arrow.arrow-small(href="#") News & Press Releases
-                      a.arrow.arrow-small(href="#") Partnerships
-                      a.arrow.arrow-small(href="#") Public Policy
-                      a.arrow.arrow-small(href="#") Sponsorships
-                      a.arrow.arrow-small(href="#") Talent Worldwide
-                      a.arrow.arrow-small(href="#") Women Empowered
-                    .cell.auto
-                      +bannerConsulting
+            // ===========================================================
+            // ███    ███ ███████ ███    ██ ██    ██
+            // ████  ████ ██      ████   ██ ██    ██
+            // ██ ████ ██ █████   ██ ██  ██ ██    ██
+            // ██  ██  ██ ██      ██  ██ ██ ██    ██
+            // ██      ██ ███████ ██   ████  ██████
+            // ===========================================================
+            li.m0
+              a About Us
+              ul.menu.vertical.megamenu.large-fixed.large-pos-left.w100.pt1.bg-primary
+                li
+                  .grid-container
+                    .grid-x.grid-margin-x.large-h100vh
+                      .cell.auto
+                        a.arrow.arrow-small(href="#") 2020 in Focus
+                        a.arrow.arrow-small(href="#") About Cognizant
+                        a.arrow.arrow-small(href="#") Board of Directors
+                        a.arrow.arrow-small(href="#") Client Briefing Program
+                        a.arrow.arrow-small(href="#") Cognizant Events
+                        a.arrow.arrow-small(href="#") Contact Us
+                      .cell.auto
+                        a.arrow.arrow-small(href="#") Corporate Governance
+                        a.arrow.arrow-small(href="#") Corporate Integrity
+                        a.arrow.arrow-small(href="#") Culture & Values
+                        a.arrow.arrow-small(href="#") Diversity & Inclusion
+                        a.arrow.arrow-small(href="#") ESG
+                        a.arrow.arrow-small(href="#") Leadership Team
+                      .cell.auto
+                        a.arrow.arrow-small(href="#") News & Press Releases
+                        a.arrow.arrow-small(href="#") Partnerships
+                        a.arrow.arrow-small(href="#") Public Policy
+                        a.arrow.arrow-small(href="#") Sponsorships
+                        a.arrow.arrow-small(href="#") Talent Worldwide
+                        a.arrow.arrow-small(href="#") Women Empowered
+                      .cell.auto
+                        +bannerConsulting
 
-          // ===========================================================
-          // ███    ███ ███████ ███    ██ ██    ██
-          // ████  ████ ██      ████   ██ ██    ██
-          // ██ ████ ██ █████   ██ ██  ██ ██    ██
-          // ██  ██  ██ ██      ██  ██ ██ ██    ██
-          // ██      ██ ███████ ██   ████  ██████
-          // ===========================================================
-          li.hide-for-medium-xxl
-            hr.my1.lighter
-            .grid-x.grid-padding-x
-              .cell.auto
-                a.m0.p-half(href="#") Cognizant.com
-                a.m0.p-half(href="#") Industries
-                a.m0.p-half(href="#") Services
-                a.m0.p-half(href="#") Latest Thinking
-              .cell.auto
-                a.m0.p-half(href="#") Careers
-                a.m0.p-half(href="#") News
-                a.m0.p-half(href="#") Events
-                a.m0.p-half(href="#") Investors
-              .cell
-                a.m0.px-half(href="#")
-                  | Search
-                  i.search.text-bold.ml-half
+            // ===========================================================
+            // ███    ███ ███████ ███    ██ ██    ██
+            // ████  ████ ██      ████   ██ ██    ██
+            // ██ ████ ██ █████   ██ ██  ██ ██    ██
+            // ██  ██  ██ ██      ██  ██ ██ ██    ██
+            // ██      ██ ███████ ██   ████  ██████
+            // ===========================================================
+            li.hide-for-medium-xxl
+              hr.my1.lighter
+              .grid-x.grid-padding-x
+                .cell.auto
+                  a.m0.p-half(href="#") Cognizant.com
+                  a.m0.p-half(href="#") Industries
+                  a.m0.p-half(href="#") Services
+                  a.m0.p-half(href="#") Latest Thinking
+                .cell.auto
+                  a.m0.p-half(href="#") Careers
+                  a.m0.p-half(href="#") News
+                  a.m0.p-half(href="#") Events
+                  a.m0.p-half(href="#") Investors
+                .cell
+                  a.m0.px-half(href="#")
+                    | Search
+                    i.search.text-bold.ml-half
 
 
 mixin sectionNav
-  #navSubBar.z1(data-sticky-container="")
+  #navSubBar.z2(data-sticky-container="")
     .sticky.w100(data-sticky="" data-margin-top="0" data-top-anchor="navSubBar:bottom")
       .bg-primary
         .grid-container
@@ -519,14 +519,14 @@ mixin sectionNav
                       a(href="#") Link
                     li
                       a(href="#") Link
-            .cell.shrink.show-for-medium
+            .cell.shrink.show-for-medium.py-half
               button.button.hollow.m0.small(data-open="contact-widget")
-                i.bubble-chat-typing.p0.mr-half.ml0
+                i.bubble-chat-typing.p0.mr-half.ml0.text-bold
                 | CONTACT
 
 
 mixin navBarInPage
-  #navBarInPage.stickyNav.bg-primary.show-for-large(data-sticky-container="")
+  #navBarInPage.z1.stickyNav.bg-primary.show-for-large(data-sticky-container="")
     .sticky(data-sticky="" data-margin-top="3.75" data-top-anchor="navBarInPage:bottom")
         .grid-container
           .grid-x.grid-padding-x

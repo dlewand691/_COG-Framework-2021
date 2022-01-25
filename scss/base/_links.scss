@@ -7,22 +7,16 @@
 ███████ ██ ██   ████ ██   ██ ███████
 
 =========================================================================================== */
-a {
-  &:link {
-    &:not(.button) {
-      color: var(--link-color);
-    }
-    font-weight: $global-weight-bold;
-    transition: $transition-fast;
-
-    &:not(.button):hover {
-      color: var(--link-hover-color);
-    }
+a,
+a:link {
+  &:not(.button) {
+    color: var(--link-color);
   }
+  font-weight: $global-weight-bold;
+  transition: $transition-fast;
 
-  &:focus {
-    // outline: 2px solid $accent2-dark;
-    // outline-offset: 2px;
+  &:not(.button):hover {
+    color: var(--link-hover-color);
   }
 }
 

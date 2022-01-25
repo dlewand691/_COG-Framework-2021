@@ -1,4 +1,6 @@
 mixin footer
+  mixin footer-siteMap-link(linkHref, footerTitle)
+          a(href=linkHref title=footerTitle)!= footerTitle
   footer&attributes(attributes)
     // =============================================================================================
     // ███████  ██████   ██████  ████████ ███████ ██████      ███████  ██████   ██████ ██  █████  ██
@@ -12,17 +14,21 @@ mixin footer
         .grid-x.grid-padding-x.align-middle.align-justify
           .small-12.medium-shrink.cell.mln-half.social-media
             ul.menu.horizontal
-              a.h5(href="#")
-                i.logo-linkedin
-              a.h5(href="#")
-                i.logo-twitter-bird
-              a.h5(href="#")
-                i.logo-facebook
-              a.h5(href="#")
-                i.rss-feed-solid
+              li
+                a.h5.m0(href="#")
+                  i.logo-linkedin
+              li
+                a.h5.m0(href="#")
+                  i.logo-twitter-bird
+              li
+                a.h5.m0(href="#")
+                  i.logo-facebook
+              li
+                a.h5.m0(href="#")
+                  i.rss-feed-solid
 
-          .small-12.medium-shrink.cell.small
-            ul.menu.vertical.medium-horizontal.large-align-right.flex-wrap.pos-inherit.small.collapse
+          .cell.auto
+            ul.menu.vertical.medium-horizontal.large-align-right
               li
                 a(href="#") Sitemap
 
@@ -35,8 +41,8 @@ mixin footer
               li
                 a(href="#")  Cookie Policy
 
-              li.p-half
-                | &copy;2021 Cognizant, all rights reserved
+              li.py-half
+                | &copy;2022 Cognizant, all rights reserved
 
     // =============================================================================================
     // ███████  ██████   ██████  ████████ ███████ ██████
@@ -54,103 +60,103 @@ mixin footer
                 h6.m0 Industries
             .grid-x.grid-padding-x.small-up-1.medium-up-3
               .cell
-                ul.no-bullet.small
+                ul.no-bullet
                   li
                     p.mb0(title="")
                       strong
                   li
-                    a(href="/banking-financial-services" title="Banking & Financial Services" target="_blank" rel="noopener") Banking &amp; Financial Services
+                    +footer-siteMap-link("#", "Banking & Financial Services")
                   li
-                    a(href="/telecommunications" title="Communications") Communications
+                    +footer-siteMap-link("#", "Communications")
                   li
-                    a(href="/consumer-goods" title="Consumer Goods") Consumer Goods
+                    +footer-siteMap-link("#", "Consumer Goods")
                   li
-                    a(href="/education" title="Education") Education
+                    +footer-siteMap-link("#", "Education")
                   li
-                    a(href="/energy-utility" title="Energy & Utilities") Energy &amp; Utilities
+                    +footer-siteMap-link("#", "Energy & Utilities")
               .cell
-                ul.no-bullet.small
+                ul.no-bullet
                   li
                     p.mb0(title="")
                       strong
                   li
-                    a(href="/healthcare" title="Healthcare") Healthcare
+                    +footer-siteMap-link("#", "Healthcare")
                   li
-                    a(href="/information-services" title="Information Services") Information Services
+                    +footer-siteMap-link("#", "Information Services")
                   li
-                    a(href="/insurance" title="Insurance") Insurance
+                    +footer-siteMap-link("#", "Insurance")
                   li
-                    a(href="/life-sciences" title="Life Sciences") Life Sciences
+                    +footer-siteMap-link("#", "Life Sciences")
                   li
-                    a(href="/manufacturing" title="Manufacturing") Manufacturing
+                    +footer-siteMap-link("#", "Manufacturing")
               .cell
-                ul.no-bullet.small
+                ul.no-bullet
                   li
                     p.mb0(title="")
                       strong
                   li
-                    a(href="/information-media-entertainment" title="Media & Entertainment") Media &amp; Entertainment
+                    +footer-siteMap-link("#", "Media & Entertainment")
                   li
-                    a(href="/retail" title="Retail") Retail
+                    +footer-siteMap-link("#", "Retail")
                   li
-                    a(href="/technology" title="Technology") Technology
+                    +footer-siteMap-link("#", "Technology")
                   li
-                    a(href="/transportation-logistics" title="Transportation & Logistics") Transportation &amp; Logistics
+                    +footer-siteMap-link("#", "Transportation & Logistics")
                   li
-                    a(href="/travel-hospitality" title="Travel & Hospitality") Travel &amp; Hospitality
+                    +footer-siteMap-link("#", "Travel & Hospitality")
             .grid-x.grid-padding-x
               .cell
                 h6.m0 Services
                 .grid-x.grid-padding-x
                   .cell.medium-8
-                    ul.no-bullet.small.m0
+                    ul.no-bullet.m0
                       li
                         a(href="#")
                           strong Digital Business & Technology
                     .grid-container.full
                       .grid-x.grid-padding-x
                         .cell.auto
-                          ul.no-bullet.small
+                          ul.no-bullet
                             li
-                              a(href="#") Application Services
+                              +footer-siteMap-link("#", "Application Services")
                             li
-                              a(href="#") Artificial Intelligence
+                              +footer-siteMap-link("#", "Artificial Intelligence")
                             li
-                              a(href="#") Cloud Enablement
+                              +footer-siteMap-link("#", "Cloud Enablement")
                             li
-                              a(href="#") Cognizant Infrastructure Services
+                              +footer-siteMap-link("#", "Cognizant Infrastructure Services")
                             li
-                              a(href="#") Cognizant Security
+                              +footer-siteMap-link("#", "Cognizant Security")
                             li
-                              a(href="#") Core Modernization
+                              +footer-siteMap-link("#", "Core Modernization")
                         .cell.auto
-                          ul.no-bullet.small
+                          ul.no-bullet
                             li
-                              a(href="#") Digital Engineering
+                              +footer-siteMap-link("#", "Digital Engineering")
                             li
-                              a(href="#") Digital Experience
+                              +footer-siteMap-link("#", "Digital Experience")
                             li
-                              a(href="#") Digital Strategy
+                              +footer-siteMap-link("#", "Digital Strategy")
                             li
-                              a(href="#") Enterprise Application Services
+                              +footer-siteMap-link("#", "Enterprise Application Services")
                             li
-                              a(href="#") Internet of Things
+                              +footer-siteMap-link("#", "Internet of Things")
                             li
-                              a(href="#") Quality Engineering & Assurance
+                              +footer-siteMap-link("#", "Quality Engineering & Assurance")
                   .cell.medium-4
-                    ul.no-bullet.small
+                    ul.no-bullet
                       li
-                        a(href="/cognizant-digital-business", title="Cognizant Digital Business")
+                        a(href="#", title="Cognizant Digital Business")
                           strong Digital Business Operations
                       li
-                        a(href="/cognizant-digital-business/applied-ai-analytics", title="AI & Analytics") Enterprise Services
+                        +footer-siteMap-link("#", "Enterprise Services")
                       li
-                        a(href="/cognizant-digital-business/digital-engineering-services", title="Digital Engineering") Industry & Platform Solutions
+                        +footer-siteMap-link("#", "Industry & Platform Solutions")
                       li
-                        a(href="/cognizant-digital-business/digital-strategy", title="Digital Strategy") Intelligent Process Automation
+                        +footer-siteMap-link("#", "Intelligent Process Automation")
             .grid-x.grid-padding-x
               .cell
-                a(href="/consulting" title="Cognizant Consulting")
+                a(href="#" title="Cognizant Consulting")
                   h6 Cognizant Consulting
             .grid-x.grid-padding-x.small-up-1.medium-up-3
             .grid-x.grid-padding-x
@@ -158,86 +164,86 @@ mixin footer
                 h6.m0 Latest Thinking
             .grid-x.grid-padding-x.small-up-1.medium-up-3
               .cell
-                ul.no-bullet.small
+                ul.no-bullet
                   li
-                    p.small.mb0(title="Our Media & Publications")
-                      strong Our Media &amp; Publications
+                    p.mb0(title="Our Media & Publications")
+                      strong Our Media & Publications
                   li
-                    a(href="/latest-thinking" title="All Latest Thinking") All Latest Thinking
+                    +footer-siteMap-link("#", "All Latest Thinking")
                   li
-                    a(href="/perspectives" title="Perspectives") Perspectives
+                    +footer-siteMap-link("#", "Perspectives")
                   li
-                    a(href="/cognizanti" title="Cognizanti Journal") Cognizanti Journal
+                    +footer-siteMap-link("#", "Cognizanti Journal")
                   li
                     a(href="https://digitally.cognizant.com/" title="Digitally Cognizant Blog" target="_blank" rel="noopener") Digitally Cognizant Blog
                   li
                     a(href="https://soundcloud.com/cognizant-worldwide/" title="Cognizant Podcasts" target="_blank" rel="noopener") Cognizant Podcasts
                   li
-                    a(href="/case-studies" title="Browse Case Studies") Browse Case Studies
+                    +footer-siteMap-link("#", "Browse Case Studies")
               .cell
-                ul.no-bullet.small
+                ul.no-bullet
                   li
-                    p.small.mb0(title="Key Themes")
+                    p.mb0(title="Key Themes")
                       strong Key Themes
                   li
-                    a(href="/blockchain" title="Blockchain") Blockchain
+                    +footer-siteMap-link("#", "Blockchain")
                   li
-                    a(href="/artificial-intelligence" title="Artificial Intelligence") Artificial Intelligence
+                    +footer-siteMap-link("#", "Artificial Intelligence")
                   li
-                    a(href="/when-machines-do-everything" title="When Machines Do Everything") When Machines Do Everything
+                    +footer-siteMap-link("#", "When Machines Do Everything")
                   li
-                    a(href="/world-economic-forum-highlights-2018" title="World Economic Forum 2018—Davos") World Economic Forum 2018&mdash;Davos
+                    +footer-siteMap-link("#", "World Economic Forum 2018&mdash;Davos")
                   li
-                    a(href="/code-halos" title="Code Halos") Code Halos
+                    +footer-siteMap-link("#", "Code Halos")
               .cell
-                ul.no-bullet.small
+                ul.no-bullet
                   li
-                    a(href="/futureofwork" title="Center for the Future of Work")
+                    a(href="#" title="Center for the Future of Work")
                       strong Center for the Future of Work
                   li
-                    a(href="/future-of-work" title="Explore the Future of Work") Explore the Future of Work
+                    +footer-siteMap-link("#", "Explore the Future of Work")
                   li
-                    a(href="/digital-workforce-of-the-future" title="Digital Workforce of the Future") Digital Workforce of the Future
+                    +footer-siteMap-link("#", "Digital Workforce of the Future")
                   li
-                    a(href="/the-work-ahead" title="The Work Ahead") The Work Ahead
+                    +footer-siteMap-link("#", "The Work Ahead")
                   li
-                    a(href="/business-value-of-trust" title="Business Value of Trust") Business Value of Trust
+                    +footer-siteMap-link("#", "Business Value of Trust")
                   li
                     a(href="http://www.futureofwork.com/whitepaper/21-jobs-of-the-future-a-guide-to-getting-and-staying-employed-over-the-next-10-years" title="21 Jobs of the Future" target="_blank" rel="noopener") 21 Jobs of the Future
           .small-12.medium-3.cell(data-attribute="whiteFooterMenuTwoTag")
-            a(href="/about-cognizant" title="About Cognizant")
+            a(href="#" title="About Cognizant")
               h6.m0 About Cognizant
-            ul.no-bullet.small
+            ul.no-bullet
               li
-                a(href="/about-cognizant/board-of-directors" title="Board of Directors") Board of Directors
+                +footer-siteMap-link("#", "Board of Directors")
               li
-                a(href="/events" title="Cognizant Events") Cognizant Events
+                +footer-siteMap-link("#", "Cognizant Events")
               li
-                a(href="/contactus" title="Contact Us") Contact Us
+                +footer-siteMap-link("#", "Contact Us")
               li
-                a(href="/about-cognizant/corporate-governance" title="Corporate Governance") Corporate Governance
+                +footer-siteMap-link("#", "Corporate Governance")
               li
-                a(href="/about-cognizant/corporate-integrity" title="Corporate Integrity") Corporate Integrity
+                +footer-siteMap-link("#", "Corporate Integrity")
               li
-                a(href="/about-cognizant/core-values" title="Culture & Values") Culture &amp; Values
+                +footer-siteMap-link("#", "Culture & Values")
               li
-                a(href="/about-cognizant/executive-leadership" title="Executive Leadership") Executive Leadership
+                +footer-siteMap-link("#", "Executive Leadership")
               li
-                a(href="http://news.cognizant.com/" title="News & Press Releases") News &amp; Press Releases
+                +footer-siteMap-link("#", "News & Press Releases")
               li
-                a(href="/partners" title="Partnerships") Partnerships
+                +footer-siteMap-link("#", "Partnerships")
               li
-                a(href="/about-cognizant/sustainability" title="Sustainability") Sustainability
+                +footer-siteMap-link("#", "Sustainability")
               li
-                a(href="/about-cognizant/talent-worldwide" title="Talent Worldwide") Talent Worldwide
+                +footer-siteMap-link("#", "Talent Worldwide")
               li
-                a(href="/about-cognizant/the-cognizant-growth-story" title="The Cognizant Growth Story") The Cognizant Growth Story
+                +footer-siteMap-link("#", "The Cognizant Growth Story")
               li
-                a(href="/women-empowered" title="Women Empowered") Women Empowered
+                +footer-siteMap-link("#", "Women Empowered")
             h6.m0 Information For Suppliers
-            ul.no-bullet.small
+            ul.no-bullet
               li
-                a(href="/Procure-to-pay" title="Procure-to-Pay") Procure-to-Pay
+                +footer-siteMap-link("#", "Procure-to-Pay")
             .cell
               .hex-link
                 //- #teconsent(consent="0,1,2")

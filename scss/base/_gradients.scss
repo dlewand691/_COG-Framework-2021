@@ -15,26 +15,26 @@
   border: none;
 
   & :is(h1, h2, h3, h4, h5, h6, p, ul, li, ol, em, strong) {
-    color: inherit !important;
+    // color: inherit !important;
   }
 }
 
 .bg-grd-theme-1,
 .bg-grd-mesh-theme-1 {
   background: $grd-theme-1;
-  color: contrast-checker($color-dark) !important;
+  color: contrast-checker($color-dark);
 }
 
 .bg-grd-theme-2,
 .bg-grd-mesh-theme-2 {
   background: $grd-theme-2;
-  color: contrast-checker($color-dark) !important;
+  color: contrast-checker($color-dark);
 }
 
 .bg-grd-theme-3,
 .bg-grd-mesh-theme-3 {
   background: $grd-theme-3;
-  color: contrast-checker($color-light) !important;
+  color: contrast-checker($color-light);
 }
 
 .bg-grd-mesh-theme-1 {
