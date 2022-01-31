@@ -993,36 +993,6 @@
       "pg" : 2,
       "sct" : 0
     },
-    "\/scss\/components\/global\/_nav-anchorLink-bar.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 2,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 3,
-      "oA" : 1,
-      "oAP" : "\/_BUILD\/scss\/components\/css\/_nav-anchorLink-bar.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 2,
-      "sct" : 0
-    },
-    "\/scss\/components\/global\/_nav-primary-OLD.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 2,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 3,
-      "oA" : 1,
-      "oAP" : "\/_BUILD\/scss\/components\/css\/_nav-primary-OLD.css",
-      "oF" : 0,
-      "oS" : 0,
-      "pg" : 2,
-      "sct" : 0
-    },
     "\/scss\/components\/global\/_nav-primary.scss" : {
       "aP" : 1,
       "bl" : 0,
