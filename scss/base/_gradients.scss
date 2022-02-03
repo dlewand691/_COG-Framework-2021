@@ -14,32 +14,29 @@
 [class*="bg-grd-"] {
   border: none;
 
-  & :is(h1, h2, h3, h4, h5, h6, p, ul, li, ol, em, strong) {
+  & > :is(h1, h2, h3, h4, h5, h6, p, ul, li, ol, em, strong) {
     // color: inherit !important;
+    color: contrast-checker($color-dark) !important;
+    // color: var(--heading-color);
   }
 }
 
-.bg-grd-theme-1 {
-  background: $grd-theme-1;
-  color: contrast-checker($color-dark);
+@mixin gradients($direction, $theme) {
+  background-image: linear-gradient($direction, $theme);
 }
 
-.bg-grd-theme-2 {
-  background: $grd-theme-2;
-  color: contrast-checker($color-dark);
-}
-
-.bg-grd-theme-3 {
-  background: $grd-theme-3;
-  color: contrast-checker($color-light);
+@each $color-name, $color in $gradient-palette {
+  .bg-#{$color-name} {
+    @include gradients(45deg, $color);
+  }
 }
 
 .bg-grd-mesh-theme-1 {
-  background: $grd-theme-1;
+  color: contrast-checker($color-dark);
+  @include gradients(150deg, $grd-theme-1);
   @include breakpoint(medium) {
     background-size: cover;
-    background-image: rgb(230, 183, 198);
-    background-image: radial-gradient(
+    background: radial-gradient(
         at 18% 95%,
         rgba(3, 0, 96, 1) 0,
         rgba(3, 0, 96, 0.001) 80%
@@ -90,11 +87,11 @@
 }
 
 .bg-grd-mesh-theme-2 {
-  background: $grd-theme-2;
+  color: contrast-checker($color-dark);
+  @include gradients(150deg, $grd-theme-2);
   @include breakpoint(medium) {
     background-size: cover;
-    background-image: rgb(1, 0, 50);
-    background-image: radial-gradient(
+    background: radial-gradient(
         at 1% 2%,
         rgba(2, 0, 51, 1) 0,
         rgba(2, 0, 51, 0.1) 76%,
@@ -136,10 +133,10 @@
 }
 
 .bg-grd-mesh-theme-3 {
-  background: $grd-theme-3;
+  color: contrast-checker($color-light);
+  @include gradients(150deg, $grd-theme-3);
   @include breakpoint(medium) {
-    background-image: rgba(0, 0, 72, 1);
-    background-image: radial-gradient(
+    background: radial-gradient(
         at 95% 7%,
         rgba(69, 188, 201, 1) 0,
         rgba(69, 188, 201, 0.001) 60%
@@ -164,13 +161,11 @@
 
 %bg-grd-accent2-radial,
 .bg-grd-accent2-radial {
-  color: contrast-checker($color-dark);
   background: radial-gradient(circle, $accent2-dark 0%, $primary 85%);
 }
 
 %bg-grd-accent2-radial-top,
 .bg-grd-accent2-radial-top {
-  color: contrast-checker($color-dark);
   background: radial-gradient(
     circle at top center,
     $accent2-dark 0%,
@@ -179,7 +174,6 @@
 }
 
 .bg-grd-accent2-radial-bottom {
-  color: contrast-checker($color-dark);
   background: radial-gradient(
     circle at bottom center,
     $accent2-dark 0%,
@@ -188,7 +182,6 @@
 }
 
 .bg-grd-dark-accent2-dark {
-  color: contrast-checker($color-dark);
   background: linear-gradient(
     90deg,
     $primary 0%,
@@ -198,32 +191,26 @@
 }
 
 .bg-grd-tb-dark-accent2-medium {
-  color: contrast-checker($color-dark);
   background: linear-gradient(0deg, $primary 0%, $accent2-dark 100%);
 }
 
 .bg-grd-bt-dark-accent2-medium {
-  color: contrast-checker($color-dark);
   background: linear-gradient(180deg, $primary 0%, $accent2-dark 100%);
 }
 
 .bg-grd-lr-dark-accent2-medium {
-  color: contrast-checker($color-dark);
   background: linear-gradient(90deg, $primary 0%, $accent2-dark 100%);
 }
 
 .bg-grd-rl-dark-accent2-medium {
-  color: contrast-checker($color-dark);
   background: linear-gradient(-90deg, $primary 0%, $accent2-dark 100%);
 }
 
 .bg-grd-tb-dark-primary {
-  color: contrast-checker($color-dark);
   background: linear-gradient(0deg, $primary 0%, $accent2-dark 100%);
 }
 
 .bg-grd-lr-dark-primary {
-  color: contrast-checker($color-dark);
   background: linear-gradient(90deg, $primary 0%, $accent2-dark 100%);
 }
 

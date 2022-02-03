@@ -68,7 +68,7 @@ $border-side: (
       // GRADIENT BORDER, ALL SIDES
       // ====================================================================================
       @for $i from 1 through $border-width {
-        @each $color-name, $color in $border-gradient-palette {
+        @each $color-name, $color in $gradient-palette {
           .#{$size}-bd-#{$color-name}-#{$i} {
             border-width: #{$i}px;
             border-style: solid;
@@ -81,7 +81,7 @@ $border-side: (
       // ====================================================================================
       @for $i from 1 through $border-width {
         @each $side-name, $side in $border-side {
-          @each $color-name, $color in $border-gradient-palette {
+          @each $color-name, $color in $gradient-palette {
             .#{$size}-bd-#{$side-name}-#{$color-name}-#{$i} {
               border: 0;
               border-#{$side}: #{$i}px solid;
@@ -153,7 +153,7 @@ $border-side: (
       // GRADIENT BORDER, ALL SIDES
       // ====================================================================================
       @for $i from 1 through $border-width {
-        @each $color-name, $color in $border-gradient-palette {
+        @each $color-name, $color in $gradient-palette {
           .bd-#{$color-name}-#{$i} {
             border-width: #{$i}px;
             border-style: solid;
@@ -166,7 +166,7 @@ $border-side: (
       // ====================================================================================
       @for $i from 1 through $border-width {
         @each $side-name, $side in $border-side {
-          @each $color-name, $color in $border-gradient-palette {
+          @each $color-name, $color in $gradient-palette {
             .bd-#{$side-name}-#{$color-name}-#{$i} {
               border: 0;
               border-#{$side}: #{$i}px solid;

@@ -88,25 +88,12 @@ $grd-dir-180deg: 180deg;
 $grd-dir-225deg: 225deg;
 $grd-dir-270deg: 270deg;
 $grd-dir-315deg: 315deg;
-$grd-theme-1: linear-gradient(
-  $grd-dir-45deg,
-  rgba(45, 45, 143, 1) 10%,
-  rgba(0, 111, 186, 1) 50%,
-  rgba(33, 252, 235, 1) 94%
-);
-$grd-theme-2: linear-gradient(
-  $grd-dir-45deg,
-  rgba(1, 0, 101, 1) 15%,
-  rgba(212, 54, 53, 1) 65%,
-  rgba(243, 201, 206, 1) 100%
-);
-$grd-theme-3: linear-gradient(
-  $grd-dir-45deg,
-  rgba(94, 147, 239, 1) 10%,
-  rgba(199, 237, 136, 1) 65%,
-  rgba(238, 226, 160, 1) 85%,
-  rgba(239, 227, 74, 1) 100%
-);
+$grd-theme-1: rgba(45, 45, 143, 1) 10%, rgba(0, 111, 186, 1) 50%,
+  rgba(33, 252, 235, 1) 94%;
+$grd-theme-2: rgba(1, 0, 101, 1) 15%, rgba(212, 54, 53, 1) 65%,
+  rgba(243, 201, 206, 1) 100%;
+$grd-theme-3: rgba(94, 147, 239, 1) 10%, rgba(199, 237, 136, 1) 65%,
+  rgba(238, 226, 160, 1) 85%, rgba(239, 227, 74, 1) 100%;
 
 // ======================================================================
 // FOUNDATION PALETTE OVERRIDES
@@ -197,7 +184,7 @@ $border-palette: (
   "white": $white,
 );
 
-$border-gradient-palette: (
+$gradient-palette: (
   grd-theme-1: $grd-theme-1,
   grd-theme-2: $grd-theme-2,
   grd-theme-3: $grd-theme-3,
