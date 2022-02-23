@@ -72,7 +72,7 @@ $border-side: (
           .#{$size}-bd-#{$color-name}-#{$i} {
             border-width: #{$i}px;
             border-style: solid;
-            border-image: $color 1;
+            border-image: linear-gradient(35deg, $color) 1;
           }
         }
       }
@@ -85,7 +85,7 @@ $border-side: (
             .#{$size}-bd-#{$side-name}-#{$color-name}-#{$i} {
               border: 0;
               border-#{$side}: #{$i}px solid;
-              border-image: $color 1;
+              border-image: linear-gradient(35deg, $color) 1;
             }
           }
         }
@@ -157,7 +157,7 @@ $border-side: (
           .bd-#{$color-name}-#{$i} {
             border-width: #{$i}px;
             border-style: solid;
-            border-image: $color 1;
+            border-image: linear-gradient(35deg, $color) 1;
           }
         }
       }
@@ -170,7 +170,7 @@ $border-side: (
             .bd-#{$side-name}-#{$color-name}-#{$i} {
               border: 0;
               border-#{$side}: #{$i}px solid;
-              border-image: $color 1;
+              border-image: linear-gradient(35deg, $color) 1;
             }
           }
         }

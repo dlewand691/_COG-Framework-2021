@@ -32,3 +32,9 @@ $cog-bp--desktop-xxl: 1600px; //80rem
 // Grid
 $cog-grid--columns: 12;
 $cog-grid--gutter: 20px;
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
