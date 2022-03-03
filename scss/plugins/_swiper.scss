@@ -114,10 +114,9 @@ $themeColor: $accent3-medium;
 .square-pagination [class*="swiper-pagination"] [class*="swiper-pagination"] {
   overflow: hidden;
   width: 2rem;
-  height: 5px;
-  margin: 0 5px;
-  border-radius: 0 !important;
-  // @include border-rounded;
+  height: 0.25rem;
+  margin: 0 0.25rem;
+  @include border-rounded;
 }
 
 /* ==============================  WHITE CONTROLS  ============================== */

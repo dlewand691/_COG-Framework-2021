@@ -43,6 +43,7 @@
       }
     }
 
+    a,
     a:link {
       border-radius: inherit;
       color: $anchor-color;
@@ -94,6 +95,9 @@
 .tabs-content {
   border-radius: 0 0 $global-radius $global-radius;
   overflow: hidden;
+  --heading-color: #{$accent2-dark};
+  --link-color: #{$accent2-dark};
+  // --link-hover-color: #{$primary};
 
   &.is-active {
     animation: tab-panel-fade-in 1s ease;
