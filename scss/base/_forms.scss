@@ -312,6 +312,10 @@ form {
       border-radius: $global-radius;
       background: $gray-lightest;
       box-shadow: none;
+
+      &:focus {
+        outline: 2px solid $accent2-dark;
+      }
     }
 
     & input:focus,

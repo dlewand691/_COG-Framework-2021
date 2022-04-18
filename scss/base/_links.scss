@@ -25,9 +25,11 @@ a:link {
 p,
 ul,
 ol,
-dl {
-  &:not(.accordion, .menu, .tabs, .pagination, .breadcrumbs) {
-    & a {
+dl,
+li {
+  &:not(.accordion, .menu, .tabs, .pagination, .breadcrumbs, [class*="dropdown"], .button) {
+    & a,
+    & a:focus {
       text-decoration: underline;
       text-decoration-color: inherit;
       text-decoration-thickness: 0.1em;
