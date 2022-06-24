@@ -117,9 +117,7 @@ $breakpoints: (
   xxlarge: $cog-bp--desktop-xxl,
 );
 $print-breakpoint: large;
-$breakpoint-classes: (
-  small small-xl medium medium-xl medium-xxl large xlarge xxlarge
-);
+$breakpoint-classes: (small medium large);
 
 // 3. The Grid
 // -----------

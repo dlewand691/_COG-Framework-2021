@@ -273,6 +273,21 @@
       "pg" : 2,
       "sct" : 0
     },
+    "\/scss\/base\/_aspect-ratio.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 2,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 3,
+      "oA" : 1,
+      "oAP" : "\/_BUILD\/scss\/css\/_aspect-ratio.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 2,
+      "sct" : 0
+    },
     "\/scss\/base\/_backgrounds.scss" : {
       "aP" : 1,
       "bl" : 0,
